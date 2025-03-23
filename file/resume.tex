@@ -1,0 +1,292 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{color}  %导言区调用color宏包
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemNew}[3]{
+  \item\small{
+    \textbf{#1}{: #2}{\newline{#3}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubheadingNew}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+      \textit{#5} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+\newcommand{\resumeSubItemNew}[3]{\resumeItemNew{#1}{#2}{#3}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Jianyu Lai}} \\
+  %\href{https://xprilion.com}{Portfolio: xprilion.com} & Mobile:~~~+86-185-5937-7627 \\
+  % \href{https://scholar.google.com/citations?user=EtljKSgAAAAJ&hl=en}{Google Scholar: ~~scholar.google.com/Sixiang Chen} & Personal Website: \href{https://ephemeral182.github.io}{About me}\\
+  Mobile: +86-159-6058-5656 & Email: \href{mailto:}{jlai218@connect.hkust-gz.edu.cn} \\
+  Wechat: alexlai2860& Github: \href{https://github.com/alexlai2860}{alexlai2860}
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{~~Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingNew
+      {The Hong Kong University of Science and Technology (Guangzhou)}{Guangzhou, China}
+      {\textbf{School:} College of Future Technology \textbf{Major:} Data Science and Analytics}{September 2024 - }
+      {\textbf{Degree:} Master of Philosophy in Data Science and Analytics; Supervised by Prof.Lei Zhu}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research Proposal:} Image Restoration, Image Generation, MLLM.}}}
+      
+    \resumeSubheadingNew
+      {South China University of Technology}{Guangzhou, China}
+      {\textbf{School:} Automation Science and Engineering \textbf{Major:} Automation}{September 2020 - June 2024}
+      {\textbf{Degree:} Bachelor of Engineering in Automation}
+      {\scriptsize \textit{ \footnotesize{ \newline{}\textbf{Key Courses:} Principles of Microcomputers (4/4), Motor and Drive Foundation (4/4), Probability and Mathematical Statistics (3.7/4),\vspace{-2pt} Signal Analysis and Processing (3.7/4), Computer Network and Communication (3.7/4).\textbf{GPA:3.47/4}}}}
+
+    \resumeSubHeadingListEnd
+	   
+
+
+\section{Research Interest}
+
+\textbf{- Advanced image generation algorithms, such as diffusion models and autoregressive generative models, aim to produce highly realistic images.}
+ \vspace{0.5em}
+ 
+\textbf{- Developing robust and generalizable solutions for real-world image restoration, particularly in adverse conditions.}
+ \vspace{0.5em}
+ 
+\textbf{- Exploring multimodal large language models (MLLM) for image processing.}
+
+
+
+
+% \resumeSubHeadingListEnd
+% \vspace{-5pt}
+% \section{Experience}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading{Google Summer of Code - Submitty}{Remote}
+%     {Student Developer (Full-time)}{May 2019 - Sep 2019}
+%     \resumeItemListStart
+%         \resumeItem{Discussion Forum Upgrades}
+%           {Refactor forum for performance to handle large databases.}
+%           \resumeItem{REST API for Discussion Forum}
+%           {Symphony \& Twig based Forum parts converted to API-first interface.}
+%           \resumeItem{Ratchet PHP WebSocket}{Implemented a WebSocket for low-latency real time exchange of posts and thread updates.}
+%       \resumeItemListEnd
+% \vspace{-5pt}
+%     \resumeSubheading
+% 		{DataCamp Inc.}{Remote}
+% 		{Instructor (Part-time, Contractual)}{Dec 2018 -  Present}
+% 		\resumeItemListStart
+%         \resumeItem{Project Course - Find Movie Similarity from Plot Summaries}
+%           {Created project based course using Unsupervised learning and natural language processing.}
+%         \resumeItem{Tutorial - Introduction to Reinforcement Learning}
+%           {Created tutorial for Q-learning RL algorithm and  concepts.}
+%         \resumeItem{Impact}{Course has been taken by 250+ students so far with 4.65 average rating.}
+% 		\resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+% \vspace{-5pt}
+% \section{Projects}
+% \resumeSubHeadingListStart
+% \resumeSubItem{Vison - multimedia search engine (NLP, Search Engine, Web Crawlers, Multimedia Processing)}{(Work in progress) Research oriented, open source, search engine for bringing reverse multimedia search to small \& mid scale enterprises. Tech: Python, NodeJS, Intel OpenVino Toolkit, Selenium, TensorFlow (October '18)}
+% \vspace{2pt}
+% \resumeSubItem{Reinforcement Learning based Traffic Control System (Reinforcement Learning, Computer Vision)}{AI model to resolve city traffic around 50\%
+% faster. Tech: Python, Alibaba Cloud, Raspberry Pi, Arduino, SUMO \& OpenCV. (August '18)}
+% \vspace{2pt}
+% \resumeSubItem{Panorama from Satellite Imagery using Distributed Computing (Distributed Computing, Image Processing)}{Images clicked using drones, provided by ISRO were stitched together using distributed public compute nodes, effectively bringing down processing time exponentially. Tech: PHP, C++, Java, Python (March '18)}
+% \vspace{2pt}
+% \resumeSubItem{Drag-n-drop machine learning learning environment (Web Development, Machine Learning)}{Scratch like tool for implementing machine learning pipelines along with built in tutorial for each concept. Tech: Python, JavaScript (September '18)}
+% \vspace{2pt}
+% \resumeSubItem{Search Engine and Social Network(Web Development, Web Crawler, Search)}{Created from scratch a social network and a search engine based on the idea of integrating Facebook and Google. The launched website was among top 1000 websites in India during 2012-2013. Tech: PHP, MySQL, HTML, CSS, WebSockets, JavaScript, RSS, XML ( May '12)}
+% \resumeSubHeadingListEnd
+
+
+\vspace{2pt}
+\section{Publications}
+\resumeSubHeadingListStart
+% \resumeSubItem{Book: Deep Learning on Web (Web Development, Deep Learning)}{Work in Progress book to be published by Packt Publishing in late 2019. Tech: Django, Python, AWS, GCP, Azure (November '18)}
+\vspace{2pt}
+
+\resumeSubItemNew{In submission: ACD-Desmoke: Adaptive Constrained Diffusion for Generalizable Zero-Shot Surgical Smoke Removal in Laparoscopy}{\textcolor{red}{\underline{Jianyu Lai$^{\dag}$}}, Sixiang Chen$^{\dag}$, Yunlong Lin, Tian Ye, Song Fei, Heming Li, Zhaohu Xing, Lei Zhu.
+% [\href{https://Ephemeral182.github.io}{\textbf{PDF}},
+% \href{https://Ephemeral182.github.io}{\textbf{Code}}]
+}{\textbf{Summary:} Laparoscopic surgery is often hindered by surgical smoke, reducing visibility and precision. Existing desmoking methods are limited by reliance on costly synthetic data or complex training architectures. This paper proposes ACD-Desmoke, a zero-shot, training-free framework leveraging pre-trained diffusion models with adaptive constrained diffusion. By incorporating adaptive weight allocation and timestep control, it achieves robust, high-quality smoke removal across diverse laparoscopic datasets, offering a practical and scalable solution.}
+\vspace{2pt}
+
+\resumeSubItemNew{In submission: GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing}{Sixiang Chen, Tian Ye, Yunlong Lin, Yijun Yang, Yun Liu, Yeying Jin, Song Fei, \textcolor{red}{\underline{Jianyu Lai}}, Zhaohu Xing, Fugee Tsung, Lei Zhu.
+% [\href{https://Ephemeral182.github.io}{\textbf{PDF}},
+% \href{https://Ephemeral182.github.io}{\textbf{Code}}]
+}{\textbf{Summary:} Real-world image dehazing is vital for visual quality, but existing methods struggle with complexity and controllability. We propose GenHaze, a framework using a pre-trained latent diffusion model to generate high-quality, controllable hazy images in one step. GenHaze enhances existing models with minimal fine-tuning, significantly improving performance across seven metrics. This work demonstrates the potential of realistic degradation generation, offering an efficient alternative to traditional approaches.}
+\vspace{2pt}
+
+\resumeSubItemNew{CVPR'25: SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization}{\textcolor{red}{\underline{Jianyu Lai$^{\dag}$}}, Sixiang Chen$^{\dag}$, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu.
+[\href{https://Ephemeral182.github.io}{\textbf{PDF}},
+\href{https://Ephemeral182.github.io}{\textbf{Code}}]}{\textbf{Summary:} Motivated by the limited generalization of current desnowing models due to their reliance on synthetic data and the lack of large-scale real-world snowfall datasets, this paper introduces RealSnow10K, a large-scale annotated high-quality real-world snowfall dataset, and a preference dataset with 36,000 expert-ranked pairs. Furthermore, we propose SnowMaster desnowing framework which leverages MMPO-enhanced Q-instruct for semi-supervised training to improve real-world snow removal performance.}
+\vspace{2pt}
+
+\vspace{1em}
+
+\resumeSubHeadingListEnd
+\vspace{-1.5em}
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{2023.9 - 2024.5: Gait Face Fusion Recognition System Based on Multi Perspective Collaboration}{This is a \textbf{College Students Innovation and Entrepreneurship Training Program (National)} Project which develops a multi person gait recognition system with a visual operating interface to achieve long-distance, contactless, and non-cooperative multi person identity recognition. This project overcomes challenges in long-distance blur and close-range incomplete body movement by combining facial and gait features Specifically, I \textbf{lead the design and implementation of the occlusion gait restoration module}, which significantly improved recognition accuracy. }{}{}
+\resumeSubItem{2022.11 - 2023.6: Auto-Focus-Assistant}{This project is an \textbf{independent R\&{}D initiative} that leverages \textbf{depth cameras} and advanced \textbf{computer vision algorithms} to deliver a highly efficient auto-focus system for various camera setups. The system processes both spatial depth and RGB data from the depth camera, deploying efficient object detection models (\textbf{YolofastestV2}) to compute target-to-camera distances with high accuracy. These distances are converted into control signals for a \textbf{follow-focus motor (Nucleus-N)}, enabling precise adjustments to the focus ring. Iteratively optimized, the system supports multiple focusing modes, including manual, fully automatic, and continuous tracking via \textbf{SCRFD face detection} and object tracking algorithms. It also integrates \textbf{eye-tracking focus} and \textbf{radar waveform-based focus}, making it one of the most intelligent focusing systems currently available.}{}{}
+[\href{https://github.com/alexlai2860/Auto-focus-assistant}{\textbf{Code}},
+\href{https://www.bilibili.com/video/BV1Yh4y147x5/}{\textbf{Video}}]
+\resumeSubItem{2022.9 - 2023.1: Original Aspiration: RoboMaster Short Film Project}{This is a team-driven filming project in which I serve as the \textbf{team leader}, overseeing a comprehensive range of responsibilities including \textbf{screenwriting, directing, cinematography, and post-production editing and color grading}. The short film narrates the journey of preparing for a robotics competition, which garnered nearly 4,000 views on a video-sharing platform and received commendations and shares from the event organizers. }
+[\href{https://www.bilibili.com/video/BV1MM411t7SY/}{\textbf{Video}}]
+\resumeSubItem{2021.9 - 2022.7: National College Student Robot Competition (RoboMaster University Championship)}{This is a robotics competition in which different universities participate in teams. Each competing team is required to develop multiple robots with different functionalities to engage in the contest. I am a member of the \textbf{aerial robotics (unmanned aerial vehicle - UAV) team}, primarily responsible for \textbf{designing and developing the target detection system for the UAV}, and joint debugging and flight testing with the electronic control group. Additionally, I maintain the visual code repository for the robotics laboratory, known as the Scut Robot Vision Library (SRVL). Concurrently, I serve as one of the UAV pilots within my team.}
+[\href{https://vision.scutbot.cn/}{\textbf{Code}},
+\href{https://www.bilibili.com/video/BV11a41197jg/}{\textbf{Video}}]
+
+% \vspace{0.5em}
+
+
+%\textbf{(Transactions on Circuits and Systems for Video Technology IF:5.859 Under Review)}
+
+%\vspace{0.8em}
+
+% \vspace{0.5em}
+
+%\textbf{(IEEE Transactions on Instrumentation and Measurement IF:5.332 Under Review)}
+
+\resumeSubHeadingListEnd
+
+% \section{Research Service}
+% \resumeSubHeadingListStart
+% \resumeSubItem{Reviewer}{ICCV 2025.}
+
+
+% \resumeItemListEnd
+
+	   
+\vspace{2pt}
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~~~Python, C++.}
+ \vspace{0.5em}
+	\resumeSubItem{Frameworks}{~~~~Opencv, Pytorch, Numpy, Onnxruntime.}
+ \vspace{0.5em}
+%	\resumeSubItem{Platforms}{~~~~~~~Linux, Windows, Arduino, Stm32.}
+	\resumeSubItem{Soft Skills}{~~~~~~~Leadership, Science Writing, Engineering Experience, Independent Thinking, Critical Thinking.}
+
+\resumeSubHeadingListEnd
+
+
+\vspace{2pt}
+\section{Patents and Awards}
+	\resumeSubHeadingListStart
+ \vspace{0.5em}
+	\resumeSubItem{2023.6: Patent, Inventor \&{} Patentee}{Automatic focusing system based on depth vision and target detection, CN219268990U}
+ \vspace{0.5em}
+	\resumeSubItem{2022.8: National First Prize, Technical team member}{National College Student Robot Competition (RoboMaster University Championship)}
+
+	
+	
+%-----------Awards-----------------
+% \section{Honors and Awards}
+% \begin{description}[font=$\bullet$]
+% \item {Awarded title of Intel Software Innovator - May, 2019}
+% \vspace{-5pt}
+% \item {Second Runner's Up at TCS EngiNx Engineering Project Innovation Content - September, 2018 }
+% \vspace{-5pt}
+% \item {Runner's Up at Facebook Developers Circle Hackathon - August, 2017}
+
+% \end{description}
+
+% \vspace{-5pt}
+% \section{Volunteer Experience}
+%   \resumeSubHeadingListStart
+% 	\resumeSubheading
+%     {Community Lead at Developer Student Clubs NSEC}{Kolkata, India}
+%     {Conducted online and offline technical \& soft-skills training impacting over 3000 students.}{Jan 2019 - Present}
+% \vspace{5pt}
+%     % \vspace{10pt}\textbf{\large{Community Experience}}
+%     \resumeSubheading
+%     {Event Organizer at Google Developers Group Kolkata}{Kolkata, India}
+%     {Organized events, conducted workshops and delivered workshops reaching over 7000 developers.}{Jan 2018 - Present}
+
+% \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
+\end{document}

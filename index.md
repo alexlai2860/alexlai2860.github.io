@@ -4,13 +4,13 @@ layout: page
 
 # About Me
 
-<img src="https://caihanlin.com/caihanlin.jpg" class="floatpic">
+<img src="https://alexlai2860.github.io/assets/images/JianyuLai_img1_cut.jpg" class="floatpic">
 
-Here is **Hanlin Cai (Lance, 蔡汉霖)**.<br>
+Here is **Jianyu Lai**.<br>
 
-I am a graduate student in the Department of Engineering at the University of Cambridge, advised by [Prof. Özgür Akan](https://ioe.eng.cam.ac.uk/directory/akan), within [Internet of Everything (IoE) Group](https://ioe.eng.cam.ac.uk/). I also spent a lovely summer research program with [Prof. Pietro Liò](https://www.cl.cam.ac.uk/~pl219/) at [Artificial Intelligence Group](https://www.cl.cam.ac.uk/research/ai/). Prior to Cambridge,  I have worked on System Engineering, Cybersecurity and Wireless Communication with [Prof. Zhezhuang Xu](https://scholar.google.com.hk/citations?user=iZ7LQRkAAAAJ&hl=zh-CN) and [Dr. Meng Yuan](https://myuan27.github.io/). Recently, I was honored to be selected as **AAAI-2024 and KDD-2024 Undergraduate Scholars**.<br>
+I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. Previously, I earned my Bachelor's degree in Automation Engineering from South China University of Technology, where I engaged in innovative projects in robotics and image processing—earning a National First Prize at the RoboMaster University Championship and securing a patent for an automatic focusing system based on depth vision and target detection.<br>
 
-If you are interested in any aspect of me, I am always open to discussions and collaborations. Feel free to reach out to me at - hc663 [at] cam.ac.uk
+If you are interested in my work or research, feel free to contact me at: [jlai218@connect.hkust-gz.edu.cn](mailto:jlai218@connect.hkust-gz.edu.cn)
 
 **<font color="#990000">I am actively seeking a PhD position for 2025 Fall admission. If you have any information, please contact me. Thank you!</font>**
 
@@ -18,23 +18,19 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## Research Interests
 
-- [Internet of Everything](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:internet_of_everything)
-- Molecular Communication
-- Wireless Communication
-- AI-powered Communication
+- Advanced image generation algorithms (e.g., diffusion models and autoregressive generative models)
+- Robust image restoration techniques in challenging real-world conditions
+- Applications of multimodal large language models (MLLM) in image processing
 
-My current research focuses on practical problems that artificial intelligence faces in real life. My interests are on the Machine Learning and its applications in Industrial IoT. In a word, advanced technologies like ML and IoT positively influence the life of everybody.  I wish to devote my talent to this meaningful cause and bring well-being to society.
+My research focuses on addressing practical challenges in artificial intelligence and leveraging advanced machine learning approaches to improve real-world applications.
 
 ---
 
 ## News and Updates
 
-- **June 2024**：Very excited to be selected as [KDD UC Scholar](https://kdd2024.kdd.org/undergraduate-consortium/). See you in Spain!
-- **May 2024：**My bachelor thesis won the Annual Best Thesis Award (Top 1/300).
-- **April 2024：**Our work *BLEGuard* has been accepted to [MobiSys 2024](https://www.sigmobile.org/mobisys/2024/) as a poster paper. See you in Japan!
-- **March 2024：**Very excited to get a MPhil offer from Engineering department at Cambridge University!
-- **Dec 2023：**Very excited to be selected as [AAAI UC Scholar](https://aaai.org/aaai-conference/undergraduate-consortium-program/). See you in Canada!
-- **Jun 2022：**Started research programme at [Cambridge AI Group](https://www.cl.cam.ac.uk/research/ai/), advised by Prof. Pietro Liò.
+- **September 2024**: Began my Master of Philosophy program in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou).
+- **August 2022**: Awarded the National First Prize at the RoboMaster University Championship as part of my team.
+- **June 2023**: Granted a patent for an automatic focusing system based on depth vision and target detection.
 
 <br>
 
