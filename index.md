@@ -1,38 +1,189 @@
 ---
 layout: page
 ---
+<style>
+body {
+  background-color: #f0f5fa;  /* A very light blue background */
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Page flowing light effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(100, 180, 255, 0.2), transparent);
+  z-index: -1;
+  animation: page-flow-light 8s infinite linear;
+  pointer-events: none;
+}
+
+/* Flowing light animation */
+@keyframes page-flow-light {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.scrollable-news {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #f8fbff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin: 15px 0;
+  list-style: none;
+}
+
+.scrollable-news li {
+  margin-bottom: 4px;
+  padding: 5px;
+  border-bottom: 1px solid #e6f0ff;
+  line-height: 1.4;
+}
+
+.scrollable-news li:hover {
+  background-color: #e6f2ff;
+  transition: background-color 0.3s ease;
+}
+
+.scrollable-news li:last-child {
+  border-bottom: none;
+}
+
+.scrollable-news::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-news::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollable-news::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 10px;
+}
+
+.scrollable-news::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+.mouse-particle {
+  pointer-events: none;
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.25);
+  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3);
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+</style>
 
 # About Me
 
-<img src="https://alexlai2860.github.io/assets/images/JianyuLai_img1_cut.jpg" class="floatpic">
+<img src="assets/images/JianyuLai_img1_cut.jpg" class="floatpic" style="width: 43%; max-width: 540px; height: auto; float: right; margin-left: 1em;">
 
-Here is **Jianyu Lai**.<br>
+My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. I earned my Bachelor's degree in Automation Engineering from South China University of Technology. I have participated in innovative projects in robotics and image processing – achieving a National First Prize at the RoboMaster University Championship and obtaining a patent for an automatic focusing system based on depth vision and target detection.
 
-I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. Previously, I earned my Bachelor's degree in Automation Engineering from South China University of Technology, where I engaged in innovative projects in robotics and image processing—earning a National First Prize at the RoboMaster University Championship and securing a patent for an automatic focusing system based on depth vision and target detection.<br>
+If you are interested in my work or research, feel free to contact me.
 
-If you are interested in my work or research, feel free to contact me at: [jlai218@connect.hkust-gz.edu.cn](mailto:jlai218@connect.hkust-gz.edu.cn)
+<br>
 
-**<font color="#990000">I am actively seeking a PhD position for 2025 Fall admission. If you have any information, please contact me. Thank you!</font>**
+## Education
+
+- **Sept. 2024 – Present:** The Hong Kong University of Science and Technology (Guangzhou)  
+  *Master of Philosophy in Data Science and Analytics*
+- **Sept. 2020 – June 2024:** South China University of Technology  
+  *Bachelor of Engineering in Automation*
+
+<br>
 
 ---
 
 ## Research Interests
 
-- Advanced image generation algorithms (e.g., diffusion models and autoregressive generative models)
+- Advanced image generation algorithms (e.g., diffusion models, autoregressive generative models)
 - Robust image restoration techniques in challenging real-world conditions
 - Applications of multimodal large language models (MLLM) in image processing
 
-My research focuses on addressing practical challenges in artificial intelligence and leveraging advanced machine learning approaches to improve real-world applications.
+My research focuses on addressing practical challenges in artificial intelligence and applying cutting-edge machine learning methods to real-world applications.
+
+<br>
 
 ---
 
 ## News and Updates
 
-- **September 2024**: Began my Master of Philosophy program in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou).
-- **August 2022**: Awarded the National First Prize at the RoboMaster University Championship as part of my team.
-- **June 2023**: Granted a patent for an automatic focusing system based on depth vision and target detection.
+<div class="scrollable-news">
+ <ul>
+  <li><strong>Sept. 2024:</strong> Began my MPhil program in Data Science and Analytics at HKUST (Guangzhou).</li>
+  <li><strong>Aug. 2022:</strong> Awarded the National First Prize at the RoboMaster University Championship as a technical team member.</li>
+  <li><strong>Jun. 2023:</strong> Granted a patent for an automatic focusing system based on depth vision and target detection.</li>
+ </ul>
+</div>
 
 <br>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thrilled to be an AAAI-UC Scholar at <a href="https://twitter.com/hashtag/AAAI24?src=hash&amp;ref_src=twsrc%5Etfw">#AAAI24</a>, thanks to <a href="https://twitter.com/hashtag/AAAI?src=hash&amp;ref_src=twsrc%5Etfw">#AAAI</a> &amp; <a href="https://twitter.com/hashtag/GoogleExploreCSR?src=hash&amp;ref_src=twsrc%5Etfw">#GoogleExploreCSR</a> for the sponsorship. Grateful for the knowledge gained and new friendships formed.<br><br>Wonderful trip in Vancouver. Looking forward to staying connected with all.<a href="https://twitter.com/hashtag/AAAI24?src=hash&amp;ref_src=twsrc%5Etfw">#AAAI24</a> <a href="https://twitter.com/hashtag/Vancouver?src=hash&amp;ref_src=twsrc%5Etfw">#Vancouver</a> <a href="https://twitter.com/hashtag/GoogleExploreCSR?src=hash&amp;ref_src=twsrc%5Etfw">#GoogleExploreCSR</a> <a href="https://t.co/wUQUp8XlSM">pic.twitter.com/wUQUp8XlSM</a></p>&mdash; Hanlin CAI (seeking a PhD position 2025) (@lancecai2002) <a href="https://twitter.com/lancecai2002/status/1762210025173344260?ref_src=twsrc%5Etfw">February 26, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+---
 
+## Projects
+
+- **Auto-Focus-Assistant:**  
+  An independent R&D project that leverages depth cameras and advanced computer vision techniques to deliver an efficient auto-focus system. The system processes both spatial depth and RGB data—utilizing YolofastestV2 for object detection—and supports multiple focusing modes (manual, automatic, continuous tracking), demonstrating a practical application of advanced image processing in real time.
+
+<br>
+
+---
+
+## Awards
+
+- **Patent (Jun. 2023):** Inventor of an automatic focusing system based on depth vision and target detection (Patent CN219268990U).
+- **National First Prize (Aug. 2022):** Awarded as a technical team member in the RoboMaster University Championship.
+
+<br>
+
+<script>
+// Mouse particle effect
+document.addEventListener('DOMContentLoaded', function() {
+  function createParticle(x, y, size) {
+    const particle = document.createElement('div');
+    particle.className = 'mouse-particle';
+    const actualSize = size * (0.5 + Math.random() * 0.5);
+    particle.style.width = actualSize + 'px';
+    particle.style.height = actualSize + 'px';
+    const hue = Math.floor(Math.random() * 360);
+    particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
+    particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
+    particle.style.left = x + 'px';
+    particle.style.top = y + 'px';
+    document.body.appendChild(particle);
+    setTimeout(() => {
+      particle.style.opacity = '0';
+      particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
+      particle.style.transition = 'all 0.6s ease-out';
+      setTimeout(() => {
+        document.body.removeChild(particle);
+      }, 600);
+    }, 10);
+  }
+  
+  let lastX = 0, lastY = 0, throttle = false;
+  document.addEventListener('mousemove', function(e) {
+    if (throttle) return;
+    throttle = true;
+    setTimeout(() => { throttle = false; }, 10);
+    const x = e.clientX, y = e.clientY;
+    const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
+    const size = Math.min(16, Math.max(5, speed * 0.4));
+    createParticle(x, y, size);
+    lastX = x; lastY = y;
+  });
+});
+</script>
+
+---
