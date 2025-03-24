@@ -97,7 +97,7 @@ If you are interested in my work or research, feel free to contact me.
 ## Education
 
 - **Sept. 2024 – Present:** The Hong Kong University of Science and Technology (Guangzhou)  
-  *Master of Philosophy in Data Science and Analytics*
+  *Master of Philosophy in Data Science and Analytics (DSA)*
 - **Sept. 2020 – June 2024:** South China University of Technology  
   *Bachelor of Engineering in Automation*
 
@@ -107,7 +107,7 @@ If you are interested in my work or research, feel free to contact me.
 
 ## Research Interests
 
-- Advanced image generation algorithms (e.g., diffusion models, autoregressive generative models)
+- Advanced AIGC algorithms (e.g., diffusion models, autoregressive generative models)
 - Robust image restoration techniques in challenging real-world conditions
 - Applications of multimodal large language models (MLLM) in image processing
 
@@ -133,8 +133,17 @@ My research focuses on addressing practical challenges in artificial intelligenc
 
 ## Projects
 
+- **Gait Face Fusion Recognition System Based on Multi Perspective Collaboration:**  
+  A national-level project developing a multi-person gait recognition system with a visual interface that integrates facial and gait features. I led the design and implementation of the occlusion gait restoration module to significantly improve recognition accuracy.
+
 - **Auto-Focus-Assistant:**  
-  An independent R&D project that leverages depth cameras and advanced computer vision techniques to deliver an efficient auto-focus system. The system processes both spatial depth and RGB data—utilizing YolofastestV2 for object detection—and supports multiple focusing modes (manual, automatic, continuous tracking), demonstrating a practical application of advanced image processing in real time.
+  An independent R&D project leveraging depth cameras and advanced computer vision techniques to deliver an efficient auto-focus system. It processes both spatial depth and RGB data via YolofastestV2 for object detection, supporting multiple focusing modes (manual, automatic, continuous tracking).
+
+- **Original Aspiration: RoboMaster Short Film Project:**  
+  A team-driven filmmaking project where I served as the team leader, overseeing screenwriting, directing, cinematography, and post-production. The short film documents the journey of preparing for a robotics competition and has received positive attention.
+
+- **National College Student Robot Competition (RoboMaster University Championship):**  
+  A robotics contest in which I participated as a UAV team member; responsible for designing and developing the target detection system, assisting in debugging and flight testing, as well as maintaining the robot vision repository.
 
 <br>
 
