@@ -263,3 +263,5 @@ html{font-size:112.5%;}
 .related-articles{display:inline;float:left;width:37.5%;margin-left:33.333333333333336%;margin-right:29.166666666666668%;}
 .footer-wrap footer{display:inline;float:left;width:37.5%;margin-left:33.333333333333336%;margin-right:29.166666666666668%;}
 .article-author-top{display:inline;float:left;width:12.5%;margin-left:16.666666666666668%;}
+
+.post-title{font-weight:300;color:#226e93;font-family:Lato, sans-serif;font-size:2rem;margin:1rem 0;text-align:center}.post-authors{color:#226e93;font-family:Lato, sans-serif;text-align:center}.post-section{color:#226e93;font-family:Lato, sans-serif;font-size:1rem;margin-bottom:15px;margin-top:25px;font-weight:700}.post-img-group{display:flex;justify-content:center;align-items:center}.post-line{border-top:0.4rem solid #55657d;display:block;margin:0 auto 2rem;width:5rem}.post p{margin:0 0 1rem;text-align:justify}.post a:hover{text-decoration:underline}.post img{margin:0 3.5px 0.5rem}
