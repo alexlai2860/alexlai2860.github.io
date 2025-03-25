@@ -200,7 +200,7 @@ body {
     <tbody>
       <tr>
         <td style="width:35%;" class="image-wrapper" data-description="CVPR'25">
-          <img src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="SnowMaster">
+          <img src="https://alexlai2860.github.io/images/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
         </td>
         <td style="width:65%;" valign="middle" class="text-wrapper">
           <papertitle>
@@ -211,14 +211,14 @@ body {
           <br>
           <div>
             <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-            <span class="paper-tag tag-application">Multi-Model Feedback Optimization</span>
+            <span class="paper-tag tag-application">Multi-Model Preference Optimization</span>
           </div>
           Jianyu Lai*, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
           <br>
           <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2025
           <br>
-          <a href="https://Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-          <a href="https://Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+          <a href="https://alexlai2860.github.io" class="custom-link—paper">[Paper]</a>
+          <a href="https://alexlai2860.github.io" class="custom-link—code">[Code]</a>
         </td>
       </tr>
     </tbody>
