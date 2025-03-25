@@ -1,7 +1,7 @@
 ---
 layout: post1
 permalink: /SnowMaster/index.html #/publications.html
-title: SnowMaster
+title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization"
 ---
 
 
@@ -9,21 +9,17 @@ title: SnowMaster
 <!-- <h2 class="post-title" style="margin-bottom:20px;margin-top:7px;">Unified Removal of Raindrops and Rain Streaks</h2>  -->
 
 <div class="post-authors" style="margin-bottom:5px;">
-<a href="https://ephemeral182.github.io">Sixiang Chen</a><sup>1,3</sup>*&nbsp;&nbsp;&nbsp; <a href="https://owen718.github.io">Tian Ye</a><sup>1,3</sup>*&nbsp;&nbsp;&nbsp;
-<a href="https://noyii.github.io">Jinbin Bai</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
-<a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ">Erkang Chen</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
-Jun Shi<sup>4</sup>&nbsp;&nbsp;&nbsp;
-<a href="https://sites.google.com/site/indexlzhu/home">Lei Zhu</a><sup>1,5 ✉️</sup>&nbsp;&nbsp;&nbsp;
-<br>
-<sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)&nbsp;&nbsp;&nbsp;
-<sup>2</sup>National University of Singapore&nbsp;&nbsp;&nbsp;<br>
-<sup>3</sup>School of Ocean Information Engineering, Jimei University&nbsp;&nbsp;&nbsp;             
-<sup>4</sup>Xinjiang University&nbsp;&nbsp;&nbsp; 
-<sup>5</sup>The Hong Kong University of Science and Technology&nbsp;&nbsp;&nbsp;         
+  Jianyu Lai<sup>*</sup>, Sixiang Chen<sup>*, &#9828;</sup>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>
+</div>
+
+<div class="symbols-legend" style="margin: 15px 0; font-size: 1em; color: #555;">
+  <span style="margin-right: 20px;"><strong>*</strong> - Equal Contribution</span>
+  <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
+  <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
 </div>
 
 <div class="post-authors" style="margin-bottom:20px;">
-International Conference on Computer Vision <strong>(ICCV)</strong>, 2023
+  Computer Vision and Pattern Recognition (CVPR), 2025
 </div>
 
 
@@ -31,34 +27,33 @@ International Conference on Computer Vision <strong>(ICCV)</strong>, 2023
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <ul class="nav nav-pills nav-justified" style="box-shadow:0 0">
                         <li>
-                            <a href="https://arxiv.org/abs/2308.14153">
-                            <!-- <a href="https://arxiv.org/abs/2112.05504"> -->
-                            <img class="post-logo" src="https://ephemeral182.github.io/images/paper.jpg" height="50px">
-                                <h5><strong>arXiv</strong></h5>
+                            <a href="https://alexlai2860.github.io">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/paper.jpg" height="50px">
+                                <h5><strong>Paper</strong></h5>
                             </a>
                         </li>
                         <li>
-                             <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/">
-                            <img class="post-logo" src="https://ephemeral182.github.io/images/paper.jpg" height="50px">
-                                <h5><strong>ICCV 2023</strong></h5>
+                             <a href="https://alexlai2860.github.io">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/paper.jpg" height="50px">
+                                <h5><strong>CVPR 2025</strong></h5>
                             </a>
                         </li>
                         <li>
-                             <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/">
-                            <img class="post-logo" src="https://ephemeral182.github.io/images/datatset.jpg" height="50px">
+                             <a href="https://alexlai2860.github.io">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/dataset.jpg" height="50px">
                                 <h5><strong>Dataset</strong></h5>
                             </a>
                         </li>                        
                         <li>
-                            <a href="https://github.com/Ephemeral182/UDR-S2Former_deraining">
-                            <img class="post-logo" src="https://ephemeral182.github.io/images/github.png" height="50px">
+                            <a href="https://github.com/JianyuLai/SnowMaster">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/github.png" height="50px">
                                 <h5><strong>Code</strong></h5>
                             </a>
                         </li>
                         <li>
-                             <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/">
-                            <img class="post-logo" src="https://ephemeral182.github.io/images/supplementary.jpg" height="50px">
-                                <h5><strong>Supplementery</strong></h5>
+                             <a href="https://alexlai2860.github.io">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/supplementary.jpg" height="50px">
+                                <h5><strong>Supplementary</strong></h5>
                             </a>
                         </li>
                     </ul>
@@ -88,40 +83,19 @@ International Conference on Computer Vision <strong>(ICCV)</strong>, 2023
 
 
 <div style="background-color:#f0f1f3a6;">
-<h2 class="post-section" style="
-    padding-left: 25px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-">Abstract</h2>
-<p style="
-    padding: 25px;
-    padding-top: 10px;
-">In the real world, image degradations caused by rain often exhibit a combination of rain streaks and raindrops, thereby increasing the challenges of recovering the underlying clean image. Note that the rain streaks and raindrops have diverse shapes, sizes, and locations in the captured image, and thus modeling the correlation relationship between irregular degradations caused by rain artifacts is a necessary prerequisite for image deraining. 
-This paper aims to present an efficient and flexible mechanism to learn and model degradation relationships in a global view, thereby achieving a unified removal of intricate rain scenes. 
-To do so, we propose a <u>S</u>parse <u>S</u>ampling Trans<u>former</u> based on <u>U</u>ncertainty-<u>D</u>riven <u>R</u>anking, dubbed <strong>UDR-S<sup>2</sup>Former</strong>. 
-Compared to previous methods, our UDR-S<sup>2</sup>Former has three merits. First, it can adaptively sample relevant image degradation information to model underlying degradation relationships. 
-Second, explicit application of the uncertainty-driven ranking strategy can facilitate the network to attend to degradation features and understand the reconstruction process. 
-Finally, experimental results show that our UDR-S<sup>2</sup>Former clearly outperforms state-of-the-art methods for all benchmarks.</p>
-
+  <h2 class="post-section" style="padding-left: 25px; margin-bottom: 0px; padding-top: 20px;">Abstract</h2>
+  <p style="padding: 25px; padding-top: 10px;">
+    Snowfall presents significant challenges for visual data processing, necessitating specialized desnowing algorithms. However, existing models often fail to generalize effectively due to their heavy reliance on synthetic datasets. Furthermore, current real-world snowfall datasets are limited in scale and lack dedicated evaluation metrics designed specifically for snowfall degradation, thus hindering the effective integration of real snowy images into model training to reduce domain gaps.
+    To address these challenges, we first introduce RealSnow10K, a large-scale, high-quality dataset consisting of over 10,000 annotated real-world snowy images. In addition, we curate a preference dataset comprising 36,000 expert-ranked image pairs, enabling the adaptation of multimodal large language models (MLLMs) to better perceive snowy image quality through our innovative Multi-Model Preference Optimization (MMPO). Finally, we propose the <strong>SnowMaster</strong>, which employs MMPO-enhanced MLLM to perform accurate snowy image evaluation and pseudo-label filtering for semi-supervised training. Experiments demonstrate that SnowMaster delivers superior desnowing performance under real-world conditions.
+  </p>
 </div>
 
-<h2 class="post-section" style="
-    text-align: center;
-    padding-left: 25px;
-    margin-bottom: 10px;
-    padding-top: 20px;
-">Method</h2>
-<div style="box-shadow:3px 6px 13px 0px  rgba(0,0,0,0.5)">
+<h2 class="post-section" style="text-align: center; padding-left: 25px; margin-bottom: 10px; padding-top: 20px;">Method</h2>
+<div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5)">
   <div class="post-img-group">
-    <img class="post-img" style="max-width:100%" src="https://ephemeral182.github.io/images/uncertainty_map.png" alt="Left Image">
+    <img class="post-img" style="max-width:100%" src="https://alexlai2860.github.io/images/overview_cvpr2025_snowmaster.png" alt="Overall Framework">
   </div>
-
-
-<div class="post-img-group">
-    <img class="post-img" style="max-width:50%" src="https://ephemeral182.github.io/images/udr_overview1.png" alt="Left Image">
-    <img class="post-img" style="max-width:50%" src="https://ephemeral182.github.io/images/udr_overview2.png" alt="Right Image">
-  </div> 
-  </div>
+</div>
 
 <h2 class="post-section" style="
     text-align: center;
@@ -131,7 +105,7 @@ Finally, experimental results show that our UDR-S<sup>2</sup>Former clearly outp
 ">Quantitative Comparison</h2>
 <div style="box-shadow:3px 6px 13px 0px  rgba(0,0,0,0.5)">
   <div class="post-img-group">
-    <img class="post-img" style="max-width:100%;margin-bottom:0;" src="https://ephemeral182.github.io/images/metric.png"  alt="Left Image">
+    <img class="post-img" style="max-width:100%;margin-bottom:0;" src="https://alexlai2860.github.io/images/NRIQA_comparison.png"  alt="Left Image">
   </div>
   </div>
 
@@ -191,7 +165,7 @@ Finally, experimental results show that our UDR-S<sup>2</sup>Former clearly outp
 
 - <strong>RVSD</strong> contains a total of 110 pairs of videos. 
 - Each pair contains <strong>snowy</strong> and  <strong>hazy</strong> videos and corresponding snow-free and haze-free ground truth videos. 
-- We use a rendering engine (Unreal Engine 5) and various augmentation techniques to generate snow and haze with diverse and realistic physical properties. This results in more realistic and varied synthesized videos, which improve the model’s performance on real-world data. 
+- We use a rendering engine (Unreal Engine 5) and various augmentation techniques to generate snow and haze with diverse and realistic physical properties. This results in more realistic and varied synthesized videos, which improve the model's performance on real-world data. 
 
 
 
@@ -210,10 +184,9 @@ Finally, experimental results show that our UDR-S<sup>2</sup>Former clearly outp
 
 
 ```
-@inproceedings{chen2023deraining,
-  title={Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks},
-  author={Chen, Sixiang and Ye, Tian and Bai, Jinbin and Chen, Erkang and Shi, Jun and Zhu, Lei},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  year={2023}
+@inproceedings{lai2025snowmaster,
+  title={SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization},
+  author={Lai, Jianyu and Chen, Sixiang and Lin, Yunlong and Ye, Tian and Liu, Yun and Fei, Song and Xing, Zhaohu and Wu, Hongtao and Wang, Weiming and Zhu, Lei},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2025}
 }
-```
