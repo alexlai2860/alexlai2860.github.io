@@ -5,11 +5,20 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 ---
 
 
-<h2 class="post-title" style="margin-bottom:7px;margin-top:20px;font-weight:400;">Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks</h2>
+<h2 class="post-title" style="margin-bottom:7px;margin-top:20px;font-weight:400;">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</h2>
 <!-- <h2 class="post-title" style="margin-bottom:20px;margin-top:7px;">Unified Removal of Raindrops and Rain Streaks</h2>  -->
 
 <div class="post-authors" style="margin-bottom:5px;">
-  Jianyu Lai<sup>*</sup>, Sixiang Chen<sup>*, &#9828;</sup>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>
+  <a href="https://alexlai2860.github.io">Jianyu Lai</a><sup>1,*</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://ephemeral182.github.io">Sixiang Chen</a><sup>1,*, &#9828;</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://owen718.github.io">Tian Ye</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://sites.google.com/site/indexlzhu/home">Lei Zhu</a><sup>1,5,✉️</sup>
+  <br>
+  <sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)&nbsp;&nbsp;&nbsp;
+  <sup>2</sup>Xiamen University&nbsp;&nbsp;&nbsp;
+  <sup>3</sup>Southwestern University&nbsp;&nbsp;&nbsp;
+  <sup>4</sup>Hong Kong Metropolitan University&nbsp;&nbsp;&nbsp;
+  <sup>5</sup>The Hong Kong University of Science and Technology&nbsp;&nbsp;&nbsp;
 </div>
 
 <div class="symbols-legend" style="margin: 15px 0; font-size: 1em; color: #555;">
@@ -27,33 +36,34 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <ul class="nav nav-pills nav-justified" style="box-shadow:0 0">
                         <li>
-                            <a href="https://alexlai2860.github.io">
-                            <img class="post-logo" src="https://alexlai2860.github.io/images/paper.jpg" height="50px">
-                                <h5><strong>Paper</strong></h5>
+                            <a href="https://alexlai2860.github.io/SnowMaster/">
+                            <!-- <a href="https://arxiv.org/abs/2112.05504"> -->
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/logo/paper.jpg" height="50px">
+                                <h5><strong>arXiv</strong></h5>
                             </a>
                         </li>
                         <li>
-                             <a href="https://alexlai2860.github.io">
-                            <img class="post-logo" src="https://alexlai2860.github.io/images/paper.jpg" height="50px">
+                             <a href="https://alexlai2860.github.io/SnowMaster/">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/logo/paper.jpg" height="50px">
                                 <h5><strong>CVPR 2025</strong></h5>
                             </a>
                         </li>
                         <li>
-                             <a href="https://alexlai2860.github.io">
-                            <img class="post-logo" src="https://alexlai2860.github.io/images/dataset.jpg" height="50px">
+                             <a href="https://alexlai2860.github.io/SnowMaster/">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/logo/datatset.jpg" height="50px">
                                 <h5><strong>Dataset</strong></h5>
                             </a>
                         </li>                        
                         <li>
-                            <a href="https://github.com/JianyuLai/SnowMaster">
-                            <img class="post-logo" src="https://alexlai2860.github.io/images/github.png" height="50px">
+                            <a href="https://alexlai2860.github.io/SnowMaster/">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/logo/github.png" height="50px">
                                 <h5><strong>Code</strong></h5>
                             </a>
                         </li>
                         <li>
-                             <a href="https://alexlai2860.github.io">
-                            <img class="post-logo" src="https://alexlai2860.github.io/images/supplementary.jpg" height="50px">
-                                <h5><strong>Supplementary</strong></h5>
+                             <a href="https://alexlai2860.github.io/mypaper/cvpr2025_snowmaster/04956_supp.pdf">
+                            <img class="post-logo" src="https://alexlai2860.github.io/images/logo/supplementary.jpg" height="50px">
+                                <h5><strong>Supplementery</strong></h5>
                             </a>
                         </li>
                     </ul>
