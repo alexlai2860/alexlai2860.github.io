@@ -1,16 +1,228 @@
 ---
 layout: page
-permalink: /publications/index.html
+permalink: /publications/
 title: Publications
 ---
 
-> (†: equal contribution, ~: corresponding author)
+<style>
+/* 整体背景色 */
+body {
+  background-color: #f0f5fa;  /* 非常淡的蓝色背景 */
+}
 
-## Conference Paper
+/* 摘要部分样式 */
+.summary-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-size: 1em;
+}
 
-- **CVPR'25: SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization**  
-  **Authors:** Jianyu Lai†, Sixiang Chen†, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu.  
-  **Summary:** Motivated by the limited generalization of current desnowing models due to their reliance on synthetic data and the lack of large-scale real-world snowfall datasets, this work introduces RealSnow10K, a large-scale annotated high-quality real-world snowfall dataset, and a preference dataset with 36,000 expert-ranked pairs. Furthermore, the SnowMaster desnowing framework leverages MMPO-enhanced Q-instruct for semi-supervised training to improve real-world snow removal performance.
-  [PDF](https://Ephemeral182.github.io) | [Code](https://Ephemeral182.github.io)
+/* 摘要统计部分样式 */
+.summary-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+  font-size: 2.5em;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2196F3, #00BCD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* 论文标签及按钮样式 */
+.paper-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag-method {
+  background: linear-gradient(135deg, rgba(33,150,243,0.1), rgba(33,150,243,0.2));
+  color: #2196F3;
+  border: 1px solid rgba(33,150,243,0.3);
+}
+
+.tag-application {
+  background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(76,175,80,0.2));
+  color: #4CAF50;
+  border: 1px solid rgba(76,175,80,0.3);
+}
+
+.custom-link—paper,
+.custom-link—code,
+.custom-link—project {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  font-size: 0.85em;
+}
+
+.custom-link—paper {
+  color: #2196F3;
+  background: rgba(33,150,243,0.1);
+}
+
+.custom-link—code {
+  color: #4CAF50;
+  background: rgba(76,175,80,0.1);
+}
+
+/* 研究标签容器 */
+.research-tags-container {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.research-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tag-tech {
+  background: linear-gradient(135deg, #00695c10, #00695c20);
+  color: #00695c;
+  border: 1.5px solid #00695c40;
+}
+
+.tag-focus {
+  background: linear-gradient(135deg, #bf360c10, #bf360c20);
+  color: #bf360c;
+  border: 1.5px solid #bf360c40;
+}
+
+/* 表格与图片容器样式 */
+.year-section { margin: 50px 0; }
+.year-divider {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+.year-2025 { color: #4169E1; }
+
+.image-wrapper {
+  text-align: center;
+  padding: 5px;
+}
+.image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+}
+</style>
+
+<!-- 摘要部分 -->
+<div class="summary-section">
+  <h1>Publications</h1>
+  My research focuses on AI-generated content (AIGC) and advanced image restoration techniques.
+  <br><br>
+  I strive to develop robust solutions for real-world adverse conditions by leveraging multimodal large language models and innovative feedback optimization methods.
+  
+  <div class="research-tags-container">
+    <span class="research-tag tag-tech">MLLM</span>
+    <span class="research-tag tag-tech">Image Restoration</span>
+    <span class="research-tag tag-focus">Real-world Applications</span>
+  </div>
+
+  <div class="summary-stats">
+    <div class="stat-item">
+      <div class="stat-number">1</div>
+      <div class="stat-label">CVPR/Conferences</div>
+      <div class="stat-tooltip">
+        <strong>Publication:</strong><br>
+        • CVPR'25 SnowMaster Paper
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Selected Papers -->
+<h1>Selected Papers</h1>
+
+<!-- 符号说明 -->
+<div class="symbols-legend" style="margin: 15px 0; font-size: 1em; color: #555;">
+  <span style="margin-right: 20px;"><strong>*</strong> - Equal Contribution</span>
+  <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
+  <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
+</div>
+
+<!-- 2025年论文 -->
+<div class="year-section">
+  <div class="year-divider">
+    <h2 class="year-2025">2025</h2>
+  </div>
+  <table style="width:100%; border:0; border-collapse: separate; margin: auto;">
+    <tbody>
+      <tr>
+        <td style="width:35%;" class="image-wrapper" data-description="CVPR'25">
+          <img src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="SnowMaster">
+        </td>
+        <td style="width:65%;" valign="middle" class="text-wrapper">
+          <papertitle>
+            <strong>
+              SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization
+            </strong>
+          </papertitle>
+          <br>
+          <div>
+            <span class="paper-tag tag-method">MLLM for Image Restoration</span>
+            <span class="paper-tag tag-application">Multi-Model Feedback Optimization</span>
+          </div>
+          Jianyu Lai*, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
+          <br>
+          <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2025
+          <br>
+          <a href="https://Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
+          <a href="https://Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
