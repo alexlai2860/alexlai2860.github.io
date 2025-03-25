@@ -11,7 +11,13 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 <div class="post-authors" style="margin-bottom:5px;">
   <a href="https://alexlai2860.github.io">Jianyu Lai</a><sup>1,*</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://ephemeral182.github.io">Sixiang Chen</a><sup>1,*, &#9828;</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://lyl1015.github.io/">Yunlong Lin</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://owen718.github.io">Tian Ye</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+  Yun Liu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+  Song Fei</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://ge-xing.github.io/">Zhaohu Xing</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://hongtao-wu.github.io/">Hongtao Wu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+  Weiming Wang</a><sup>4</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://sites.google.com/site/indexlzhu/home">Lei Zhu</a><sup>1,5,✉️</sup>
   <br>
   <sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)&nbsp;&nbsp;&nbsp;
