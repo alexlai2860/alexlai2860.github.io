@@ -200,7 +200,7 @@ body {
     <tbody>
       <tr>
         <td style="width:35%;" class="image-wrapper" data-description="CVPR'25">
-          <img src="https://alexlai2860.github.io/images/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
+          <img src="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
         </td>
         <td style="width:65%;" valign="middle" class="text-wrapper">
           <papertitle>

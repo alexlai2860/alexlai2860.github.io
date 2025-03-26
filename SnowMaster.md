@@ -13,11 +13,11 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
   <a href="https://ephemeral182.github.io">Sixiang Chen</a><sup>1,*, &#9828;</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://lyl1015.github.io/">Yunlong Lin</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://owen718.github.io">Tian Ye</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
-  Yun Liu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
-  Song Fei</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+  Yun Liu<sup>3</sup>&nbsp;&nbsp;&nbsp;
+  Song Fei<sup>1</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://ge-xing.github.io/">Zhaohu Xing</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://hongtao-wu.github.io/">Hongtao Wu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
-  Weiming Wang</a><sup>4</sup>&nbsp;&nbsp;&nbsp;
+  Weiming Wang<sup>4</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://sites.google.com/site/indexlzhu/home">Lei Zhu</a><sup>1,5,✉️</sup>
   <br>
   <sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)&nbsp;&nbsp;&nbsp;
@@ -109,7 +109,8 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 <h2 class="post-section" style="text-align: center; padding-left: 25px; margin-bottom: 10px; padding-top: 20px;">Method</h2>
 <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5)">
   <div class="post-img-group">
-    <img class="post-img" style="max-width:100%" src="https://alexlai2860.github.io/images/overview_cvpr2025_snowmaster.png" alt="Overall Framework">
+    <!-- <img class="post-img" style="max-width:100%" src="https://alexlai2860.github.io/images/overview_cvpr2025_snowmaster.png" alt="Overall Framework"> -->
+    <img class="post-img" style="display: block; max-width:100%" src="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" alt="Overall Framework">
   </div>
 </div>
 
@@ -121,7 +122,7 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 ">Quantitative Comparison</h2>
 <div style="box-shadow:3px 6px 13px 0px  rgba(0,0,0,0.5)">
   <div class="post-img-group">
-    <img class="post-img" style="max-width:100%;margin-bottom:0;" src="https://alexlai2860.github.io/images/NRIQA_comparison.png"  alt="Left Image">
+    <img class="post-img" style="max-width:100%;margin-bottom:0;" src="https://alexlai2860.github.io/images/snowmaster/NRIQA_comparison.png"  alt="Left Image">
   </div>
   </div>
 
