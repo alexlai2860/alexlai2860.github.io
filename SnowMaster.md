@@ -78,16 +78,27 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 
 <div class="post-line"></div>
 
+<!--
 <div style="box-shadow:3px 6px 13px 0px  rgba(0,0,0,0.5)">
 <div class="post-img-group">
-    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://ephemeral182.github.io/images/real_gif1.gif" alt="Left Image"><!--&nbsp;&nbsp;!-->
+    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://ephemeral182.github.io/images/real_gif1.gif" alt="Left Image">
     <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://ephemeral182.github.io/images/real_gif2.gif" alt="Right Image">
   </div> 
   <div class="post-img-group">
     <img class="post-img" style="left:0;right:0;margin-bottom:0;width:100%" src="https://ephemeral182.github.io/images/350.gif" alt="Left Image">
   </div> 
   </div> 
+!-->
 
+<div style="box-shadow:3px 6px 13px 0px  rgba(0,0,0,0.5)">
+<div class="post-img-group">
+    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-2.gif" alt="Left Image"><!--&nbsp;&nbsp;!-->
+    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-3.gif" alt="Right Image">
+  </div> 
+  <div class="post-img-group">
+    <img class="post-img" style="left:0;right:0;margin-bottom:0;width:100%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-5.gif" alt="Left Image">
+  </div> 
+  </div> 
 
 
   <!-- <div class="post-img-group">
