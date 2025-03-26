@@ -163,9 +163,9 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 
  <div style="box-shadow:3px 6px 13px 0px  rgba(0,0,0,0.5)">  
 <div class="post-img-group">
+<!-- <iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="250"  src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2dfe347a-0a1f-11f0-9397-d93975fe8866"></iframe> -->
 <iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="250"  src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2dfe347a-0a1f-11f0-9397-d93975fe8866"></iframe>
-<iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="100%" height="556"  src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2dfe347a-0a1f-11f0-9397-d93975fe8866"></iframe>
-<!-- <iframe style="max-width:50%;margin-bottom:0px;text-align: right;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="250" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=209744e0-3ea4-11ee-b5bd-6595d9b17862"></iframe> -->
+<iframe style="max-width:50%;margin-bottom:0px;text-align: right;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="250" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=209744e0-3ea4-11ee-b5bd-6595d9b17862"></iframe>
 </div> 
 <div class="post-img-group">
 <iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="250"  src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c58fedd2-3f3d-11ee-b5bd-6595d9b17862"></iframe>
@@ -174,6 +174,8 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 <div class="post-img-group">
 <iframe style="max-width:100%;margin-bottom:0px;text-align: right;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="100%" height="371" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2ad2a594-3f3f-11ee-b5bd-6595d9b17862"></iframe>
 </div>
+<div class="post-img-group">
+<iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="100%" height="556"  src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2dfe347a-0a1f-11f0-9397-d93975fe8866"></iframe>
 </div>
 
 <!-- <div style="box-shadow:3px 6px 13px 0px  rgba(0,0,0,0.5)">
