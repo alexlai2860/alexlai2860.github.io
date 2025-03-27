@@ -82,11 +82,26 @@ body::before {
   z-index: 10000;
   transform: translate(-50%, -50%);
 }
+
+.profile-image {
+  aspect-ratio: 1.624;  /* 4724/2910 ≈ 1.624 */
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-image {
+    width: 100% !important;
+    max-width: 400px !important;
+    float: none !important;
+    margin: 1em auto !important;
+    display: block;
+  }
+}
 </style>
 
 # About Me
 
-<img src="assets/images/JianyuLai_img1_cut.jpg" class="floatpic" style="width: 43%; max-width: 540px; height: auto; float: right; margin-left: 1em;">
+<img src="assets/images/JianyuLai_img3&4.jpg" class="floatpic profile-image" style="width: 43%; max-width: 400px; height: auto; float: right; margin-left: 1.5em; margin-bottom: 1em; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. I earned my Bachelor's degree in Automation Engineering from South China University of Technology. I have participated in innovative projects in robotics and image processing – achieving a National First Prize at the RoboMaster University Championship and obtaining a patent for an automatic focusing system based on depth vision and target detection.
 
