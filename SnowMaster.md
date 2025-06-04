@@ -76,6 +76,9 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
     <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif_hq/gif_img2_6s_h264.gif" alt="Desnowing Result 1">
     <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif_hq/gif_img5_6s_h264.gif" alt="Desnowing Result 2">
   </div> 
+  <div class="post-img-group">
+    <img class="post-img" style="left:0;right:0;margin-bottom:0;width:100%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-5.gif" alt="Desnowing Result 3">
+  </div> 
 </div>
 
 <!-- Abstract 部分 -->
