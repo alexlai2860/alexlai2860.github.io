@@ -8,7 +8,7 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 
 <div class="post-authors" style="margin-bottom:5px;">
   <a href="https://alexlai2860.github.io">Jianyu Lai</a><sup>1,*</sup>&nbsp;&nbsp;&nbsp;
-  <a href="https://ephemeral182.github.io">Sixiang Chen</a><sup>1,*, &#9828;</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://ephemeral182.github.io">Sixiang Chen</a><sup>1,*</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://lyl1015.github.io/">Yunlong Lin</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://owen718.github.io">Tian Ye</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
   Yun Liu<sup>3</sup>&nbsp;&nbsp;&nbsp;
@@ -25,12 +25,6 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
   <sup>3</sup>Southwestern University<br>
   <sup>4</sup>Hong Kong Metropolitan University&nbsp;&nbsp;&nbsp;
   <sup>5</sup>The Hong Kong University of Science and Technology
-</div>
-
-<div class="symbols-legend" style="margin: 15px 0; font-size: 0.9em; color: #555;">
-  <span style="margin-right: 20px;"><strong>*</strong> - Equal Contribution</span>
-  <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
-  <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
 </div>
 
 <div class="post-authors" style="margin-bottom:20px; font-weight: bold;">
