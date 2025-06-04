@@ -35,9 +35,9 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
   <div class="col-md-8 col-md-offset-2 text-center">
     <ul class="nav nav-pills nav-justified" style="box-shadow:0 0">
       <li>
-        <a href="https://alexlai2860.github.io/SnowMaster/">
+        <a href="https://alexlai2860.github.io/mypaper/cvpr2025_snowmaster/SnowMasterfinalrelease.pdf">
           <img class="post-logo" src="https://alexlai2860.github.io/images/logo/paper.jpg" height="50px">
-          <h5><strong>arXiv</strong></h5>
+          <h5><strong>Paper</strong></h5>
         </a>
       </li>
       <li>
@@ -73,8 +73,8 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 <!-- 演示效果展示 -->
 <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 2em;">
   <div class="post-img-group">
-    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-2.gif" alt="Desnowing Result 1">
-    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-3.gif" alt="Desnowing Result 2">
+    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif_hq/gif_img2_6s_h264.gif" alt="Desnowing Result 1">
+    <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif_hq/gif_img5_6s_h264.gif" alt="Desnowing Result 2">
   </div> 
   <div class="post-img-group">
     <img class="post-img" style="left:0;right:0;margin-bottom:0;width:100%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-5.gif" alt="Desnowing Result 3">
