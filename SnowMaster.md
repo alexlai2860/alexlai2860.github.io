@@ -77,7 +77,7 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
     <img class="post-img" style="left:0;right:0;margin-bottom:0px;max-width:50%" src="https://alexlai2860.github.io/images/snowmaster/gif_hq/gif_img5_6s_h264.gif" alt="Desnowing Result 2">
   </div> 
   <div class="post-img-group">
-    <img class="post-img" style="left:0;right:0;margin-bottom:0;width:100%" src="https://alexlai2860.github.io/images/snowmaster/gif/gif-5.gif" alt="Desnowing Result 3">
+    <img class="post-img" style="left:0;right:0;margin-bottom:0;width:100%" src="https://alexlai2860.github.io/images/snowmaster/gif_hq/gif_img6_6s_h264_crop.gif" alt="Desnowing Result 3">
   </div> 
 </div>
 
@@ -111,14 +111,22 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
   </div>
 </div>
 
-<!-- Visual Comparison 部分 -->
+
+<!-- Method 部分 -->
 <h2 class="post-section" style="text-align: center; margin-bottom: 20px; padding-top: 20px;">Visual Comparison</h2>
+<div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 2em;">
+  <img class="post-img" style="display: block; max-width:100%; margin: 0;" src="https://alexlai2860.github.io/images/snowmaster/visual_comp_fix_Page1.png" alt="Visual Comparison 1">
+</div>
+
+
+<!-- Visual Comparison 部分 -->
+<h2 class="post-section" style="text-align: center; margin-bottom: 20px; padding-top: 20px;">More Examples</h2>
 
 <!-- 静态图片对比 -->
-<div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 1em;">
+<!-- <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 1em;">
   <div class="post-img-group">
-    <img class="post-img" style="max-width:100%;margin-bottom:2px;" src="https://alexlai2860.github.io/images/snowmaster/visual_comp_fix_Page1" alt="Visual Comparison 1">
-  </div>
+    <img class="post-img" style="max-width:100%;margin-bottom:2px;" src="https://alexlai2860.github.io/images/snowmaster/visual_comp_fix_Page1.png" alt="Visual Comparison 1">
+  </div> -->
   <!-- <div class="post-img-group">
     <img class="post-img" style="max-width:100%;margin-bottom:0;" src="https://ephemeral182.github.io/images/udr_visual3.png" alt="Visual Comparison 2">
   </div>
@@ -128,7 +136,7 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
   <div class="post-img-group">
     <img class="post-img" style="max-width:100%;margin-bottom:10px;" src="https://ephemeral182.github.io/images/udr_visual5.png" alt="Visual Comparison 4">
   </div> -->
-</div>
+<!-- </div> -->
 
 <!-- 交互式对比 -->
 <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 2em;">  
