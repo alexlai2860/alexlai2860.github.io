@@ -125,15 +125,15 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 <!-- 交互式对比 -->
 <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 2em;">  
   <div class="post-img-group">
-    <iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="280" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=400508fe-41d5-11f0-bb24-0936e1cb08fb"></iframe>
-    <iframe style="max-width:50%;margin-bottom:0px;text-align: right;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="280" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4d74d646-41d4-11f0-bb24-0936e1cb08fb"></iframe>
+    <iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="270" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=400508fe-41d5-11f0-bb24-0936e1cb08fb"></iframe>
+    <iframe style="max-width:50%;margin-bottom:0px;text-align: right;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="270" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4d74d646-41d4-11f0-bb24-0936e1cb08fb"></iframe>
   </div> 
   <div class="post-img-group">
-    <iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="280" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e371a146-41d0-11f0-bb24-0936e1cb08fb"></iframe>
-    <iframe style="max-width:50%;margin-bottom:0px;text-align: right;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="280" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=a393d210-41d5-11f0-bb24-0936e1cb08fb"></iframe>
+    <iframe style="max-width:50%;margin-top:0px;text-align: left;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="270" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e371a146-41d0-11f0-bb24-0936e1cb08fb"></iframe>
+    <iframe style="max-width:50%;margin-bottom:0px;text-align: right;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="50%" height="270" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=a393d210-41d5-11f0-bb24-0936e1cb08fb"></iframe>
   </div> 
   <div class="post-img-group">
-    <iframe style="max-width:100%;margin-bottom:0px;text-align: center;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="100%" height="530" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f9a47ab0-41d0-11f0-bb24-0936e1cb08fb"></iframe>
+    <iframe style="max-width:100%;margin-bottom:0px;text-align: center;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="100%" height="540" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f9a47ab0-41d0-11f0-bb24-0936e1cb08fb"></iframe>
   </div>
   <div class="post-img-group">
     <iframe style="width:100%; margin:0; padding:0; display:block;" frameborder="0" class="juxtapose" width="100%" height="450" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bd2752d4-0a2a-11f0-9397-d93975fe8866"></iframe>
@@ -150,3 +150,5 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2025}
 }
+```
+```
