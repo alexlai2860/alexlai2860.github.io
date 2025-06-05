@@ -115,28 +115,12 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
 <!-- Method 部分 -->
 <h2 class="post-section" style="text-align: center; margin-bottom: 20px; padding-top: 20px;">Visual Comparison</h2>
 <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 2em;">
-  <img class="post-img" style="display: block; max-width:100%; margin: 0;" src="https://alexlai2860.github.io/images/snowmaster/visual_comp_fix_Page1.png" alt="Visual Comparison 1">
+  <img class="post-img" style="display: block; max-width:100%; margin: 0;" src="https://alexlai2860.github.io/images/snowmaster/visual_comp_fix_Page1new.png" alt="Visual Comparison 1">
 </div>
 
 
 <!-- Visual Comparison 部分 -->
 <h2 class="post-section" style="text-align: center; margin-bottom: 20px; padding-top: 20px;">More Examples</h2>
-
-<!-- 静态图片对比 -->
-<!-- <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 1em;">
-  <div class="post-img-group">
-    <img class="post-img" style="max-width:100%;margin-bottom:2px;" src="https://alexlai2860.github.io/images/snowmaster/visual_comp_fix_Page1.png" alt="Visual Comparison 1">
-  </div> -->
-  <!-- <div class="post-img-group">
-    <img class="post-img" style="max-width:100%;margin-bottom:0;" src="https://ephemeral182.github.io/images/udr_visual3.png" alt="Visual Comparison 2">
-  </div>
-  <div class="post-img-group">
-    <img class="post-img" style="max-width:100%;margin-bottom:0;" src="https://ephemeral182.github.io/images/udr_visual4.png" alt="Visual Comparison 3">
-  </div>
-  <div class="post-img-group">
-    <img class="post-img" style="max-width:100%;margin-bottom:10px;" src="https://ephemeral182.github.io/images/udr_visual5.png" alt="Visual Comparison 4">
-  </div> -->
-<!-- </div> -->
 
 <!-- 交互式对比 -->
 <div style="box-shadow:3px 6px 13px 0px rgba(0,0,0,0.5); margin-bottom: 2em;">  
