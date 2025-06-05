@@ -35,13 +35,7 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
   <div class="col-md-8 col-md-offset-2 text-center">
     <ul class="nav nav-pills nav-justified" style="box-shadow:0 0">
       <li>
-        <a href="https://alexlai2860.github.io/mypaper/cvpr2025_snowmaster/SnowMasterfinalrelease.pdf">
-          <img class="post-logo" src="https://alexlai2860.github.io/images/logo/paper.jpg" height="50px">
-          <h5><strong>Paper</strong></h5>
-        </a>
-      </li>
-      <li>
-        <a href="https://alexlai2860.github.io/SnowMaster/">
+        <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lai_SnowMaster_Comprehensive_Real-world_Image_Desnowing_via_MLLM_with_Multi-Model_Feedback_CVPR_2025_paper.pdf#:~:text=Finally%2C%20we%20propose%20the%20SnowMaster%2C%20which%20employs%20MMPO-enhanced,image%20evaluation%20and%20pseudo-label%20filtering%20for%20semi-supervised%20training.">
           <img class="post-logo" src="https://alexlai2860.github.io/images/logo/paper.jpg" height="50px">
           <h5><strong>CVPR 2025</strong></h5>
         </a>
@@ -136,19 +130,18 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
     <iframe style="max-width:100%;margin-bottom:0px;text-align: center;margin: 0;padding: 0;display: flex;" frameborder="0" class="juxtapose" width="100%" height="540" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f9a47ab0-41d0-11f0-bb24-0936e1cb08fb"></iframe>
   </div>
   <div class="post-img-group">
-    <iframe style="width:100%; margin:0; padding:0; display:block;" frameborder="0" class="juxtapose" width="100%" height="450" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bd2752d4-0a2a-11f0-9397-d93975fe8866"></iframe>
+    <iframe style="width:100%; margin:0; padding:0; display:block;" frameborder="0" class="juxtapose" width="100%" height="453" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bd2752d4-0a2a-11f0-9397-d93975fe8866"></iframe>
   </div>
 </div>
 
 <!-- Citation 部分 -->
 <h2 class="post-section" style="margin-top: 40px;">Citation</h2>
 
-```bibtex
+```
 @inproceedings{lai2025snowmaster,
   title={SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization},
   author={Lai, Jianyu and Chen, Sixiang and Lin, Yunlong and Ye, Tian and Liu, Yun and Fei, Song and Xing, Zhaohu and Wu, Hongtao and Wang, Weiming and Zhu, Lei},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2025}
 }
-```
 ```
