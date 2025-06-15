@@ -53,7 +53,7 @@ title: "SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi
         </a>
       </li>                        
       <li>
-        <a href="https://alexlai2860.github.io/SnowMaster/">
+        <a href="https://github.com/alexlai2860/SnowMaster">
           <img class="post-logo" src="https://alexlai2860.github.io/images/logo/github.png" height="50px">
           <h5><strong>Code</strong></h5>
         </a>
