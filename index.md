@@ -101,7 +101,7 @@ body::before {
 
 # About Me
 
-<img src="images/JianyuLai_img3_4.jpg" class="floatpic profile-image" style="width: 43%; max-width: 400px; height: auto; float: right; margin-left: 1.5em; margin-bottom: 1em; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="images/JianyuLai_img5_20250702.jpg" class="floatpic profile-image" style="width: 43%; max-width: 400px; height: auto; float: right; margin-left: 1.5em; margin-bottom: 1em; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. I earned my Bachelor's degree in Automation Engineering from South China University of Technology. During my undergraduate studies, I was a vision team member for the RoboMaster University Championship 2022, where our team won the National First Prize. Concurrently, I independently developed an automatic focusing system based on depth vision. Currently, as an MPhil student, I am involved in a Red Bird project focused on the Research and Development of More Capable and Intelligent UAV and Novel Applications.
 
