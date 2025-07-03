@@ -147,6 +147,8 @@ My research focuses on addressing practical challenges in artificial intelligenc
 
 <div class="scrollable-news">
  <ul>
+  <li><strong>Jun. 2025:</strong> We released our latest work, <em><a href="https://arxiv.org/abs/2506.10741" target="_blank">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</a></em>, on Arxiv.</li>
+  <li><strong>Mar. 2025:</strong> Luckily, our paper <em><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lai_SnowMaster_Comprehensive_Real-world_Image_Desnowing_via_MLLM_with_Multi-Model_Feedback_CVPR_2025_paper.pdf" target="_blank">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</a></em> was accepted by CVPR 2025.</li>
   <li><strong>Sept. 2024:</strong> Began my MPhil program in Data Science and Analytics at HKUST (Guangzhou).</li>
   <li><strong>Aug. 2022:</strong> Awarded the National First Prize at the RoboMaster University Championship as a technical team member.</li>
   <li><strong>Jun. 2023:</strong> Granted a patent for an automatic focusing system based on depth vision and target detection.</li>
