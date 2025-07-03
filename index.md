@@ -103,11 +103,20 @@ body::before {
 
 <img src="images/JianyuLai_img5_20250702.jpg" class="floatpic profile-image" style="width: 43%; max-width: 400px; height: auto; float: right; margin-left: 1.5em; margin-bottom: 1em; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
-My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. I earned my Bachelor's degree in Automation Engineering from South China University of Technology. During my undergraduate studies, I was a vision team member for the RoboMaster University Championship 2022, where our team won the National First Prize. Concurrently, I independently developed an automatic focusing system based on depth vision. Currently, as an MPhil student, I am involved in a Red Bird project focused on the Research and Development of More Capable and Intelligent UAV and Novel Applications.
+<!-- My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. I earned my Bachelor's degree in Automation Engineering from South China University of Technology. During my undergraduate studies, I was a vision team member for the RoboMaster University Championship 2022, where our team won the National First Prize. Concurrently, I independently developed an automatic focusing system based on depth vision. Currently, as an MPhil student, I am involved in a Red Bird project focused on the Research and Development of More Capable and Intelligent UAV and Novel Applications.
 
 My graduate studies have further fueled my strong interest in low-level vision and AIGC. I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas, including computational photography.
 
+If you are interested in my work or research, please feel free to contact me. -->
+
+<!-- My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. My graduate studies have further fueled my strong interest in low-level vision and AIGC. I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas, including computational photography.
+
+If you are interested in my work or research, please feel free to contact me. -->
+
+My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. During my graduate studies, I have developed a strong interest and focus on **low-level vision**, **computational photography**, and **AIGC** (Artificial Intelligence Generated Content). I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas. Notably, my recent work includes **Postercraft**, an end-to-end poster generation project that leverages cutting-edge AIGC techniques.
+
 If you are interested in my work or research, please feel free to contact me.
+
 
 <br>
 
