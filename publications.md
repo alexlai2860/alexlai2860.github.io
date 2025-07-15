@@ -102,6 +102,11 @@ body {
   background: rgba(76,175,80,0.1);
 }
 
+.custom-link—project {
+  color: #FF9800; /* 橙色 */
+  background: rgba(255,152,0,0.1); /* 淡橙色背景 */
+}
+
 /* 研究标签容器 */
 .research-tags-container {
   margin: 25px 0;
@@ -145,14 +150,37 @@ body {
 }
 .year-2025 { color: #4169E1; }
 
-.image-wrapper {
-  text-align: center;
-  padding: 5px;
+.publication-item {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  background-color: #fff; /* 添加底色 */
+  margin-bottom: 30px; /* 加大条目间距 */
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease; /* 动态效果过渡 */
+  overflow: hidden;
 }
-.image-wrapper img {
+
+.publication-item:hover {
+  transform: translateY(-5px); /* 鼠标悬停时上浮 */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* 增强阴影 */
+}
+
+.publication-item .image-wrapper {
+  flex: 0 0 35%; /* 固定图片区域宽度 */
+  padding: 20px;
+  text-align: center;
+}
+
+.publication-item .image-wrapper img {
   width: 100%;
   max-width: 100%;
   border-radius: 12px;
+}
+
+.publication-item .text-wrapper {
+  flex: 0 0 65%; /* 固定文本区域宽度 */
+  padding: 20px;
 }
 </style>
 
@@ -196,87 +224,86 @@ body {
   <div class="year-divider">
     <h2 class="year-2025">2025</h2>
   </div>
-  <table style="width:100%; border:0; border-collapse: separate; margin: auto;">
-    <tbody>
-      <!-- PosterCraft -->
-      <tr>
-        <td style="width:35%;" class="image-wrapper" data-description="arXiv'25">
-            <a href="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" target="_blank" title="Click to view full image">
-                <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterCraft">
-            </a>
-        </td>
-        <td style="width:65%;" valign="middle" class="text-wrapper">
-          <papertitle>
-            <strong>
-              🔥🔥🔥 PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
-            </strong>
-          </papertitle>
-          <br>
-          <div>
-            <span class="paper-tag tag-method">Unified Framework</span>
-            <span class="paper-tag tag-application">Aesthetic Poster Generation</span>
-          </div>
-          Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
-          <br>
-          <em>arXiv</em>, 2025
-          <br>
-          <a href="https://arxiv.org/abs/2506.10741" class="custom-link—paper">[Paper]</a>
-          <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link—code">[GitHub]</a>
-          <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link—project">[Project Website]</a>
-        </td>
-      </tr>
-      <!-- GenHaze -->
-      <tr>
-        <td style="width:35%;" class="image-wrapper" data-description="ICCV'25">
-            <a href="https://ephemeral182.github.io/images/genhaze/teaser2.png" target="_blank" title="Click to view full image">
-                <img src="https://ephemeral182.github.io/images/genhaze/teaser2.png" alt="GenHaze">
-            </a>
-        </td>
-        <td style="width:65%;" valign="middle" class="text-wrapper">
-          <papertitle>
-            <strong>
-              GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing
-            </strong>
-          </papertitle>
-          <br>
-          <div>
-            <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-            <span class="paper-tag tag-application">Real-world Generalization, Plug and Play</span>
-          </div>
-          Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, <strong><u>Jianyu Lai</u></strong>, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
-          <br>
-          <em>International Conference on Computer Vision (ICCV)</em>, 2025
-          <br>
-          <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-        </td>
-      </tr>
-      <!-- SnowMaster -->
-      <tr>
-        <td style="width:35%;" class="image-wrapper" data-description="CVPR'25">
-          <img src="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
-        </td>
-        <td style="width:65%;" valign="middle" class="text-wrapper">
-          <papertitle>
-            <strong>
-              SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization
-            </strong>
-          </papertitle>
-          <br>
-          <div>
-            <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-            <span class="paper-tag tag-application">Multi-Model Preference Optimization</span>
-          </div>
-          <strong><u>Jianyu Lai*</u></strong>, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
-          <br>
-          <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2025
-          <br>
-          <a href="https://alexlai2860.github.io" class="custom-link—paper">[Paper]</a>
-          <a href="https://alexlai2860.github.io" class="custom-link—code">[Code]</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  
+  <!-- PosterCraft -->
+  <div class="publication-item">
+    <div class="image-wrapper" data-description="arXiv'25">
+        <a href="https://alexlai2860.github.io/images/postercraft.png" target="_blank" title="Click to view full image">
+            <img src="https://alexlai2860.github.io/images/postercraft.png" alt="PosterCraft">
+        </a>
+    </div>
+    <div class="text-wrapper">
+      <papertitle>
+        <strong>
+          🔥🔥🔥 PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
+        </strong>
+      </papertitle>
+      <br>
+      <div>
+        <span class="paper-tag tag-method">Unified Framework</span>
+        <span class="paper-tag tag-application">Aesthetic Poster Generation</span>
+      </div>
+      Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+      <br>
+      <em>arXiv</em>, 2025
+      <br>
+      <a href="https://arxiv.org/abs/2506.10741" class="custom-link—paper">[Paper]</a>
+      <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link—code">[GitHub]</a>
+      <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link—project">[Project Website]</a>
+    </div>
+  </div>
+
+  <!-- GenHaze -->
+  <div class="publication-item">
+    <div class="image-wrapper" data-description="ICCV'25">
+        <a href="https://alexlai2860.github.io/images/genhaze_teaser2.png" target="_blank" title="Click to view full image">
+            <img src="https://alexlai2860.github.io/images/genhaze_teaser2.png" alt="GenHaze">
+        </a>
+    </div>
+    <div class="text-wrapper">
+      <papertitle>
+        <strong>
+          GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing
+        </strong>
+      </papertitle>
+      <br>
+      <div>
+        <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
+        <span class="paper-tag tag-application">Real-world Generalization, Plug and Play</span>
+      </div>
+      Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, <strong><u>Jianyu Lai</u></strong>, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
+      <br>
+      <em>International Conference on Computer Vision (ICCV)</em>, 2025
+      <br>
+      <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
+      <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+    </div>
+  </div>
+
+  <!-- SnowMaster -->
+  <div class="publication-item">
+    <div class="image-wrapper" data-description="CVPR'25">
+      <img src="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
+    </div>
+    <div class="text-wrapper">
+      <papertitle>
+        <strong>
+          SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization
+        </strong>
+      </papertitle>
+      <br>
+      <div>
+        <span class="paper-tag tag-method">MLLM for Image Restoration</span>
+        <span class="paper-tag tag-application">Multi-Model Preference Optimization</span>
+      </div>
+      <strong><u>Jianyu Lai*</u></strong>, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
+      <br>
+      <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2025
+      <br>
+      <a href="https://alexlai2860.github.io" class="custom-link—paper">[Paper]</a>
+      <a href="https://alexlai2860.github.io" class="custom-link—code">[Code]</a>
+    </div>
+  </div>
 </div>
 
 ---
