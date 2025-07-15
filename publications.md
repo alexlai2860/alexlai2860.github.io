@@ -198,6 +198,60 @@ body {
   </div>
   <table style="width:100%; border:0; border-collapse: separate; margin: auto;">
     <tbody>
+      <!-- PosterCraft -->
+      <tr>
+        <td style="width:35%;" class="image-wrapper" data-description="arXiv'25">
+            <a href="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" target="_blank" title="Click to view full image">
+                <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterCraft">
+            </a>
+        </td>
+        <td style="width:65%;" valign="middle" class="text-wrapper">
+          <papertitle>
+            <strong>
+              🔥🔥🔥 PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
+            </strong>
+          </papertitle>
+          <br>
+          <div>
+            <span class="paper-tag tag-method">Unified Framework</span>
+            <span class="paper-tag tag-application">Aesthetic Poster Generation</span>
+          </div>
+          Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+          <br>
+          <em>arXiv</em>, 2025
+          <br>
+          <a href="https://arxiv.org/abs/2506.10741" class="custom-link—paper">[Paper]</a>
+          <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link—code">[GitHub]</a>
+          <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link—project">[Project Website]</a>
+        </td>
+      </tr>
+      <!-- GenHaze -->
+      <tr>
+        <td style="width:35%;" class="image-wrapper" data-description="ICCV'25">
+            <a href="https://ephemeral182.github.io/images/genhaze/teaser2.png" target="_blank" title="Click to view full image">
+                <img src="https://ephemeral182.github.io/images/genhaze/teaser2.png" alt="GenHaze">
+            </a>
+        </td>
+        <td style="width:65%;" valign="middle" class="text-wrapper">
+          <papertitle>
+            <strong>
+              GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing
+            </strong>
+          </papertitle>
+          <br>
+          <div>
+            <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
+            <span class="paper-tag tag-application">Real-world Generalization, Plug and Play</span>
+          </div>
+          Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, <strong><u>Jianyu Lai</u></strong>, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
+          <br>
+          <em>International Conference on Computer Vision (ICCV)</em>, 2025
+          <br>
+          <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
+          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+        </td>
+      </tr>
+      <!-- SnowMaster -->
       <tr>
         <td style="width:35%;" class="image-wrapper" data-description="CVPR'25">
           <img src="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
@@ -213,7 +267,7 @@ body {
             <span class="paper-tag tag-method">MLLM for Image Restoration</span>
             <span class="paper-tag tag-application">Multi-Model Preference Optimization</span>
           </div>
-          Jianyu Lai*, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
+          <strong><u>Jianyu Lai*</u></strong>, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
           <br>
           <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2025
           <br>
