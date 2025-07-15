@@ -181,6 +181,7 @@ body {
 .publication-item .text-wrapper {
   flex: 0 0 65%; /* 固定文本区域宽度 */
   padding: 20px;
+  overflow-wrap: break-word; /* 确保长文本换行 */
 }
 </style>
 
