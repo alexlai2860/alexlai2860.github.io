@@ -183,6 +183,17 @@ body {
   padding: 20px;
   overflow-wrap: break-word; /* 确保长文本换行 */
 }
+
+/* 新增作者和会议信息样式 */
+.pub-authors {
+  font-size: 0.9em; /* 减小作者列表字体大小 */
+  margin-bottom: 5px; /* 增加作者列表下方间距 */
+}
+
+.pub-venue {
+  font-style: italic;
+  margin-top: 5px; /* 增加会议信息上方间距 */
+}
 </style>
 
 <!-- 摘要部分 -->
@@ -229,8 +240,8 @@ body {
   <!-- PosterCraft -->
   <div class="publication-item">
     <div class="image-wrapper" data-description="arXiv'25">
-        <a href="https://alexlai2860.github.io/images/postercraft.png" target="_blank" title="Click to view full image">
-            <img src="https://alexlai2860.github.io/images/postercraft.png" alt="PosterCraft">
+        <a href="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" target="_blank" title="Click to view full image">
+            <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterCraft">
         </a>
     </div>
     <div class="text-wrapper">
@@ -244,21 +255,23 @@ body {
         <span class="paper-tag tag-method">Unified Framework</span>
         <span class="paper-tag tag-application">Aesthetic Poster Generation</span>
       </div>
-      Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
-      <br>
-      <em>arXiv</em>, 2025
-      <br>
-      <a href="https://arxiv.org/abs/2506.10741" class="custom-link—paper">[Paper]</a>
-      <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link—code">[GitHub]</a>
-      <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link—project">[Project Website]</a>
+      <div class="pub-authors">
+        Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+      </div>
+      <div class="pub-venue"><em>arXiv</em>, 2025</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2506.10741" class="custom-link—paper">[Paper]</a>
+        <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link—code">[GitHub]</a>
+        <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link—project">[Project Website]</a>
+      </div>
     </div>
   </div>
 
   <!-- GenHaze -->
   <div class="publication-item">
     <div class="image-wrapper" data-description="ICCV'25">
-        <a href="https://alexlai2860.github.io/images/genhaze_teaser2.png" target="_blank" title="Click to view full image">
-            <img src="https://alexlai2860.github.io/images/genhaze_teaser2.png" alt="GenHaze">
+        <a href="https://ephemeral182.github.io/images/genhaze/teaser2.png" target="_blank" title="Click to view full image">
+            <img src="https://ephemeral182.github.io/images/genhaze/teaser2.png" alt="GenHaze">
         </a>
     </div>
     <div class="text-wrapper">
@@ -272,12 +285,14 @@ body {
         <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
         <span class="paper-tag tag-application">Real-world Generalization, Plug and Play</span>
       </div>
-      Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, <strong><u>Jianyu Lai</u></strong>, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
-      <br>
-      <em>International Conference on Computer Vision (ICCV)</em>, 2025
-      <br>
-      <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-      <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+      <div class="pub-authors">
+        Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, <strong><u>Jianyu Lai</u></strong>, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
+      </div>
+      <div class="pub-venue"><em>International Conference on Computer Vision (ICCV)</em>, 2025</div>
+      <div class="pub-links">
+        <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
+        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+      </div>
     </div>
   </div>
 
@@ -297,12 +312,14 @@ body {
         <span class="paper-tag tag-method">MLLM for Image Restoration</span>
         <span class="paper-tag tag-application">Multi-Model Preference Optimization</span>
       </div>
-      <strong><u>Jianyu Lai*</u></strong>, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
-      <br>
-      <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2025
-      <br>
-      <a href="https://alexlai2860.github.io" class="custom-link—paper">[Paper]</a>
-      <a href="https://alexlai2860.github.io" class="custom-link—code">[Code]</a>
+      <div class="pub-authors">
+        <strong><u>Jianyu Lai*</u></strong>, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, Lei Zhu<sup>✉️</sup>.
+      </div>
+      <div class="pub-venue"><em>Computer Vision and Pattern Recognition (CVPR)</em>, 2025</div>
+      <div class="pub-links">
+        <a href="https://alexlai2860.github.io" class="custom-link—paper">[Paper]</a>
+        <a href="https://alexlai2860.github.io" class="custom-link—code">[Code]</a>
+      </div>
     </div>
   </div>
 </div>
