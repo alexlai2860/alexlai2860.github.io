@@ -133,12 +133,9 @@ If you are interested in my work or research, please feel free to contact me.
 
 ## Research Interests
 
-- **AIGC and Generative Models:** Advanced diffusion models, autoregressive generative models, and their applications in poster generation and aesthetic content creation
-- **Low-level Computer Vision:** Image restoration in challenging real-world conditions (desnowing, dehazing), computational photography
-- **Multimodal Large Language Models (MLLM):** Applications in image processing, multi-model feedback optimization, and vision-language understanding
-- **Real-world AI Applications:** Bridging the gap between research and practical deployment in adverse environmental conditions
-
-My research focuses on developing robust AI solutions that can handle real-world challenges, particularly in computer vision and generative AI applications.
+- Researching Advanced AIGC algorithms and their applications, such as photography generation, poster generation, text generation, and image editing.
+- Developing robust and generalizable solutions for degraded image restoration, particularly in complex real-world scenarios.
+- Exploring multimodal large language models (MLLM) for image processing and evaluation.
 
 <br>
 
@@ -157,7 +154,7 @@ My research focuses on developing robust AI solutions that can handle real-world
  </ul>
 </div>
 
-<br>
+<!-- <br>
 
 ---
 
@@ -175,7 +172,7 @@ My research focuses on developing robust AI solutions that can handle real-world
 - **National College Student Robot Competition (RoboMaster University Championship):**  
   A robotics contest in which I participated as a UAV team member; responsible for designing and developing the target detection system, assisting in debugging and flight testing, as well as maintaining the robot vision repository.
 
-<br>
+<br> -->
 
 ---
 
