@@ -182,6 +182,7 @@ body {
   flex: 0 0 65%; /* 固定文本区域宽度 */
   padding: 20px;
   overflow-wrap: break-word; /* 确保长文本换行 */
+  min-width: 0; /* 允许 flex item 收缩以适应容器 */
 }
 
 /* 新增作者和会议信息样式 */
