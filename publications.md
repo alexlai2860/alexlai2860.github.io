@@ -152,12 +152,14 @@ body {
 
 .publication-item {
   display: flex;
-  align-items: center; /* 垂直居中对齐 */
-  background-color: #fff; /* 添加底色 */
-  margin-bottom: 30px; /* 加大条目间距 */
+  /* 新增：允许子项在空间不足时换行 */
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: all 0.3s ease; /* 动态效果过渡 */
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 
@@ -167,7 +169,8 @@ body {
 }
 
 .publication-item .image-wrapper {
-  flex: 0 0 35%; /* 固定图片区域宽度 */
+  /* 允许在换行时保持35%基准并可收缩 */
+  flex: 1 1 35%;
   padding: 20px;
   text-align: center;
 }
@@ -179,10 +182,13 @@ body {
 }
 
 .publication-item .text-wrapper {
-  flex: 0 0 60%; /* 固定文本区域宽度 */
+  /* 允许在换行时保持55%基准并可收缩 */
+  flex: 1 1 55%;
   padding: 20px;
-  overflow-wrap: break-word; /* 确保长文本换行 */
-  min-width: 0; /* 允许 flex item 收缩以适应容器 */
+  overflow-wrap: break-word;
+  min-width: 0;
+  /* 强制在单词或长串字符处断行，避免超出容器 */
+  word-break: break-word;
 }
 
 /* 新增作者和会议信息样式 */
