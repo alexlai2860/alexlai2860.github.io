@@ -179,7 +179,7 @@ body {
 }
 
 .publication-item .text-wrapper {
-  flex: 0 0 65%; /* 固定文本区域宽度 */
+  flex: 0 0 60%; /* 固定文本区域宽度 */
   padding: 20px;
   overflow-wrap: break-word; /* 确保长文本换行 */
   min-width: 0; /* 允许 flex item 收缩以适应容器 */
