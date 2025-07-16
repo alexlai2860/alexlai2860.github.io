@@ -210,7 +210,7 @@ body {
     <span class="research-tag tag-focus">Real-world Applications</span>
   </div>
 
-  <div class="summary-stats">
+  <!-- <div class="summary-stats">
     <div class="stat-item">
       <div class="stat-number">1</div>
       <div class="stat-label">CVPR/Conferences</div>
@@ -219,7 +219,7 @@ body {
         • CVPR'25 SnowMaster Paper
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <!-- Selected Papers -->
@@ -228,7 +228,7 @@ body {
 <!-- 符号说明 -->
 <div class="symbols-legend" style="margin: 15px 0; font-size: 1em; color: #555;">
   <span style="margin-right: 20px;"><strong>*</strong> - Equal Contribution</span>
-  <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
+  <!-- <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span> -->
   <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
 </div>
 
