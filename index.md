@@ -133,11 +133,12 @@ If you are interested in my work or research, please feel free to contact me.
 
 ## Research Interests
 
-- Advanced AIGC algorithms (e.g., diffusion models, autoregressive generative models)
-- Robust image restoration techniques in challenging real-world conditions
-- Applications of multimodal large language models (MLLM) in image processing
+- **AIGC and Generative Models:** Advanced diffusion models, autoregressive generative models, and their applications in poster generation and aesthetic content creation
+- **Low-level Computer Vision:** Image restoration in challenging real-world conditions (desnowing, dehazing), computational photography
+- **Multimodal Large Language Models (MLLM):** Applications in image processing, multi-model feedback optimization, and vision-language understanding
+- **Real-world AI Applications:** Bridging the gap between research and practical deployment in adverse environmental conditions
 
-My research focuses on addressing practical challenges in artificial intelligence and applying cutting-edge machine learning methods to real-world applications.
+My research focuses on developing robust AI solutions that can handle real-world challenges, particularly in computer vision and generative AI applications.
 
 <br>
 
@@ -147,6 +148,7 @@ My research focuses on addressing practical challenges in artificial intelligenc
 
 <div class="scrollable-news">
  <ul>
+  <li><strong>Jun. 2025:</strong> Our work <em><a href="https://ephemeral182.github.io/GenHaze/" target="_blank">GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing</a></em> has been accepted by ICCV 2025!</li>
   <li><strong>Jun. 2025:</strong> We released our latest work, <em><a href="https://arxiv.org/abs/2506.10741" target="_blank">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</a></em>, on Arxiv.</li>
   <li><strong>Mar. 2025:</strong> Luckily, our paper <em><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lai_SnowMaster_Comprehensive_Real-world_Image_Desnowing_via_MLLM_with_Multi-Model_Feedback_CVPR_2025_paper.pdf" target="_blank">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</a></em> was accepted by CVPR 2025.</li>
   <li><strong>Sept. 2024:</strong> Began my MPhil program in Data Science and Analytics at HKUST (Guangzhou).</li>
