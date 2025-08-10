@@ -83,6 +83,112 @@ body::before {
   transform: translate(-50%, -50%);
 }
 
+/* Research Interests fancy styling */
+.research-interests-container {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.research-interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.research-card {
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.research-card:hover::before {
+  left: 100%;
+}
+
+.research-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 2px solid #4a90e2;
+}
+
+.research-card-icon {
+  font-size: 2.5em;
+  margin-bottom: 16px;
+  display: block;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.research-card:hover .research-card-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.research-card-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #2c5aa0;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.research-card-content {
+  color: #4a4a4a;
+  line-height: 1.6;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+.research-interests-title {
+  text-align: center;
+  font-size: 2.2em;
+  color: #2c5aa0;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.research-interests-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a90e2, #5ba3f5);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .research-interests-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .research-card {
+    padding: 20px;
+  }
+  
+  .research-interests-title {
+    font-size: 1.8em;
+  }
+}
+
 .profile-image {
   aspect-ratio: 1.624;  /* 4724/2910 ≈ 1.624 */
   object-fit: cover;
@@ -113,7 +219,7 @@ If you are interested in my work or research, please feel free to contact me. --
 
 If you are interested in my work or research, please feel free to contact me. -->
 
-My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. During my graduate studies, I have developed a strong interest and focus on **low-level vision**, **computational photography**, and **AIGC** (Artificial Intelligence Generated Content). I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas. Notably, my recent work includes **Postercraft**, an end-to-end poster generation project that leverages cutting-edge AIGC techniques.
+My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. During my graduate studies, I have developed a strong interest and focus on **low-level vision**, **MLLM**, and **AIGC** . I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas. My recent work includes **Postercraft**, an end-to-end poster generation framework that leverages cutting-edge AIGC techniques.
 
 If you are interested in my work or research, please feel free to contact me.
 
@@ -122,9 +228,9 @@ If you are interested in my work or research, please feel free to contact me.
 
 ## Education
 
-- **Sept. 2024 – Present:** The Hong Kong University of Science and Technology (Guangzhou)  
+- **Sep. 2024 – Jun 2026:** The Hong Kong University of Science and Technology (Guangzhou)  
   *Master of Philosophy in Data Science and Analytics (DSA)*
-- **Sept. 2020 – June 2024:** South China University of Technology  
+- **Sep. 2020 – Jun 2024:** South China University of Technology  
   *Bachelor of Engineering in Automation*
 
 <br>
@@ -133,9 +239,34 @@ If you are interested in my work or research, please feel free to contact me.
 
 ## Research Interests
 
-- Researching Advanced AIGC algorithms and their applications, such as photography generation, poster generation, text generation, and image editing.
-- Developing robust and generalizable solutions for degraded image restoration, particularly in complex real-world scenarios.
-- Exploring multimodal large language models (MLLM) for image processing and evaluation.
+<div class="research-interests-container">
+  <div class="research-interests-title">Research Interests</div>
+  <div class="research-interests-grid">
+    <div class="research-card" onclick="highlightCard(this)">
+      <div class="research-card-icon">🎨</div>
+      <div class="research-card-title">Advanced AIGC</div>
+      <div class="research-card-content">
+        Researching Advanced AIGC algorithms and their applications, such as photography generation, poster generation, text generation, and image editing.
+      </div>
+    </div>
+    
+    <div class="research-card" onclick="highlightCard(this)">
+      <div class="research-card-icon">🔧</div>
+      <div class="research-card-title">Image Restoration</div>
+      <div class="research-card-content">
+        Developing robust and generalizable solutions for degraded image restoration, particularly in complex real-world scenarios.
+      </div>
+    </div>
+    
+    <div class="research-card" onclick="highlightCard(this)">
+      <div class="research-card-icon">🧠</div>
+      <div class="research-card-title">Multimodal LLMs</div>
+      <div class="research-card-content">
+        Exploring multimodal large language models (MLLM) for image processing and evaluation.
+      </div>
+    </div>
+  </div>
+</div>
 
 <br>
 
@@ -220,6 +351,36 @@ document.addEventListener('DOMContentLoaded', function() {
     lastX = x; lastY = y;
   });
 });
+
+// Research card interaction
+function highlightCard(card) {
+  // Remove highlight from all cards
+  document.querySelectorAll('.research-card').forEach(c => {
+    c.style.background = 'linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%)';
+    c.style.border = '2px solid transparent';
+  });
+  
+  // Highlight clicked card
+  card.style.background = 'linear-gradient(135deg, #e8f4ff 0%, #d1e9ff 100%)';
+  card.style.border = '2px solid #4a90e2';
+  
+  // Add pulse effect
+  card.style.animation = 'pulse 0.6s';
+  setTimeout(() => {
+    card.style.animation = '';
+  }, 600);
+}
+
+// Add pulse animation
+const style = document.createElement('style');
+style.textContent = `
+@keyframes pulse {
+  0% { transform: translateY(-8px) scale(1.02); }
+  50% { transform: translateY(-12px) scale(1.05); }
+  100% { transform: translateY(-8px) scale(1.02); }
+}
+`;
+document.head.appendChild(style);
 </script>
 
 ---
