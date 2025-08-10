@@ -95,16 +95,37 @@ body {
 .custom-link—paper {
   color: #2196F3;
   background: rgba(33,150,243,0.1);
+  border: 1px solid rgba(33,150,243,0.2);
 }
 
 .custom-link—code {
   color: #4CAF50;
   background: rgba(76,175,80,0.1);
+  border: 1px solid rgba(76,175,80,0.2);
 }
 
 .custom-link—project {
-  color: #FF9800; /* 橙色 */
-  background: rgba(255,152,0,0.1); /* 淡橙色背景 */
+  color: #FF9800;
+  background: rgba(255,152,0,0.1);
+  border: 1px solid rgba(255,152,0,0.2);
+}
+
+.custom-link—paper:hover {
+  background: rgba(33,150,243,0.2);
+  border: 1px solid rgba(33,150,243,0.4);
+  transform: translateY(-1px);
+}
+
+.custom-link—code:hover {
+  background: rgba(76,175,80,0.2);
+  border: 1px solid rgba(76,175,80,0.4);
+  transform: translateY(-1px);
+}
+
+.custom-link—project:hover {
+  background: rgba(255,152,0,0.2);
+  border: 1px solid rgba(255,152,0,0.4);
+  transform: translateY(-1px);
 }
 
 /* 研究标签容器 */
@@ -206,13 +227,14 @@ body {
 <!-- 摘要部分 -->
 <div class="summary-section">
   <h1>Publications</h1>
-  My research focuses on AI-generated content (AIGC) and advanced image restoration techniques.
+  My research focuses on low-level vision, AI-generated content (AIGC), and multimodal large language models (MLLM).
   <br><br>
-  I strive to develop robust solutions for real-world adverse conditions by leveraging multimodal large language models and innovative feedback optimization methods.
+  I develop robust solutions for image restoration in real complex environments, explore AIGC applications for real-world scenarios, and investigate MLLM applications in image processing and evaluation.
   
   <div class="research-tags-container">
+    <span class="research-tag tag-tech">Low-level Vision</span>
+    <span class="research-tag tag-tech">AIGC</span>
     <span class="research-tag tag-tech">MLLM</span>
-    <span class="research-tag tag-tech">Image Restoration</span>
     <span class="research-tag tag-focus">Real-world Applications</span>
   </div>
 
@@ -293,12 +315,12 @@ body {
         <span class="paper-tag tag-application">Real-world Generalization, Plug and Play</span>
       </div>
       <div class="pub-authors">
-        Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, <strong><u>Jianyu Lai</u></strong>, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
+        Sixiang Chen, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, <strong><u>Jianyu Lai</u></strong>, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
       </div>
       <div class="pub-venue"><em>International Conference on Computer Vision (ICCV)</em>, 2025</div>
       <div class="pub-links">
-        <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+        <!-- <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a> -->
+        <!-- <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a> -->
       </div>
     </div>
   </div>

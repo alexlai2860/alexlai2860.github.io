@@ -100,13 +100,13 @@ body::before {
   background: linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%);
   border: 2px solid transparent;
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
   position: relative;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-  min-height: 180px;
+  min-height: 200px;
 }
 
 .research-card::before {
@@ -132,7 +132,7 @@ body::before {
 
 .research-card-icon {
   font-size: 1.8em;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   display: block;
   text-align: center;
   transition: transform 0.3s ease;
@@ -146,16 +146,16 @@ body::before {
   font-size: 1.1em;
   font-weight: bold;
   color: #2c5aa0;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   text-align: center;
   line-height: 1.2;
 }
 
 .research-card-content {
   color: #4a4a4a;
-  line-height: 1.4;
+  line-height: 1.6;
   text-align: left;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
 .research-interests-title {
@@ -248,7 +248,8 @@ If you are interested in my work or research, please feel free to contact me.
       <div class="research-card-icon">🔧</div>
       <div class="research-card-title">Low-level Vision</div>
       <div class="research-card-content">
-        Developing robust and generalizable solutions for degraded image restoration, particularly in complex real-world scenarios such as desnowing, dehazing, and other image enhancement tasks.
+        Image restoration problems in real complex environments;<br><br>
+        Computational photography combined with AIGC techniques.
       </div>
     </div>
     
@@ -256,7 +257,8 @@ If you are interested in my work or research, please feel free to contact me.
       <div class="research-card-icon">🎨</div>
       <div class="research-card-title">AIGC<br><small style="font-size: 0.7em; color: #666;">(AI Generated Content)</small></div>
       <div class="research-card-content">
-        Researching advanced AI Generated Content algorithms and their applications, including photography generation, poster generation, text generation, and image editing using cutting-edge generative models.
+        AIGC applications for real-world scenarios;<br><br>
+        Post-training of advanced generative models.
       </div>
     </div>
     
@@ -264,7 +266,8 @@ If you are interested in my work or research, please feel free to contact me.
       <div class="research-card-icon">🧠</div>
       <div class="research-card-title">MLLM<br><small style="font-size: 0.7em; color: #666;">(Multimodal Large Language Models)</small></div>
       <div class="research-card-content">
-        Exploring Multimodal Large Language Models for image processing, evaluation, and understanding, focusing on the integration of vision and language capabilities.
+        MLLM applications in image restoration and evaluation;<br><br>
+        Integration of MLLM with AIGC techniques.
       </div>
     </div>
   </div>
