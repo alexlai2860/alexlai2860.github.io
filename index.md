@@ -243,26 +243,26 @@ If you are interested in my work or research, please feel free to contact me.
   <div class="research-interests-title">Research Interests</div>
   <div class="research-interests-grid">
     <div class="research-card" onclick="highlightCard(this)">
-      <div class="research-card-icon">🎨</div>
-      <div class="research-card-title">Advanced AIGC</div>
+      <div class="research-card-icon">🔧</div>
+      <div class="research-card-title">Low-level Vision</div>
       <div class="research-card-content">
-        Researching Advanced AIGC algorithms and their applications, such as photography generation, poster generation, text generation, and image editing.
+        Developing robust and generalizable solutions for degraded image restoration, particularly in complex real-world scenarios such as desnowing, dehazing, and other image enhancement tasks.
       </div>
     </div>
     
     <div class="research-card" onclick="highlightCard(this)">
-      <div class="research-card-icon">🔧</div>
-      <div class="research-card-title">Image Restoration</div>
+      <div class="research-card-icon">🎨</div>
+      <div class="research-card-title">AIGC<br><small style="font-size: 0.7em; color: #666;">(AI Generated Content)</small></div>
       <div class="research-card-content">
-        Developing robust and generalizable solutions for degraded image restoration, particularly in complex real-world scenarios.
+        Researching advanced AI Generated Content algorithms and their applications, including photography generation, poster generation, text generation, and image editing using cutting-edge generative models.
       </div>
     </div>
     
     <div class="research-card" onclick="highlightCard(this)">
       <div class="research-card-icon">🧠</div>
-      <div class="research-card-title">Multimodal LLMs</div>
+      <div class="research-card-title">MLLM<br><small style="font-size: 0.7em; color: #666;">(Multimodal Large Language Models)</small></div>
       <div class="research-card-content">
-        Exploring multimodal large language models (MLLM) for image processing and evaluation.
+        Exploring Multimodal Large Language Models for image processing, evaluation, and understanding, focusing on the integration of vision and language capabilities.
       </div>
     </div>
   </div>
