@@ -91,21 +91,22 @@ body::before {
 
 .research-interests-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
   margin: 20px 0;
 }
 
 .research-card {
   background: linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%);
   border: 2px solid transparent;
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 12px;
+  padding: 16px;
   position: relative;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  min-height: 180px;
 }
 
 .research-card::before {
@@ -124,43 +125,44 @@ body::before {
 }
 
 .research-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
   border: 2px solid #4a90e2;
 }
 
 .research-card-icon {
-  font-size: 2.5em;
-  margin-bottom: 16px;
+  font-size: 1.8em;
+  margin-bottom: 8px;
   display: block;
   text-align: center;
   transition: transform 0.3s ease;
 }
 
 .research-card:hover .research-card-icon {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .research-card-title {
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: bold;
   color: #2c5aa0;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   text-align: center;
+  line-height: 1.2;
 }
 
 .research-card-content {
   color: #4a4a4a;
-  line-height: 1.6;
+  line-height: 1.4;
   text-align: left;
-  font-size: 0.95em;
+  font-size: 0.85em;
 }
 
 .research-interests-title {
   text-align: center;
   font-size: 2.2em;
   color: #2c5aa0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -177,11 +179,12 @@ body::before {
 @media screen and (max-width: 768px) {
   .research-interests-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
   }
   
   .research-card {
-    padding: 20px;
+    padding: 16px;
+    min-height: 160px;
   }
   
   .research-interests-title {
@@ -240,7 +243,6 @@ If you are interested in my work or research, please feel free to contact me.
 ## Research Interests
 
 <div class="research-interests-container">
-  <div class="research-interests-title">Research Interests</div>
   <div class="research-interests-grid">
     <div class="research-card" onclick="highlightCard(this)">
       <div class="research-card-icon">🔧</div>
