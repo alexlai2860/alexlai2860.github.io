@@ -68,6 +68,79 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
+
+/* 项目标签样式 */
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag-opensource {
+  background: linear-gradient(135deg, rgba(33,150,243,0.1), rgba(33,150,243,0.2));
+  color: #2196F3;
+  border: 1px solid rgba(33,150,243,0.3);
+}
+
+.tag-github {
+  background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(76,175,80,0.2));
+  color: #4CAF50;
+  border: 1px solid rgba(76,175,80,0.3);
+}
+
+.tag-video {
+  background: linear-gradient(135deg, rgba(255,152,0,0.1), rgba(255,152,0,0.2));
+  color: #FF9800;
+  border: 1px solid rgba(255,152,0,0.3);
+}
+
+/* 项目链接样式 */
+.project-links {
+  margin-top: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0 8px 8px 0;
+  transition: all 0.3s ease;
+  font-size: 0.85em;
+  border: 1px solid;
+}
+
+.link-github {
+  color: #4CAF50;
+  background: rgba(76,175,80,0.1);
+  border-color: rgba(76,175,80,0.2);
+}
+
+.link-video {
+  color: #FF9800;
+  background: rgba(255,152,0,0.1);
+  border-color: rgba(255,152,0,0.2);
+}
+
+.project-link:hover {
+  transform: translateY(-1px);
+}
+
+.link-github:hover {
+  background: rgba(76,175,80,0.2);
+  border-color: rgba(76,175,80,0.4);
+}
+
+.link-video:hover {
+  background: rgba(255,152,0,0.2);
+  border-color: rgba(255,152,0,0.4);
+}
 </style>
 
 <!-- 摘要部分 -->
@@ -98,20 +171,35 @@ body {
 <div class="project-item">
   <h3>Auto-Focus-Assistant</h3>
   <p><em>Duration: 2022.11 – 2023.6</em></p>
+  <div>
+    <span class="project-tag tag-opensource">🔓 Open Source</span>
+    <span class="project-tag tag-github">📦 GitHub</span>
+    <span class="project-tag tag-video">🎥 Demo</span>
+  </div>
   <p>
     An independent R&D project leveraging depth cameras and advanced computer vision techniques to deliver an efficient auto-focus system.
     The system processes spatial depth and RGB data using YolofastestV2 for object detection, supporting multiple focusing modes including manual, automatic, and continuous tracking.
   </p>
+  <div class="project-links">
+    <a href="https://github.com/alexlai2860/Auto-focus-assistant" class="project-link link-github" target="_blank">[GitHub Repository]</a>
+    <a href="https://www.bilibili.com/video/BV1Yh4y147x5/" class="project-link link-video" target="_blank">[Demo Video]</a>
+  </div>
 </div>
 
 <div class="project-item">
   <h3>Original Aspiration: RoboMaster Short Film Project</h3>
   <p><em>Duration: 2022.9 – 2023.1</em></p>
+  <div>
+    <span class="project-tag tag-video">🎬 Short Film</span>
+  </div>
   <p>
     A team-driven filmmaking project in which I served as the team leader.
     I managed screenplay, directing, cinematography, and post-production editing.
     The project documented the preparation for a robotics competition and received positive feedback.
   </p>
+  <div class="project-links">
+    <a href="https://www.bilibili.com/video/BV1MM411t7SY/" class="project-link link-video" target="_blank">[Watch Film]</a>
+  </div>
 </div>
 
 <div class="project-item">
@@ -122,9 +210,3 @@ body {
     My responsibilities included designing and developing the UAV target detection system, debugging during flight tests, and maintaining the robot vision library.
   </p>
 </div>
-
-<!-- Open-Source Projects -->
-<h2>Open-source Projects</h2>
-<p>
-  (Details of open-source projects can be added here if available. Otherwise, update this section later as needed.)
-</p> 

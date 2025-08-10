@@ -229,13 +229,12 @@ body {
   <h1>Publications</h1>
   My research focuses on low-level vision, AI-generated content (AIGC), and multimodal large language models (MLLM).
   <br><br>
-  I develop robust solutions for image restoration in real complex environments, explore AIGC applications for real-world scenarios, and investigate MLLM applications in image processing and evaluation.
+  I aim to develop robust solutions for image restoration in real complex environments, explore AIGC applications for real-world scenarios, and investigate MLLM applications in image processing and evaluation.
   
   <div class="research-tags-container">
     <span class="research-tag tag-tech">Low-level Vision</span>
     <span class="research-tag tag-tech">AIGC</span>
     <span class="research-tag tag-tech">MLLM</span>
-    <span class="research-tag tag-focus">Real-world Applications</span>
   </div>
 
   <!-- <div class="summary-stats">

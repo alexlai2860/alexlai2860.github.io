@@ -248,8 +248,8 @@ If you are interested in my work or research, please feel free to contact me.
       <div class="research-card-icon">🔧</div>
       <div class="research-card-title">Low-level Vision</div>
       <div class="research-card-content">
-        Image restoration problems in real complex environments;<br><br>
-        Computational photography combined with AIGC techniques.
+        Image restoration problems in real-world complex environments<br><br>
+        Computational photography combined with AIGC techniques
       </div>
     </div>
     
@@ -257,8 +257,8 @@ If you are interested in my work or research, please feel free to contact me.
       <div class="research-card-icon">🎨</div>
       <div class="research-card-title">AIGC<br><small style="font-size: 0.7em; color: #666;">(AI Generated Content)</small></div>
       <div class="research-card-content">
-        AIGC applications for real-world scenarios;<br><br>
-        Post-training of advanced generative models.
+        AIGC applications for real-world scenarios<br><br>
+        Post-training of advanced generative models
       </div>
     </div>
     
@@ -266,8 +266,8 @@ If you are interested in my work or research, please feel free to contact me.
       <div class="research-card-icon">🧠</div>
       <div class="research-card-title">MLLM<br><small style="font-size: 0.7em; color: #666;">(Multimodal Large Language Models)</small></div>
       <div class="research-card-content">
-        MLLM applications in image restoration and evaluation;<br><br>
-        Integration of MLLM with AIGC techniques.
+        MLLM applications in image restoration and evaluation<br><br>
+        Integration of MLLM and AIGC
       </div>
     </div>
   </div>
