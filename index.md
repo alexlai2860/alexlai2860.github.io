@@ -222,7 +222,7 @@ If you are interested in my work or research, please feel free to contact me. --
 
 If you are interested in my work or research, please feel free to contact me. -->
 
-My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. During my graduate studies, I have developed a strong interest and focus on **low-level vision**, **MLLM**, and **AIGC** . I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas. My recent work includes **Postercraft**, an end-to-end poster generation framework that leverages cutting-edge AIGC techniques.
+My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. During my graduate studies, I have developed a strong interest and focus on **Low-level Vision**, **Multi-modal Models**, and **Generative Models** . I am fortunate that my first paper **SnowMaster** has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas. My recent work includes **Postercraft**, an end-to-end poster generation framework that leverages cutting-edge AIGC techniques.
 
 If you are interested in my work or research, please feel free to contact me.
 

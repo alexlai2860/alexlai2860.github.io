@@ -171,17 +171,14 @@ body {
 <div class="project-item">
   <h3>Auto-Focus-Assistant</h3>
   <p><em>Duration: 2022.11 – 2023.6</em></p>
-  <div>
-    <span class="project-tag tag-opensource">🔓 Open Source</span>
-    <span class="project-tag tag-github">📦 GitHub</span>
-    <span class="project-tag tag-video">🎥 Demo</span>
-  </div>
   <p>
     An independent R&D project leveraging depth cameras and advanced computer vision techniques to deliver an efficient auto-focus system.
     The system processes spatial depth and RGB data using YolofastestV2 for object detection, supporting multiple focusing modes including manual, automatic, and continuous tracking.
   </p>
   <div class="project-links">
+    <span class="project-tag tag-github">📦 GitHub</span>
     <a href="https://github.com/alexlai2860/Auto-focus-assistant" class="project-link link-github" target="_blank">[GitHub Repository]</a>
+    <span class="project-tag tag-video">🎥 Demo</span>
     <a href="https://www.bilibili.com/video/BV1Yh4y147x5/" class="project-link link-video" target="_blank">[Demo Video]</a>
   </div>
 </div>
@@ -189,15 +186,13 @@ body {
 <div class="project-item">
   <h3>Original Aspiration: RoboMaster Short Film Project</h3>
   <p><em>Duration: 2022.9 – 2023.1</em></p>
-  <div>
-    <span class="project-tag tag-video">🎬 Short Film</span>
-  </div>
   <p>
     A team-driven filmmaking project in which I served as the team leader.
     I managed screenplay, directing, cinematography, and post-production editing.
     The project documented the preparation for a robotics competition and received positive feedback.
   </p>
   <div class="project-links">
+    <span class="project-tag tag-video">🎬 Short Film</span>
     <a href="https://www.bilibili.com/video/BV1MM411t7SY/" class="project-link link-video" target="_blank">[Watch Film]</a>
   </div>
 </div>
