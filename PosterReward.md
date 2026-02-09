@@ -1,7 +1,7 @@
 ---
 layout: posterreward
-permalink: /posterreward/
-title: PosterReward - Generalized Artistic Poster Creation
+permalink: /PosterReward/
+title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Design Generation
 ---
 
 <div class="hero-section">
@@ -141,143 +141,191 @@ title: PosterReward - Generalized Artistic Poster Creation
         </div>
     </div>
 
-    <!-- Results Table -->
+    <!-- Leaderboard -->
     <div class="table-container" id="results">
         <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Plus Jakarta Sans', sans-serif;">
-            Quantitative Comparison <span class="benchmark-badge">PosterReward-Bench</span>
+            PosterBench Leaderboard <span class="benchmark-badge">PosterBench</span>
         </h2>
         <div class="table-scroll-wrapper">
-            <table class="results-table">
+            <table class="results-table" id="posterbench-leaderboard">
                 <thead>
                     <tr>
-                        <th style="width: 20%">Model</th>
-                        <th style="width: 11%">Extending</th>
-                        <th style="width: 11%">Filling</th>
-                        <th style="width: 11%">Rescaling</th>
-                        <th style="width: 11%">Id-consis.</th>
-                        <th style="width: 11%">Layout-dri.</th>
-                        <th style="width: 11%">Style-dri.</th>
-                        <th style="width: 11%">Overall</th>
+                        <th style="width: 28%; cursor: pointer;" data-sort-key="model">Model</th>
+                        <th style="width: 18%; cursor: pointer;" data-sort-key="mean">Mean ↑</th>
+                        <th style="width: 18%; cursor: pointer;" data-sort-key="median">Median ↑</th>
+                        <th style="width: 18%; cursor: pointer;" data-sort-key="std">Std ↓</th>
+                        <th style="width: 18%; cursor: pointer;" data-sort-key="top8">Best-of-8 Avg ↑</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>ICEdit</td>
-                        <td>1.99 <span class="sep">/</span> -</td>
-                        <td>3.21 <span class="sep">/</span> -</td>
-                        <td>1.73 <span class="sep">/</span> -</td>
-                        <td>1.59 <span class="sep">/</span> -</td>
-                        <td>1.53 <span class="sep">/</span> -</td>
-                        <td>1.67 <span class="sep">/</span> -</td>
-                        <td>1.95 <span class="sep">/</span> -</td>
+                        <td colspan="5" style="text-align: left; font-style: italic; color: var(--text-secondary);">Closed-Source Models</td>
                     </tr>
                     <tr>
-                        <td>Step1X-Edit</td>
-                        <td>3.04 <span class="sep">/</span> 3.67</td>
-                        <td>4.35 <span class="sep">/</span> 4.21</td>
-                        <td>1.60 <span class="sep">/</span> 1.75</td>
-                        <td>1.70 <span class="sep">/</span> 2.14</td>
-                        <td>1.63 <span class="sep">/</span> 1.82</td>
-                        <td>1.57 <span class="sep">/</span> 1.79</td>
-                        <td>2.31 <span class="sep">/</span> 2.56</td>
+                        <td>Nano-Banana</td>
+                        <td><span class="rank-1">9.86</span></td>
+                        <td>9.63</td>
+                        <td><span class="rank-1">5.59</span></td>
+                        <td>13.17</td>
                     </tr>
                     <tr>
-                        <td>BAGEL</td>
-                        <td>2.33 <span class="sep">/</span> 2.84</td>
-                        <td>2.77 <span class="sep">/</span> 2.67</td>
-                        <td>1.77 <span class="sep">/</span> 1.40</td>
-                        <td>1.92 <span class="sep">/</span> 2.29</td>
-                        <td>2.34 <span class="sep">/</span> 3.03</td>
-                        <td>1.85 <span class="sep">/</span> 2.34</td>
-                        <td>2.15 <span class="sep">/</span> 2.43</td>
+                        <td>Seedream4.0</td>
+                        <td>9.23</td>
+                        <td><span class="rank-1">10.38</span></td>
+                        <td>6.81</td>
+                        <td><span class="rank-1">13.90</span></td>
                     </tr>
                     <tr>
-                        <td>OmniGen2</td>
-                        <td>2.56 <span class="sep">/</span> -</td>
-                        <td>2.32 <span class="sep">/</span> -</td>
-                        <td>1.61 <span class="sep">/</span> -</td>
-                        <td>3.25 <span class="sep">/</span> -</td>
-                        <td>2.22 <span class="sep">/</span> -</td>
-                        <td>1.84 <span class="sep">/</span> -</td>
-                        <td>2.59 <span class="sep">/</span> -</td>
+                        <td>GPT-Image-1</td>
+                        <td>6.57</td>
+                        <td>6.72</td>
+                        <td>6.04</td>
+                        <td>11.73</td>
                     </tr>
                     <tr>
-                        <td>FLUX.1 Kontext</td>
-                        <td>3.12 <span class="sep">/</span> -</td>
-                        <td>3.61 <span class="sep">/</span> -</td>
-                        <td>3.16 <span class="sep">/</span> -</td>
-                        <td>3.39 <span class="sep">/</span> -</td>
-                        <td>3.03 <span class="sep">/</span> -</td>
-                        <td>2.88 <span class="sep">/</span> -</td>
-                        <td>3.20 <span class="sep">/</span> -</td>
+                        <td>Seedream3.0</td>
+                        <td>2.21</td>
+                        <td>1.93</td>
+                        <td>7.13</td>
+                        <td>8.40</td>
                     </tr>
                     <tr>
-                        <td>Qwen-Image-Edit</td>
-                        <td>4.28 <span class="sep">/</span> 4.24</td>
-                        <td>3.95 <span class="sep">/</span> 3.79</td>
-                        <td>3.40 <span class="sep">/</span> 3.54</td>
-                        <td>3.06 <span class="sep">/</span> 3.37</td>
-                        <td>3.44 <span class="sep">/</span> 2.97</td>
-                        <td>2.91 <span class="sep">/</span> 2.83</td>
-                        <td>3.51 <span class="sep">/</span> 3.46</td>
+                        <td colspan="5" style="text-align: left; font-style: italic; color: var(--text-secondary);">Open-Source Models</td>
                     </tr>
                     <tr>
-                        <td>UniWorld-V2</td>
-                        <td>4.25 <span class="sep">/</span> 4.22</td>
-                        <td>3.57 <span class="sep">/</span> 3.18</td>
-                        <td>3.07 <span class="sep">/</span> 3.23</td>
-                        <td>2.87 <span class="sep">/</span> 3.20</td>
-                        <td>3.66 <span class="sep">/</span> 3.79</td>
-                        <td>3.14 <span class="sep">/</span> 2.85</td>
-                        <td>3.42 <span class="sep">/</span> 3.41</td>
-                    </tr>
-                    <tr style="border-top: 1px solid rgba(0,0,0,0.1);">
-                        <td>Seedream-3.0</td>
-                        <td>3.52 <span class="sep">/</span> 3.76</td>
-                        <td>3.40 <span class="sep">/</span> 3.52</td>
-                        <td>2.38 <span class="sep">/</span> 2.84</td>
-                        <td>2.88 <span class="sep">/</span> 3.30</td>
-                        <td>2.68 <span class="sep">/</span> 3.04</td>
-                        <td>2.32 <span class="sep">/</span> 2.82</td>
-                        <td>2.86 <span class="sep">/</span> 3.21</td>
+                        <td>Z-Image-Turbo</td>
+                        <td>6.83</td>
+                        <td>7.34</td>
+                        <td>7.05</td>
+                        <td>12.28</td>
                     </tr>
                     <tr>
-                        <td>Seedream-4.0</td>
-                        <td><span class="rank-2">4.41</span> <span class="sep">/</span> 4.57</td>
-                        <td>4.44 <span class="sep">/</span> 4.64</td>
-                        <td><span class="rank-1">4.00</span> <span class="sep">/</span> 3.69</td>
-                        <td><span class="rank-1">4.53</span> <span class="sep">/</span> <span class="rank-1">4.62</span></td>
-                        <td>4.05 <span class="sep">/</span> 4.22</td>
-                        <td><span class="rank-1">4.23</span> <span class="sep">/</span> 4.31</td>
-                        <td><span class="rank-1">4.28</span> <span class="sep">/</span> 4.34</td>
+                        <td>Qwen-Image-2512</td>
+                        <td>6.83</td>
+                        <td>7.34</td>
+                        <td>7.05</td>
+                        <td>12.28</td>
                     </tr>
-                    <tr class="row-ours">
-                        <td>PosterReward (Ours)</td>
-                        <td><span class="rank-1">4.76</span> <span class="sep">/</span> <span class="rank-1">4.72</span></td>
-                        <td><span class="rank-1">4.69</span> <span class="sep">/</span> <span class="rank-1">4.77</span></td>
-                        <td><span class="rank-2">3.97</span> <span class="sep">/</span> <span class="rank-1">3.81</span></td>
-                        <td><span class="rank-2">3.98</span> <span class="sep">/</span> <span class="rank-2">4.23</span></td>
-                        <td><span class="rank-1">4.20</span> <span class="sep">/</span> <span class="rank-1">4.35</span></td>
-                        <td><span class="rank-2">3.99</span> <span class="sep">/</span> <span class="rank-1">4.36</span></td>
-                        <td><span class="rank-2">4.27</span> <span class="sep">/</span> <span class="rank-1">4.37</span></td>
+                    <tr>
+                        <td>Qwen-Image</td>
+                        <td>6.83</td>
+                        <td>7.34</td>
+                        <td>7.05</td>
+                        <td>12.28</td>
                     </tr>
-                    <tr class="row-baseline-diff">
-                        <td>vs. Baseline (Qwen)</td>
-                        <td>+0.48 <span class="sep">/</span> +0.48</td>
-                        <td>+0.74 <span class="sep">/</span> +0.98</td>
-                        <td>+0.57 <span class="sep">/</span> +0.27</td>
-                        <td>+0.92 <span class="sep">/</span> +0.86</td>
-                        <td>+0.76 <span class="sep">/</span> +1.38</td>
-                        <td>+1.08 <span class="sep">/</span> +1.53</td>
-                        <td>+0.76 <span class="sep">/</span> +0.91</td>
+                    <tr>
+                        <td>Flux.1-dev</td>
+                        <td>4.89</td>
+                        <td>4.93</td>
+                        <td>5.89</td>
+                        <td>10.56</td>
+                    </tr>
+                    <tr>
+                        <td>Flux-Krea</td>
+                        <td>4.38</td>
+                        <td>5.47</td>
+                        <td>8.36</td>
+                        <td>9.11</td>
+                    </tr>
+                    <tr>
+                        <td>SD3.5-L</td>
+                        <td>-2.19</td>
+                        <td>-3.57</td>
+                        <td>6.52</td>
+                        <td>2.80</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-            Table 1: Quantitative comparison results on PosterReward-Bench. <span class="rank-1">Gold</span> indicates the best performance, and <span class="rank-2">Blue</span> indicates the second best.
+            Performance of different models on PosterBench. Mean, Median, and Top8-Avg represent the respective scores. Std denotes the standard deviation of scores, indicating stability (lower is better).
         </p>
     </div>
+
+    <script>
+        (function () {
+            const table = document.getElementById('posterbench-leaderboard');
+            if (!table) return;
+
+            const headers = Array.from(table.querySelectorAll('thead th'));
+            const tbody = table.querySelector('tbody');
+
+            function parseNumber(text) {
+                const value = parseFloat(text.replace(/[^\d.-]/g, ''));
+                return Number.isFinite(value) ? value : NaN;
+            }
+
+            function getCellValue(row, colIndex) {
+                const cell = row.children[colIndex];
+                if (!cell) return '';
+                const text = cell.textContent.trim();
+                return text;
+            }
+
+            function collectSections() {
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                const sections = [];
+                let current = null;
+
+                rows.forEach((row) => {
+                    const firstCell = row.firstElementChild;
+                    const isGroupRow = firstCell && firstCell.getAttribute('colspan');
+                    if (isGroupRow) {
+                        current = { header: row, rows: [] };
+                        sections.push(current);
+                    } else if (current) {
+                        current.rows.push(row);
+                    }
+                });
+                return sections;
+            }
+
+            function sortSectionRows(rows, colIndex, order, isNumeric) {
+                const multiplier = order === 'asc' ? 1 : -1;
+                rows.sort((a, b) => {
+                    const aText = getCellValue(a, colIndex);
+                    const bText = getCellValue(b, colIndex);
+
+                    if (isNumeric) {
+                        const aNum = parseNumber(aText);
+                        const bNum = parseNumber(bText);
+                        const aVal = Number.isFinite(aNum) ? aNum : -Infinity;
+                        const bVal = Number.isFinite(bNum) ? bNum : -Infinity;
+                        return (aVal - bVal) * multiplier;
+                    }
+
+                    return aText.localeCompare(bText) * multiplier;
+                });
+            }
+
+            function applySort(colIndex, order) {
+                const isNumeric = colIndex !== 0;
+                const sections = collectSections();
+                sections.forEach((section) => {
+                    sortSectionRows(section.rows, colIndex, order, isNumeric);
+                });
+
+                const fragment = document.createDocumentFragment();
+                sections.forEach((section) => {
+                    fragment.appendChild(section.header);
+                    section.rows.forEach((row) => fragment.appendChild(row));
+                });
+                tbody.appendChild(fragment);
+            }
+
+            headers.forEach((th, index) => {
+                th.addEventListener('click', () => {
+                    const currentOrder = th.getAttribute('data-sort-order') || 'desc';
+                    const nextOrder = currentOrder === 'asc' ? 'desc' : 'asc';
+                    headers.forEach((h) => h.removeAttribute('data-sort-order'));
+                    th.setAttribute('data-sort-order', nextOrder);
+                    applySort(index, nextOrder);
+                });
+            });
+
+            applySort(1, 'desc');
+        })();
+    </script>
 
     <!-- Gallery Section -->
     <div style="margin-top: 8rem;">
