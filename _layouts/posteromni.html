@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --accent: #8b5cf6;
+            --background: #f8fafc; /* 浅色背景 */
+            --surface: rgba(255, 255, 255, 0.8);
+            --text-main: #0f172a;
+            --text-secondary: #475569;
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --glass-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+            
+            /* Table Colors */
+            --rank-1-bg: #fef3c7;
+            --rank-1-text: #b45309;
+            --rank-2-bg: #e0f2fe;
+            --rank-2-text: #0369a1;
+            --diff-bg: #dcfce7; /* 增长量背景 (绿色) */
+            --diff-text: #15803d; /* 增长量文字 (深绿) */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: radial-gradient(circle at top left, #eef2ff 0%, #f8fafc 40%, #fdf2f8 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            max-width: 1350px; /* 整体缩窄，保持图文比例 */
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+
+        .project-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            max-width: 1200px;
+        }
+
+        .title-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Authors */
+        .authors-container {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .author-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .author-name:hover { color: var(--primary); cursor: pointer; }
+        .author-sup { color: var(--primary); font-size: 0.75em; font-weight: 700; margin-left: 2px; }
+        .affiliations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            margin: 0.5rem;
+        }
+        .btn-primary { background: var(--text-main); color: white; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2); }
+        .btn-secondary { background: white; color: var(--text-main); border: 1px solid rgba(0,0,0,0.1); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2); }
+
+        /* Split Layout Styles (JarvisEvo Style) */
+        .content-wrapper {
+            max-width: 1350px; /* 整体缩窄，保持图文比例 */
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+
+        .split-section {
+            display: flex;
+            align-items: center;
+            gap: 5rem; /* 增加间距 */
+            margin: 8rem 0;
+            position: relative;
+        }
+
+        .split-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .split-text {
+            flex: 1;
+            min-width: 350px; /* 稍微增加文字最小宽度 */
+        }
+
+        .split-visual {
+            flex: 1.6; /* 增加图片区域占比 (原1.2) */
+            position: relative;
+        }
+
+        .split-visual img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            background: white;
+            padding: 8px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.5s ease;
+        }
+        
+        .split-visual img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Typography within sections */
+        .section-label {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        /* Feature List Cards */
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            padding-left: 4.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px) translateX(5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .number-badge {
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            width: 2rem;
+            height: 2rem;
+            background: var(--text-main);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .feature-heading {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        /* Table Styles */
+        .table-container {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            margin: 4rem 0;
+            box-shadow: var(--glass-shadow);
+            overflow: hidden;
+        }
+
+        .table-scroll-wrapper {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .results-table th, .results-table td {
+            padding: 1rem 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+
+        /* Table Header Hover Effect */
+        .results-table th {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            color: var(--text-main);
+            text-align: center;
+            cursor: default;
+        }
+        
+        .results-table th:first-child {
+            text-align: left;
+        }
+
+        .results-table th:hover {
+            color: var(--primary);
+            transform: translateY(-2px); /* 轻微上浮 */
+        }
+
+        /* Model Name Hover Effect */
+        .results-table td:first-child {
+            font-weight: 600;
+            color: var(--text-main);
+            text-align: left;
+            transition: transform 0.2s ease, color 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .results-table tr:hover td:first-child {
+            transform: scale(1.05); /* 悬停放大 */
+            color: var(--primary);
+            padding-left: 1rem; /* 增加一点内边距让放大更明显不遮挡 */
+        }
+        
+        .results-table td {
+            color: var(--text-secondary);
+            font-variant-numeric: tabular-nums; /* 等宽数字对齐 */
+        }
+
+        /* Separator Style */
+        .sep {
+            color: #cbd5e1; /* 浅灰色 */
+            margin: 0 4px;
+            font-weight: 300;
+        }
+
+        /* Number Cells Hover Effect */
+        .results-table td:not(:first-child) {
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .results-table td:not(:first-child):hover {
+            color: var(--primary-dark);
+            background: rgba(99, 102, 241, 0.05); /* 轻微的紫色背景 */
+            transform: scale(1.1); /* 放大 */
+            font-weight: 600;
+        }
+
+        /* Rank Badge Hover - ensure text remains readable or enhances */
+        .rank-1:hover, .rank-2:hover {
+            filter: brightness(0.95); /* 稍微变暗一点点增加对比 */
+            transform: scale(1.05);
+        }
+
+        /* Baseline Diff Row Hover */
+        .row-baseline-diff td:not(:first-child):hover {
+            color: #166534; /* 更深的绿色 */
+            background: rgba(220, 252, 231, 0.6);
+        }
+
+        /* Highlight Row for Ours */
+        .row-ours {
+            background: rgba(99, 102, 241, 0.03);
+            border-top: 2px solid var(--primary);
+        }
+        
+        .row-ours td:first-child {
+            color: var(--primary-dark);
+        }
+
+        /* Highlight Row for Baseline Comparison */
+        .row-baseline-diff {
+            background: rgba(220, 252, 231, 0.3); /* 浅绿色背景 */
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .row-baseline-diff td {
+            color: var(--diff-text); /* 深绿色文字 */
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .row-baseline-diff td:first-child {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transform: none !important; /* 不缩放 */
+            cursor: default;
+        }
+
+        /* Rank Badges */
+        .rank-1 {
+            background: var(--rank-1-bg);
+            color: var(--rank-1-text);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .rank-2 {
+            background: var(--rank-2-bg);
+            color: var(--rank-2-text);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        /* Badge for Benchmark Name */
+        .benchmark-badge {
+            background: linear-gradient(135deg, var(--text-main), #334155);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.6em;
+            vertical-align: middle;
+            margin-left: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .split-section {
+                flex-direction: column !important;
+                gap: 3rem;
+                margin: 4rem 0;
+                text-align: center;
+            }
+            .feature-item {
+                text-align: left;
+                padding-left: 4.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .project-title {
+                font-size: 2.5rem;
+            }
+            .table-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <!-- Custom CSS from page frontmatter -->
+    {% for css in page.extra_css %}
+    <link rel="stylesheet" href="{{ css }}">
+    {% endfor %}
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">PosterReward</a>
+            <div class="nav-links">
+                <a href="#abstract">Abstract</a>
+                <a href="#features">Features</a>
+                <a href="#data">Data</a>
+                <a href="#method">Method</a>
+                <a href="#results">Results</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    {{ content }}
+    
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 4rem 0; color: var(--text-secondary); font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.05); margin-top: 4rem;">
+        <p>© 2026 PosterReward Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+    <!-- Custom JS from page frontmatter -->
+    {% for js in page.extra_js %}
+    <script src="{{ js }}"></script>
+    {% endfor %}
+</body>
+</html>
