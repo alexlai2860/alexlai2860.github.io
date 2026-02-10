@@ -35,8 +35,8 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
 
     <div style="margin-top: 2rem;">
         <a href="https://arxiv.org/abs/2501.11646" class="btn btn-primary"><span>📄</span> Paper</a>
-        <a href="https://github.com/Ephemeral182/PosterOmni" class="btn btn-secondary"><span>💻</span> Code</a>
-        <a href="https://huggingface.co/PosterOmni" class="btn btn-secondary"><span>🤗</span> Model</a>
+        <a href="https://alexlai2860.github.io/PosterReward/" class="btn btn-secondary"><span>💻</span> Code</a>
+        <a href="https://huggingface.co/PosterReward" class="btn btn-secondary"><span>🤗</span> Model</a>
     </div>
 </div>
 
@@ -52,100 +52,154 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         </p>
     </div>
 
-    <!-- Section 1: Capabilities (Left Text, Right Image) -->
+    <style>
+        .h-media-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .h-media-card {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 18px;
+            padding: 0.9rem;
+            box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .h-media-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 36px -14px rgba(0, 0, 0, 0.22);
+        }
+        .h-media-card img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .h-media-caption {
+            margin-top: 0.9rem;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.55;
+            text-align: left;
+        }
+        .single-media-card {
+            max-width: 960px;
+            margin: 2rem auto 0;
+        }
+    </style>
+
+    <!-- Section 1: Capability Showcase -->
     <div class="split-section" id="features">
         <div class="split-text">
-            <span class="section-label">Capabilities</span>
-            <h2 class="section-title">Diverse Poster Creation Tasks</h2>
+            <span class="section-label">Capability Showcase</span>
+            <h2 class="section-title">What is PosterReward and How the Three Models Respond</h2>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
-                    <span class="feature-heading">Local Editing Precision</span>
-                    <p class="feature-desc">Performs precise local adjustments including extending, filling, rescaling, and identity-driven generation while preserving the original subject.</p>
+                    <span class="feature-heading">PosterReward (analysis + scoring)</span>
+                    <p class="feature-desc">A two-stage discriminative reward model: the first stage produces multi-dimensional design analysis, and the second stage converts image-prompt-analysis triplets into robust scalar rewards for training and ranking.</p>
                 </div>
                 <div class="feature-item">
                     <div class="number-badge">2</div>
-                    <span class="feature-heading">Global Creation Reasoning</span>
-                    <p class="feature-desc">Handles abstract high-level tasks such as layout-driven and style-driven generation, ensuring aesthetic coherence across the entire poster.</p>
+                    <span class="feature-heading">PosterReward-Lite (fast pointwise scoring)</span>
+                    <p class="feature-desc">A streamlined variant without the analysis stage, designed for low-latency evaluation and high-throughput use cases where speed is critical.</p>
                 </div>
                 <div class="feature-item">
                     <div class="number-badge">3</div>
-                    <span class="feature-heading">Unified Framework</span>
-                    <p class="feature-desc">Seamlessly integrates multiple editing and generation capabilities into a single model without switching pipelines.</p>
+                    <span class="feature-heading">PosterReward-Pairwise (judgment + CoT reasoning)</span>
+                    <p class="feature-desc">A generative pairwise model that predicts preference and explains decisions with structured reasoning, improving interpretability and enabling stronger data filtering via model consensus.</p>
                 </div>
             </div>
         </div>
         <div class="split-visual">
-            <img src="/images/posterreward/teaser_0209.jpg" alt="PosterReward Capabilities Teaser">
+            <img src="/images/posterreward/teaser_0209.jpg" alt="PosterReward capability overview">
         </div>
     </div>
 
-    <!-- Section 2: Data Pipeline (Right Text, Left Image - using reverse) -->
+    <!-- Section 2: Automated Preference Data Construction -->
     <div class="split-section reverse" id="data">
         <div class="split-text">
-            <span class="section-label">Data Engineering</span>
-            <h2 class="section-title">Automated Data Construction</h2>
+            <span class="section-label">Automated Preference Data Construction</span>
+            <h2 class="section-title">From Large Raw Pools to Reliable Poster Preferences</h2>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
-                    <span class="feature-heading">Prompt & Image Generation</span>
-                    <p class="feature-desc">Leverages GPT-4 and Qwen to generate diverse, structured prompts and initial images covering various themes.</p>
+                    <span class="feature-heading">Large-scale pool generation and staged filtering</span>
+                    <p class="feature-desc">We build cinematic and non-cinematic sample pools from multiple generators, then progressively reduce noise using aesthetic scoring, similarity constraints, and stability checks before expensive model voting.</p>
                 </div>
                 <div class="feature-item">
                     <div class="number-badge">2</div>
-                    <span class="feature-heading">Multimodal Filtering</span>
-                    <p class="feature-desc">Employs OCR and VLM-based filtering to ensure textual correctness and layout-content consistency.</p>
+                    <span class="feature-heading">Consensus-based pair selection with bias control</span>
+                    <p class="feature-desc">Preference labels are verified by multiple advanced MLLMs under order-swapped pairwise prompting, which suppresses positional bias and retains only stable, high-confidence comparisons.</p>
                 </div>
                 <div class="feature-item">
                     <div class="number-badge">3</div>
-                    <span class="feature-heading">Task-Specific Construction</span>
-                    <p class="feature-desc">Automatically synthesizes paired data for 6 specific tasks using tools like SAM-2 and BrushNet.</p>
+                    <span class="feature-heading">Poster-Preference-70K</span>
+                    <p class="feature-desc">The final dataset emphasizes typography, layout, and instruction faithfulness, addressing the underrepresentation of graphic design quality signals in general-purpose visual preference datasets.</p>
                 </div>
             </div>
         </div>
         <div class="split-visual">
-            <img src="/images/posterreward/posterreward_datapipeline.jpg" alt="Data Construction Pipeline">
+            <div class="h-media-row">
+                <div class="h-media-card">
+                    <img src="/images/posterreward/dataset_pipe.png" alt="Automated preference data collection pipeline">
+                    <p class="h-media-caption">Automated AI-judged preference data pipeline with cascaded filtering, pair generation, and multi-model consensus validation.</p>
+                </div>
+                <div class="h-media-card">
+                    <img src="/images/posterreward/dataset_examples.png" alt="Preference pair examples">
+                    <p class="h-media-caption">Representative chosen-vs-rejected preference pairs, with dimensions such as aesthetics, text readability, layout coherence, and prompt alignment.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Section 3: Methodology (Left Text, Right Image) -->
+    <!-- Section 3: Unified Cascaded Training Framework -->
     <div class="split-section" id="method">
         <div class="split-text">
-            <span class="section-label">Methodology</span>
-            <h2 class="section-title">Progressive Training Pipeline</h2>
+            <span class="section-label">Unified Cascaded Training Framework</span>
+            <h2 class="section-title">Jointly Optimizing Analysis, Pairwise Judgment, and Scoring</h2>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
-                    <span class="feature-heading">Task-Specific SFT</span>
-                    <p class="feature-desc">Trains specialized experts for local editing and global creation to ensure high fidelity in distinct domains.</p>
+                    <span class="feature-heading">Joint SFT and rejection-sampling refinement</span>
+                    <p class="feature-desc">Single-image analysis and paired-image comparison are trained together, then refined by rejection sampling to improve answer quality and preference consistency.</p>
                 </div>
                 <div class="feature-item">
                     <div class="number-badge">2</div>
-                    <span class="feature-heading">Task Distillation</span>
-                    <p class="feature-desc">Distills knowledge from experts into a unified student model, merging pixel precision with aesthetic understanding.</p>
+                    <span class="feature-heading">Score module training with pairwise supervision</span>
+                    <p class="feature-desc">The scoring head is optimized on chosen/rejected triplets with Bradley-Terry loss, converting rich analysis into stable scalar reward differences.</p>
                 </div>
                 <div class="feature-item">
                     <div class="number-badge">3</div>
-                    <span class="feature-heading">Unified Reward Feedback</span>
-                    <p class="feature-desc">Aligns with human preferences using a reward model that evaluates both aesthetic appeal and instruction adherence.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="number-badge">4</div>
-                    <span class="feature-heading">Omni-Edit RL</span>
-                    <p class="feature-desc">Uses Reinforcement Learning to refine generation quality and align it with professional design standards.</p>
+                    <span class="feature-heading">RL-based analysis enhancement</span>
+                    <p class="feature-desc">A GRPO stage improves analysis outputs while keeping the scorer frozen, making final rewards more robust for downstream post-training.</p>
                 </div>
             </div>
         </div>
         <div class="split-visual">
-            <img src="/images/posterreward/overview.jpg" alt="PosterReward Methodology Overview">
+            <div class="h-media-row">
+                <div class="h-media-card single-media-card">
+                    <img src="/images/posterreward/training_framework.png" alt="PosterReward training framework">
+                    <p class="h-media-caption">The complete cascaded framework that unifies discriminative and pairwise reward learning through SFT, rejection sampling, score-module optimization, and reinforcement fine-tuning.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Leaderboard -->
+    <!-- Section 4: Application - Test Time Scaling and Graphic Design Evaluation -->
     <div class="table-container" id="results">
-        <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Plus Jakarta Sans', sans-serif;">
-            PosterBench Leaderboard <span class="benchmark-badge">PosterBench</span>
+        <h2 style="text-align: center; margin-bottom: 0.8rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Application: Test Time Scaling & Graphic Design Evaluation
         </h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.8rem; max-width: 980px; margin-left: auto; margin-right: auto;">
+            PosterReward supports stronger decision quality at inference through richer analysis traces and demonstrates high agreement with design-centric quality criteria on poster generation benchmarks.
+        </p>
         <div class="table-scroll-wrapper">
             <table class="results-table" id="posterbench-leaderboard">
                 <thead>
@@ -238,8 +292,33 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             </table>
         </div>
         <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-            Performance of different models on PosterBench. Mean, Median, and Top8-Avg represent the respective scores. Std denotes the standard deviation of scores, indicating stability (lower is better).
+            PosterBench evaluation results. Higher Mean/Median/Best-of-8 indicate better average and scalable performance; lower Std indicates more stable quality across prompts.
         </p>
+    </div>
+
+    <!-- Section 5: Application - Reward Model in Post Training -->
+    <div class="split-section" id="posttraining">
+        <div class="split-text" style="max-width: 1000px;">
+            <span class="section-label">Application</span>
+            <h2 class="section-title">Reward Model in Post Training</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="number-badge">1</div>
+                    <span class="feature-heading">A practical reward source for RL alignment</span>
+                    <p class="feature-desc">PosterReward provides dense, design-aware scalar feedback over typography, composition, and semantic faithfulness, making it suitable as a reward function in post-training loops for image generation systems.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">2</div>
+                    <span class="feature-heading">Bridging pairwise preference and pointwise optimization</span>
+                    <p class="feature-desc">The pairwise model improves preference reliability and interpretability, while the discriminative scorer supports efficient large-batch optimization, offering a unified path from data curation to policy improvement.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">3</div>
+                    <span class="feature-heading">Transferable to diverse post-training scenarios</span>
+                    <p class="feature-desc">Beyond benchmark ranking, the reward can guide rejection sampling, reranking, and reinforcement fine-tuning for poster generation, helping models move from generic aesthetics to task-specific design quality.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
