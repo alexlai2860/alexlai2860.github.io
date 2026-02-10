@@ -160,7 +160,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     <p class="v-media-caption">Automated AI-judged preference data pipeline with cascaded filtering, pair generation, and multi-model consensus validation.</p>
                 </div>
                 <div class="v-media-card">
-                    <img src="/images/posterreward/dataset_examples.png" alt="Preference pair examples">
+                    <img src="/images/posterreward/dataset_examples.jpg" alt="Preference pair examples">
                     <p class="v-media-caption">Representative chosen-vs-rejected preference pairs, with dimensions such as aesthetics, text readability, layout coherence, and prompt alignment.</p>
                 </div>
             </div>
