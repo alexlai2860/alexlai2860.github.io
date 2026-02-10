@@ -53,6 +53,16 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
     </div>
 
     <style>
+        @keyframes floatSoft {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulseArrow {
+            0% { opacity: 0.45; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(3px); }
+            100% { opacity: 0.45; transform: translateX(0); }
+        }
         .stacked-showcase {
             display: block;
             margin: 7rem 0;
@@ -116,6 +126,148 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 grid-template-columns: 1fr;
             }
         }
+
+        .model-eval-board {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+        .model-eval-row {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 1.2rem;
+            align-items: stretch;
+        }
+        .model-left-card {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 18px;
+            padding: 1.1rem;
+            box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.15);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .model-left-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 0.45rem;
+        }
+        .model-left-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+        .eval-flow-card {
+            background: rgba(255, 255, 255, 0.68);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 18px;
+            padding: 1rem;
+            box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.15);
+        }
+        .flow-shared-prompt {
+            background: rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            color: var(--text-main);
+            border-radius: 12px;
+            padding: 0.55rem 0.8rem;
+            font-size: 0.88rem;
+            margin-bottom: 0.8rem;
+        }
+        .flow-lane {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            margin-bottom: 0.7rem;
+            flex-wrap: wrap;
+        }
+        .flow-node {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            border-radius: 12px;
+            padding: 0.5rem;
+            box-shadow: 0 8px 22px -14px rgba(0, 0, 0, 0.25);
+            animation: floatSoft 3s ease-in-out infinite;
+        }
+        .flow-node img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+        .flow-node-label {
+            font-size: 0.74rem;
+            color: var(--text-secondary);
+            margin-top: 0.35rem;
+            text-align: center;
+        }
+        .flow-text-node {
+            min-width: 200px;
+            max-width: 360px;
+            color: var(--text-secondary);
+            font-size: 0.83rem;
+            line-height: 1.38;
+            animation-delay: 0.35s;
+        }
+        .flow-score-node {
+            min-width: 90px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: white;
+            border: none;
+            animation-delay: 0.7s;
+        }
+        .flow-score-high { background: linear-gradient(135deg, #16a34a, #22c55e); }
+        .flow-score-low { background: linear-gradient(135deg, #f97316, #ef4444); }
+        .flow-judge-node {
+            min-width: 240px;
+            max-width: 420px;
+            color: var(--text-main);
+            font-size: 0.86rem;
+            line-height: 1.42;
+            animation-delay: 0.35s;
+        }
+        .flow-arrow {
+            color: #6366f1;
+            font-weight: 700;
+            font-size: 1.05rem;
+            animation: pulseArrow 1.4s ease-in-out infinite;
+        }
+        .eval-notes {
+            margin-top: 0.55rem;
+            border-radius: 12px;
+            border: 1px dashed rgba(15, 23, 42, 0.2);
+            padding: 0.45rem 0.65rem;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .eval-notes summary {
+            cursor: pointer;
+            color: var(--text-main);
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+        .eval-notes-content {
+            margin-top: 0.5rem;
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+        @media (max-width: 1100px) {
+            .model-eval-row {
+                grid-template-columns: 1fr;
+            }
+            .flow-node img {
+                width: 100px;
+                height: 70px;
+            }
+        }
     </style>
 
     <!-- Section 1: Capability Showcase -->
@@ -123,27 +275,96 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         <div class="split-text">
             <span class="section-label">Capability Showcase</span>
             <h2 class="section-title">What is PosterReward and How the Three Models Respond</h2>
-            <div class="v-media-stack">
-                <div class="v-media-card">
-                    <img src="/images/posterreward/teaser_0209.jpg" alt="PosterReward capability overview">
-                    <p class="v-media-caption">PosterReward system overview and representative quality comparison examples for high-quality graphic design evaluation.</p>
+            <div class="model-eval-board">
+                <div class="model-eval-row">
+                    <div class="model-left-card">
+                        <div class="model-left-name">PosterReward</div>
+                        <p class="model-left-desc">Image + prompt are first analyzed, then mapped to scalar reward scores via the scoring module.</p>
+                    </div>
+                    <div class="eval-flow-card">
+                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
+                        <div class="flow-lane">
+                            <div class="flow-node">
+                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster sample">
+                                <div class="flow-node-label">Chosen Image</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-text-node">Analysis: clean typography hierarchy, coherent skyline composition, and high instruction faithfulness.</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-score-node flow-score-high">20.0</div>
+                        </div>
+                        <div class="flow-lane" style="margin-bottom: 0;">
+                            <div class="flow-node">
+                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster sample">
+                                <div class="flow-node-label">Rejected Image</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-text-node">Analysis: text readability issues, awkward phrase generation, and weaker global visual balance.</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-score-node flow-score-low">5.0</div>
+                        </div>
+                        <details class="eval-notes">
+                            <summary>Expandable notes (you can edit this later)</summary>
+                            <div class="eval-notes-content">Place your detailed explanation here, such as rubric dimensions, full chain-of-thought style comments, or per-dimension subscores.</div>
+                        </details>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <div class="number-badge">1</div>
-                    <span class="feature-heading">PosterReward (analysis + scoring)</span>
-                    <p class="feature-desc">A two-stage discriminative reward model: the first stage produces multi-dimensional design analysis, and the second stage converts image-prompt-analysis triplets into robust scalar rewards for training and ranking.</p>
+
+                <div class="model-eval-row">
+                    <div class="model-left-card">
+                        <div class="model-left-name">PosterReward-Lite</div>
+                        <p class="model-left-desc">A lightweight pointwise evaluator that predicts scores directly from image + prompt with minimal latency.</p>
+                    </div>
+                    <div class="eval-flow-card">
+                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
+                        <div class="flow-lane">
+                            <div class="flow-node">
+                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster sample for lite">
+                                <div class="flow-node-label">Chosen Image</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-score-node flow-score-high">17.8</div>
+                        </div>
+                        <div class="flow-lane" style="margin-bottom: 0;">
+                            <div class="flow-node">
+                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster sample for lite">
+                                <div class="flow-node-label">Rejected Image</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-score-node flow-score-low">7.1</div>
+                        </div>
+                        <details class="eval-notes">
+                            <summary>Expandable notes (you can edit this later)</summary>
+                            <div class="eval-notes-content">Use this card for latency/efficiency notes, deployment setup, or model confidence diagnostics.</div>
+                        </details>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <div class="number-badge">2</div>
-                    <span class="feature-heading">PosterReward-Lite (fast pointwise scoring)</span>
-                    <p class="feature-desc">A streamlined variant without the analysis stage, designed for low-latency evaluation and high-throughput use cases where speed is critical.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="number-badge">3</div>
-                    <span class="feature-heading">PosterReward-Pairwise (judgment + CoT reasoning)</span>
-                    <p class="feature-desc">A generative pairwise model that predicts preference and explains decisions with structured reasoning, improving interpretability and enabling stronger data filtering via model consensus.</p>
+
+                <div class="model-eval-row">
+                    <div class="model-left-card">
+                        <div class="model-left-name">PosterReward-Pairwise</div>
+                        <p class="model-left-desc">A pairwise judge that compares two candidates and outputs preference decisions with interpretable textual reasoning.</p>
+                    </div>
+                    <div class="eval-flow-card">
+                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
+                        <div class="flow-lane" style="margin-bottom: 0;">
+                            <div class="flow-node">
+                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Candidate A for pairwise">
+                                <div class="flow-node-label">Candidate A</div>
+                            </div>
+                            <div class="flow-arrow">+</div>
+                            <div class="flow-node">
+                                <img src="/images/posterreward/p001_reject.png" alt="Candidate B for pairwise">
+                                <div class="flow-node-label">Candidate B</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-judge-node">Judgment: Prefer Candidate A. Reasoning highlights stronger text realism, clearer semantics, and better composition consistency.</div>
+                        </div>
+                        <details class="eval-notes">
+                            <summary>Expandable notes (you can edit this later)</summary>
+                            <div class="eval-notes-content">Insert your custom judgment text template, pairwise confidence values, or rationale style constraints here.</div>
+                        </details>
+                    </div>
                 </div>
             </div>
         </div>
