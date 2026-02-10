@@ -53,52 +53,82 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
     </div>
 
     <style>
-        .h-media-row {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+        .stacked-showcase {
+            display: block;
+            margin: 7rem 0;
         }
-        .h-media-card {
-            flex: 1;
-            min-width: 300px;
+        .stacked-showcase .split-text {
+            width: 100%;
+            min-width: 0;
+        }
+        .v-media-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1240px;
+        }
+        .v-media-card {
+            width: 100%;
             background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.7);
             border-radius: 18px;
-            padding: 0.9rem;
+            padding: 0.95rem;
             box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.15);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-        .h-media-card:hover {
+        .v-media-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 36px -14px rgba(0, 0, 0, 0.22);
         }
-        .h-media-card img {
+        .v-media-card img {
             width: 100%;
             border-radius: 12px;
             display: block;
             background: white;
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        .h-media-caption {
+        .v-media-caption {
             margin-top: 0.9rem;
             color: var(--text-secondary);
             font-size: 0.92rem;
             line-height: 1.55;
             text-align: left;
         }
-        .single-media-card {
-            max-width: 960px;
-            margin: 2rem auto 0;
+        .stacked-showcase .feature-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.8rem;
+        }
+        .stacked-showcase .feature-item {
+            height: 100%;
+        }
+        @media (max-width: 1100px) {
+            .stacked-showcase .feature-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 768px) {
+            .stacked-showcase .feature-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
     <!-- Section 1: Capability Showcase -->
-    <div class="split-section" id="features">
+    <div class="split-section stacked-showcase" id="features">
         <div class="split-text">
             <span class="section-label">Capability Showcase</span>
             <h2 class="section-title">What is PosterReward and How the Three Models Respond</h2>
+            <div class="v-media-stack">
+                <div class="v-media-card">
+                    <img src="/images/posterreward/teaser_0209.jpg" alt="PosterReward capability overview">
+                    <p class="v-media-caption">PosterReward system overview and representative quality comparison examples for high-quality graphic design evaluation.</p>
+                </div>
+            </div>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
@@ -117,16 +147,23 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 </div>
             </div>
         </div>
-        <div class="split-visual">
-            <img src="/images/posterreward/teaser_0209.jpg" alt="PosterReward capability overview">
-        </div>
     </div>
 
     <!-- Section 2: Automated Preference Data Construction -->
-    <div class="split-section reverse" id="data">
+    <div class="split-section stacked-showcase" id="data">
         <div class="split-text">
             <span class="section-label">Automated Preference Data Construction</span>
             <h2 class="section-title">From Large Raw Pools to Reliable Poster Preferences</h2>
+            <div class="v-media-stack">
+                <div class="v-media-card">
+                    <img src="/images/posterreward/dataset_pipe.png" alt="Automated preference data collection pipeline">
+                    <p class="v-media-caption">Automated AI-judged preference data pipeline with cascaded filtering, pair generation, and multi-model consensus validation.</p>
+                </div>
+                <div class="v-media-card">
+                    <img src="/images/posterreward/dataset_examples.png" alt="Preference pair examples">
+                    <p class="v-media-caption">Representative chosen-vs-rejected preference pairs, with dimensions such as aesthetics, text readability, layout coherence, and prompt alignment.</p>
+                </div>
+            </div>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
@@ -145,25 +182,19 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 </div>
             </div>
         </div>
-        <div class="split-visual">
-            <div class="h-media-row">
-                <div class="h-media-card">
-                    <img src="/images/posterreward/dataset_pipe.png" alt="Automated preference data collection pipeline">
-                    <p class="h-media-caption">Automated AI-judged preference data pipeline with cascaded filtering, pair generation, and multi-model consensus validation.</p>
-                </div>
-                <div class="h-media-card">
-                    <img src="/images/posterreward/dataset_examples.png" alt="Preference pair examples">
-                    <p class="h-media-caption">Representative chosen-vs-rejected preference pairs, with dimensions such as aesthetics, text readability, layout coherence, and prompt alignment.</p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Section 3: Unified Cascaded Training Framework -->
-    <div class="split-section" id="method">
+    <div class="split-section stacked-showcase" id="method">
         <div class="split-text">
             <span class="section-label">Unified Cascaded Training Framework</span>
             <h2 class="section-title">Jointly Optimizing Analysis, Pairwise Judgment, and Scoring</h2>
+            <div class="v-media-stack">
+                <div class="v-media-card">
+                    <img src="/images/posterreward/training_framework.png" alt="PosterReward training framework">
+                    <p class="v-media-caption">The complete cascaded framework that unifies discriminative and pairwise reward learning through SFT, rejection sampling, score-module optimization, and reinforcement fine-tuning.</p>
+                </div>
+            </div>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
@@ -179,14 +210,6 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     <div class="number-badge">3</div>
                     <span class="feature-heading">RL-based analysis enhancement</span>
                     <p class="feature-desc">A GRPO stage improves analysis outputs while keeping the scorer frozen, making final rewards more robust for downstream post-training.</p>
-                </div>
-            </div>
-        </div>
-        <div class="split-visual">
-            <div class="h-media-row">
-                <div class="h-media-card single-media-card">
-                    <img src="/images/posterreward/training_framework.png" alt="PosterReward training framework">
-                    <p class="h-media-caption">The complete cascaded framework that unifies discriminative and pairwise reward learning through SFT, rejection sampling, score-module optimization, and reinforcement fine-tuning.</p>
                 </div>
             </div>
         </div>
@@ -297,8 +320,8 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
     </div>
 
     <!-- Section 5: Application - Reward Model in Post Training -->
-    <div class="split-section" id="posttraining">
-        <div class="split-text" style="max-width: 1000px;">
+    <div class="split-section stacked-showcase" id="posttraining">
+        <div class="split-text">
             <span class="section-label">Application</span>
             <h2 class="section-title">Reward Model in Post Training</h2>
             <div class="feature-list">
