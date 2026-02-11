@@ -258,11 +258,12 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         .flow-arrow:hover { opacity: 1; }
         .flow-chunk-scroll {
             width: 100%;
-            max-width: 900px;
-            height: 260px;
+            max-width: 960px;
+            height: 320px;
             overflow-y: scroll;
             overflow-x: hidden;
             margin-top: 0.5rem;
+            margin-right: -1rem;
             overscroll-behavior-y: contain;
             direction: ltr;
             scrollbar-gutter: stable;
@@ -274,15 +275,15 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin-bottom: 1rem;
-            padding: 0.6rem 0;
+            margin-bottom: 1.2rem;
+            padding: 0.8rem 0;
             flex-shrink: 0;
             border-bottom: 1px solid rgba(0,0,0,0.06);
         }
         .flow-chunk:last-child { margin-bottom: 0; border-bottom: none; }
         .flow-chunk .flow-node { flex-shrink: 0; }
         .flow-chunk .img-wrap {
-            width: 260px;
+            width: 300px;
             flex-shrink: 0;
             cursor: pointer;
             border-radius: 10px;
@@ -317,7 +318,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             transform: translateY(-2px);
             box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
         }
-        .flow-lite-row .img-wrap { width: 260px; }
+        .flow-lite-row .img-wrap { width: 300px; }
         .flow-lite-row .img-wrap img { width: 100%; height: auto; display: block; }
         .flow-pairwise-row {
             display: flex;
@@ -325,7 +326,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             gap: 0.6rem;
             flex-wrap: wrap;
         }
-        .flow-pairwise-row .img-wrap { width: 260px; }
+        .flow-pairwise-row .img-wrap { width: 300px; }
         .flow-pairwise-row .img-wrap img { width: 100%; height: auto; display: block; }
         .analysis-overlay {
             display: none;
