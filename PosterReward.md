@@ -140,6 +140,11 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             display: flex;
             flex-direction: column;
             justify-content: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .model-left-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 36px -14px rgba(0, 0, 0, 0.2);
         }
         .model-left-name {
             font-weight: 700;
@@ -159,6 +164,11 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             border-radius: 18px;
             padding: 1rem;
             box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .eval-flow-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 36px -14px rgba(0, 0, 0, 0.2);
         }
         .flow-shared-prompt {
             background: rgba(15, 23, 42, 0.06);
@@ -254,6 +264,11 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             border-radius: 12px;
             background: #f8fafc;
             border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .flow-img-scroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.25);
         }
         .flow-img-scroll::-webkit-scrollbar { width: 6px; }
         .flow-img-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
@@ -372,26 +387,22 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
-                        <div class="flow-lane">
-                            <div class="flow-node">
-                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster sample for lite">
-                                <div class="flow-node-label">Chosen Image</div>
+                        <div class="flow-dual-lane">
+                            <div class="flow-img-scroll">
+                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
+                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster">
                             </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-score-node flow-score-high">17.8</div>
-                        </div>
-                        <div class="flow-lane" style="margin-bottom: 0;">
-                            <div class="flow-node">
-                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster sample for lite">
-                                <div class="flow-node-label">Rejected Image</div>
+                            <div class="flow-lane">
+                                <div class="flow-arrow">→</div>
+                                <span style="font-size:0.87rem;color:var(--text-secondary);">Chosen</span>
+                                <div class="flow-node flow-score-node flow-score-high">17.8</div>
                             </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-score-node flow-score-low">7.1</div>
+                            <div class="flow-lane" style="margin-bottom: 0;">
+                                <div class="flow-arrow">→</div>
+                                <span style="font-size:0.87rem;color:var(--text-secondary);">Rejected</span>
+                                <div class="flow-node flow-score-node flow-score-low">7.1</div>
+                            </div>
                         </div>
-                        <details class="eval-notes">
-                            <summary>Expandable notes (you can edit this later)</summary>
-                            <div class="eval-notes-content">Use this card for latency/efficiency notes, deployment setup, or model confidence diagnostics.</div>
-                        </details>
                     </div>
                 </div>
 
@@ -402,28 +413,38 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
-                        <div class="flow-lane" style="margin-bottom: 0;">
-                            <div class="flow-node">
-                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Candidate A for pairwise">
-                                <div class="flow-node-label">Candidate A</div>
+                        <div class="flow-dual-lane">
+                            <div class="flow-img-scroll">
+                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Candidate A">
+                                <img src="/images/posterreward/p001_reject.png" alt="Candidate B">
                             </div>
-                            <div class="flow-arrow">+</div>
-                            <div class="flow-node">
-                                <img src="/images/posterreward/p001_reject.png" alt="Candidate B for pairwise">
-                                <div class="flow-node-label">Candidate B</div>
+                            <div class="flow-lane" style="margin-bottom: 0;">
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-node flow-judge-node analysis-expand" data-full="Judgment: Prefer Candidate A (top image). Reasoning: Stronger text realism and semantic clarity. The chosen candidate shows cleaner typography hierarchy, coherent skyline composition, and higher instruction faithfulness. The rejected candidate exhibits text readability issues and weaker global visual balance.">Judgment: Prefer Candidate A. Reasoning highlights stronger text realism, clearer semantics, and better composition consistency.</div>
                             </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-judge-node">Judgment: Prefer Candidate A. Reasoning highlights stronger text realism, clearer semantics, and better composition consistency.</div>
                         </div>
-                        <details class="eval-notes">
-                            <summary>Expandable notes (you can edit this later)</summary>
-                            <div class="eval-notes-content">Insert your custom judgment text template, pairwise confidence values, or rationale style constraints here.</div>
-                        </details>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="analysis-overlay" class="analysis-overlay" onclick="if(event.target===this)this.classList.remove('active')">
+        <button class="analysis-overlay-close" onclick="document.getElementById('analysis-overlay').classList.remove('active')" aria-label="Close">×</button>
+        <div class="analysis-overlay-content" onclick="event.stopPropagation()"></div>
+    </div>
+    <script>
+        (function(){
+            document.querySelectorAll('.analysis-expand').forEach(function(el){
+                el.addEventListener('click', function(){
+                    var full = el.getAttribute('data-full') || el.textContent;
+                    var overlay = document.getElementById('analysis-overlay');
+                    overlay.querySelector('.analysis-overlay-content').textContent = full;
+                    overlay.classList.add('active');
+                });
+            });
+        })();
+    </script>
 
     <!-- Section 2: Automated Preference Data Construction -->
     <div class="split-section stacked-showcase" id="data">
