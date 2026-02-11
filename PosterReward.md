@@ -256,29 +256,80 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             transition: opacity 0.2s ease;
         }
         .flow-arrow:hover { opacity: 1; }
-        .flow-img-scroll {
-            width: 200px;
-            height: 220px;
+        .flow-chunk-scroll {
+            width: 100%;
+            max-width: 680px;
+            height: 280px;
             overflow-y: auto;
             overflow-x: hidden;
-            border-radius: 12px;
-            background: #f8fafc;
+            border-radius: 14px;
+            background: rgba(248, 250, 252, 0.9);
             border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 0.6rem;
+            transition: box-shadow 0.25s ease;
+        }
+        .flow-chunk-scroll:hover { box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.2); }
+        .flow-chunk-scroll::-webkit-scrollbar { width: 6px; }
+        .flow-chunk-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .flow-chunk {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 4px 12px -8px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+        .flow-chunk:last-child { margin-bottom: 0; }
+        .flow-chunk .flow-node { flex-shrink: 0; }
+        .flow-chunk .img-wrap {
+            width: 120px;
+            flex-shrink: 0;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-        .flow-img-scroll:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.25);
+        .flow-chunk .img-wrap:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
         }
-        .flow-img-scroll::-webkit-scrollbar { width: 6px; }
-        .flow-img-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-        .flow-img-scroll img {
+        .flow-chunk .img-wrap img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 0;
         }
-        .flow-img-scroll img + img { border-top: 4px solid rgba(0,0,0,0.06); }
+        .flow-lite-row {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .flow-lite-row .flow-lane { margin-bottom: 0; }
+        .flow-lite-row .img-wrap,
+        .flow-pairwise-row .img-wrap {
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .flow-lite-row .img-wrap:hover,
+        .flow-pairwise-row .img-wrap:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+        }
+        .flow-lite-row .img-wrap { width: 140px; }
+        .flow-lite-row .img-wrap img { width: 100%; height: auto; display: block; }
+        .flow-pairwise-row {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .flow-pairwise-row .img-wrap { width: 120px; }
+        .flow-pairwise-row .img-wrap img { width: 100%; height: auto; display: block; }
         .analysis-overlay {
             display: none;
             position: fixed;
@@ -317,32 +368,42 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             line-height: 1;
         }
         .analysis-overlay-close:hover { background: rgba(255,255,255,0.35); }
-        .flow-dual-lane {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 0 0.6rem;
+        .img-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            background: rgba(15, 23, 42, 0.95);
             align-items: center;
+            justify-content: center;
+            padding: 2rem;
         }
-        .flow-dual-lane .flow-img-scroll {
-            grid-row: 1 / -1;
-            align-self: stretch;
-        }
-        .flow-single-img {
-            width: 140px;
-            flex-shrink: 0;
-        }
-        .flow-single-img img {
-            width: 100%;
-            height: auto;
-            max-height: 160px;
+        .img-overlay.active { display: flex; }
+        .img-overlay img {
+            max-width: 95vw;
+            max-height: 95vh;
             object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
+        .img-overlay-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .img-overlay-close:hover { background: rgba(255,255,255,0.35); }
         @media (max-width: 1100px) {
-            .model-eval-row {
-                grid-template-columns: 1fr;
-            }
-            .flow-dual-lane { grid-template-columns: 1fr; }
-            .flow-dual-lane .flow-img-scroll { max-width: 100%; }
+            .model-eval-row { grid-template-columns: 1fr; }
+            .flow-chunk-scroll { max-width: 100%; }
         }
     </style>
 
@@ -359,18 +420,20 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
-                        <div class="flow-dual-lane">
-                            <div class="flow-img-scroll">
-                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
-                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster">
-                            </div>
-                            <div class="flow-lane">
+                        <div class="flow-chunk-scroll">
+                            <div class="flow-chunk">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
+                                    <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
+                                </div>
                                 <div class="flow-arrow">→</div>
                                 <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Chosen): Clean typography hierarchy, coherent skyline composition, and high instruction faithfulness. The chosen sample demonstrates superior text rendering and layout balance.">Analysis: clean typography hierarchy, coherent skyline composition, and high instruction faithfulness.</div>
                                 <div class="flow-arrow">→</div>
                                 <div class="flow-node flow-score-node flow-score-high">20.0</div>
                             </div>
-                            <div class="flow-lane" style="margin-bottom: 0;">
+                            <div class="flow-chunk">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_reject.png">
+                                    <img src="/images/posterreward/p001_reject.png" alt="Rejected poster">
+                                </div>
                                 <div class="flow-arrow">→</div>
                                 <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Rejected): Text readability issues, awkward phrase generation, and weaker global visual balance. The rejected sample shows lower fidelity to the prompt and less polished typography.">Analysis: text readability issues, awkward phrase generation, and weaker global visual balance.</div>
                                 <div class="flow-arrow">→</div>
@@ -387,19 +450,19 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
-                        <div class="flow-dual-lane">
-                            <div class="flow-img-scroll">
-                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
-                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster">
-                            </div>
+                        <div class="flow-lite-row">
                             <div class="flow-lane">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
+                                    <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
+                                </div>
                                 <div class="flow-arrow">→</div>
-                                <span style="font-size:0.87rem;color:var(--text-secondary);">Chosen</span>
                                 <div class="flow-node flow-score-node flow-score-high">17.8</div>
                             </div>
-                            <div class="flow-lane" style="margin-bottom: 0;">
+                            <div class="flow-lane">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_reject.png">
+                                    <img src="/images/posterreward/p001_reject.png" alt="Rejected poster">
+                                </div>
                                 <div class="flow-arrow">→</div>
-                                <span style="font-size:0.87rem;color:var(--text-secondary);">Rejected</span>
                                 <div class="flow-node flow-score-node flow-score-low">7.1</div>
                             </div>
                         </div>
@@ -413,15 +476,15 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
-                        <div class="flow-dual-lane">
-                            <div class="flow-img-scroll">
+                        <div class="flow-pairwise-row">
+                            <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
                                 <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Candidate A">
+                            </div>
+                            <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_reject.png">
                                 <img src="/images/posterreward/p001_reject.png" alt="Candidate B">
                             </div>
-                            <div class="flow-lane" style="margin-bottom: 0;">
-                                <div class="flow-arrow">→</div>
-                                <div class="flow-node flow-judge-node analysis-expand" data-full="Judgment: Prefer Candidate A (top image). Reasoning: Stronger text realism and semantic clarity. The chosen candidate shows cleaner typography hierarchy, coherent skyline composition, and higher instruction faithfulness. The rejected candidate exhibits text readability issues and weaker global visual balance.">Judgment: Prefer Candidate A. Reasoning highlights stronger text realism, clearer semantics, and better composition consistency.</div>
-                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-node flow-judge-node analysis-expand" data-full="Judgment: Prefer Candidate A (left image). Reasoning: Stronger text realism and semantic clarity. The chosen candidate shows cleaner typography hierarchy, coherent skyline composition, and higher instruction faithfulness. The rejected candidate exhibits text readability issues and weaker global visual balance.">Judgment: Prefer Candidate A. Reasoning highlights stronger text realism, clearer semantics, and better composition consistency.</div>
                         </div>
                     </div>
                 </div>
@@ -433,6 +496,10 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         <button class="analysis-overlay-close" onclick="document.getElementById('analysis-overlay').classList.remove('active')" aria-label="Close">×</button>
         <div class="analysis-overlay-content" onclick="event.stopPropagation()"></div>
     </div>
+    <div id="img-overlay" class="img-overlay" onclick="if(event.target===this)this.classList.remove('active')">
+        <button class="img-overlay-close" onclick="document.getElementById('img-overlay').classList.remove('active')" aria-label="Close">×</button>
+        <img src="" alt="Enlarged" onclick="event.stopPropagation()">
+    </div>
     <script>
         (function(){
             document.querySelectorAll('.analysis-expand').forEach(function(el){
@@ -441,6 +508,16 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     var overlay = document.getElementById('analysis-overlay');
                     overlay.querySelector('.analysis-overlay-content').textContent = full;
                     overlay.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.img-zoomable').forEach(function(el){
+                el.addEventListener('click', function(){
+                    var src = el.getAttribute('data-src') || el.querySelector('img')?.src;
+                    if (src) {
+                        var overlay = document.getElementById('img-overlay');
+                        overlay.querySelector('img').src = src;
+                        overlay.classList.add('active');
+                    }
                 });
             });
         })();
