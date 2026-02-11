@@ -258,17 +258,12 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         .flow-arrow:hover { opacity: 1; }
         .flow-chunk-scroll {
             width: 100%;
-            max-width: 680px;
-            height: 280px;
+            max-width: 820px;
+            height: 400px;
             overflow-y: auto;
             overflow-x: hidden;
-            border-radius: 14px;
-            background: rgba(248, 250, 252, 0.9);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            padding: 0.6rem;
-            transition: box-shadow 0.25s ease;
+            margin-top: 0.5rem;
         }
-        .flow-chunk-scroll:hover { box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.2); }
         .flow-chunk-scroll::-webkit-scrollbar { width: 6px; }
         .flow-chunk-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
         .flow-chunk {
@@ -276,17 +271,14 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 1rem;
-            padding: 0.5rem;
-            background: white;
-            border-radius: 12px;
-            border: 1px solid rgba(0,0,0,0.06);
-            box-shadow: 0 4px 12px -8px rgba(0,0,0,0.15);
+            padding: 0.6rem 0;
             flex-shrink: 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
-        .flow-chunk:last-child { margin-bottom: 0; }
+        .flow-chunk:last-child { margin-bottom: 0; border-bottom: none; }
         .flow-chunk .flow-node { flex-shrink: 0; }
         .flow-chunk .img-wrap {
-            width: 120px;
+            width: 200px;
             flex-shrink: 0;
             cursor: pointer;
             border-radius: 10px;
@@ -320,7 +312,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             transform: translateY(-2px);
             box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
         }
-        .flow-lite-row .img-wrap { width: 140px; }
+        .flow-lite-row .img-wrap { width: 200px; }
         .flow-lite-row .img-wrap img { width: 100%; height: auto; display: block; }
         .flow-pairwise-row {
             display: flex;
@@ -328,7 +320,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             gap: 0.6rem;
             flex-wrap: wrap;
         }
-        .flow-pairwise-row .img-wrap { width: 120px; }
+        .flow-pairwise-row .img-wrap { width: 200px; }
         .flow-pairwise-row .img-wrap img { width: 100%; height: auto; display: block; }
         .analysis-overlay {
             display: none;
