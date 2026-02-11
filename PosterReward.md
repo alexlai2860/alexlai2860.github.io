@@ -53,16 +53,6 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
     </div>
 
     <style>
-        @keyframes floatSoft {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
-        }
-        @keyframes pulseArrow {
-            0% { opacity: 0.45; transform: translateX(0); }
-            50% { opacity: 1; transform: translateX(3px); }
-            100% { opacity: 0.45; transform: translateX(0); }
-        }
         .stacked-showcase {
             display: block;
             margin: 7rem 0;
@@ -135,7 +125,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         }
         .model-eval-row {
             display: grid;
-            grid-template-columns: 260px 1fr;
+            grid-template-columns: 180px 1fr;
             gap: 1.2rem;
             align-items: stretch;
         }
@@ -192,11 +182,15 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             border-radius: 12px;
             padding: 0.5rem;
             box-shadow: 0 8px 22px -14px rgba(0, 0, 0, 0.25);
-            animation: floatSoft 3s ease-in-out infinite;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .flow-node:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.35);
         }
         .flow-node img {
-            width: 120px;
-            height: 80px;
+            width: 100%;
+            height: auto;
             object-fit: cover;
             border-radius: 8px;
             display: block;
@@ -213,7 +207,13 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             color: var(--text-secondary);
             font-size: 0.83rem;
             line-height: 1.38;
-            animation-delay: 0.35s;
+            cursor: pointer;
+        }
+        .flow-text-node:hover { color: var(--primary); }
+        .flow-text-node::after {
+            content: " ⊞";
+            font-size: 0.75em;
+            opacity: 0.6;
         }
         .flow-score-node {
             min-width: 90px;
@@ -222,7 +222,6 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             font-size: 1.05rem;
             color: white;
             border: none;
-            animation-delay: 0.7s;
         }
         .flow-score-high { background: linear-gradient(135deg, #16a34a, #22c55e); }
         .flow-score-low { background: linear-gradient(135deg, #f97316, #ef4444); }
@@ -232,41 +231,103 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             color: var(--text-main);
             font-size: 0.86rem;
             line-height: 1.42;
-            animation-delay: 0.35s;
+            cursor: pointer;
+        }
+        .flow-judge-node:hover { color: var(--primary); }
+        .flow-judge-node::after {
+            content: " ⊞";
+            font-size: 0.75em;
+            opacity: 0.6;
         }
         .flow-arrow {
             color: #6366f1;
             font-weight: 700;
             font-size: 1.05rem;
-            animation: pulseArrow 1.4s ease-in-out infinite;
+            transition: opacity 0.2s ease;
         }
-        .eval-notes {
-            margin-top: 0.55rem;
+        .flow-arrow:hover { opacity: 1; }
+        .flow-img-scroll {
+            width: 200px;
+            height: 220px;
+            overflow-y: auto;
+            overflow-x: hidden;
             border-radius: 12px;
-            border: 1px dashed rgba(15, 23, 42, 0.2);
-            padding: 0.45rem 0.65rem;
-            background: rgba(255, 255, 255, 0.7);
+            background: #f8fafc;
+            border: 1px solid rgba(0, 0, 0, 0.08);
         }
-        .eval-notes summary {
-            cursor: pointer;
+        .flow-img-scroll::-webkit-scrollbar { width: 6px; }
+        .flow-img-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .flow-img-scroll img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
+        .flow-img-scroll img + img { border-top: 4px solid rgba(0,0,0,0.06); }
+        .analysis-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(15, 23, 42, 0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .analysis-overlay.active { display: flex; }
+        .analysis-overlay-content {
+            max-width: 720px;
+            max-height: 85vh;
+            overflow-y: auto;
+            background: rgba(255,255,255,0.95);
             color: var(--text-main);
-            font-size: 0.86rem;
-            font-weight: 600;
+            padding: 2rem;
+            border-radius: 16px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
         }
-        .eval-notes-content {
-            margin-top: 0.5rem;
-            font-size: 0.84rem;
-            color: var(--text-secondary);
-            line-height: 1.45;
+        .analysis-overlay-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .analysis-overlay-close:hover { background: rgba(255,255,255,0.35); }
+        .flow-dual-lane {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0 0.6rem;
+            align-items: center;
+        }
+        .flow-dual-lane .flow-img-scroll {
+            grid-row: 1 / -1;
+            align-self: stretch;
+        }
+        .flow-single-img {
+            width: 140px;
+            flex-shrink: 0;
+        }
+        .flow-single-img img {
+            width: 100%;
+            height: auto;
+            max-height: 160px;
+            object-fit: contain;
         }
         @media (max-width: 1100px) {
             .model-eval-row {
                 grid-template-columns: 1fr;
             }
-            .flow-node img {
-                width: 100px;
-                height: 70px;
-            }
+            .flow-dual-lane { grid-template-columns: 1fr; }
+            .flow-dual-lane .flow-img-scroll { max-width: 100%; }
         }
     </style>
 
@@ -283,30 +344,24 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
-                        <div class="flow-lane">
-                            <div class="flow-node">
-                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster sample">
-                                <div class="flow-node-label">Chosen Image</div>
+                        <div class="flow-dual-lane">
+                            <div class="flow-img-scroll">
+                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
+                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster">
                             </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-text-node">Analysis: clean typography hierarchy, coherent skyline composition, and high instruction faithfulness.</div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-score-node flow-score-high">20.0</div>
-                        </div>
-                        <div class="flow-lane" style="margin-bottom: 0;">
-                            <div class="flow-node">
-                                <img src="/images/posterreward/p001_reject.png" alt="Rejected poster sample">
-                                <div class="flow-node-label">Rejected Image</div>
+                            <div class="flow-lane">
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Chosen): Clean typography hierarchy, coherent skyline composition, and high instruction faithfulness. The chosen sample demonstrates superior text rendering and layout balance.">Analysis: clean typography hierarchy, coherent skyline composition, and high instruction faithfulness.</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-node flow-score-node flow-score-high">20.0</div>
                             </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-text-node">Analysis: text readability issues, awkward phrase generation, and weaker global visual balance.</div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-score-node flow-score-low">5.0</div>
+                            <div class="flow-lane" style="margin-bottom: 0;">
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Rejected): Text readability issues, awkward phrase generation, and weaker global visual balance. The rejected sample shows lower fidelity to the prompt and less polished typography.">Analysis: text readability issues, awkward phrase generation, and weaker global visual balance.</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-node flow-score-node flow-score-low">5.0</div>
+                            </div>
                         </div>
-                        <details class="eval-notes">
-                            <summary>Expandable notes (you can edit this later)</summary>
-                            <div class="eval-notes-content">Place your detailed explanation here, such as rubric dimensions, full chain-of-thought style comments, or per-dimension subscores.</div>
-                        </details>
                     </div>
                 </div>
 
