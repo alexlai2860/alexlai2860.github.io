@@ -259,10 +259,11 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         .flow-chunk-scroll {
             width: 100%;
             max-width: 820px;
-            height: 400px;
+            height: 260px;
             overflow-y: auto;
             overflow-x: hidden;
             margin-top: 0.5rem;
+            overscroll-behavior-y: contain;
         }
         .flow-chunk-scroll::-webkit-scrollbar { width: 6px; }
         .flow-chunk-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
@@ -412,7 +413,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
-                        <div class="flow-chunk-scroll">
+                        <div class="flow-chunk-scroll" id="posterreward-scroll" tabindex="0">
                             <div class="flow-chunk">
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
                                     <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
@@ -512,6 +513,16 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     }
                 });
             });
+            var scrollEl = document.getElementById('posterreward-scroll');
+            if (scrollEl) {
+                scrollEl.addEventListener('wheel', function(e) {
+                    var top = this.scrollTop, h = this.clientHeight, sh = this.scrollHeight;
+                    if ((e.deltaY > 0 && top < sh - h - 1) || (e.deltaY < 0 && top > 1)) {
+                        e.preventDefault();
+                        this.scrollTop += e.deltaY;
+                    }
+                }, { passive: false });
+            }
         })();
     </script>
 
