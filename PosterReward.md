@@ -761,28 +761,163 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             <!-- 对比实验 -->
             <div style="margin-bottom: 5rem;">
                 <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; color: var(--text-main);">Main Comparisons</h3>
-                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    We evaluate PosterReward against existing reward models on poster assessment tasks, demonstrating superior performance in both pairwise accuracy and pointwise correlation.
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    We evaluate PosterReward against existing reward models on poster assessment tasks, demonstrating superior performance in both pointwise accuracy and pairwise preference prediction.
                 </p>
-                <div class="table-scroll-wrapper">
-                    <table class="results-table" style="max-width: 900px; margin: 0 auto;">
-                        <thead>
-                            <tr>
-                                <th>Method</th>
-                                <th>Pairwise Acc (%) ↑</th>
-                                <th>Spearman ρ ↑</th>
-                                <th>Kendall τ ↑</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TODO: 添加对比实验数据 -->
-                            <tr>
-                                <td colspan="4" style="text-align: center; color: var(--text-secondary); padding: 3rem;">
-                                    [对比实验数据待添加]
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <!-- Pointwise Reward Models -->
+                <div style="margin-bottom: 4rem;">
+                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Pointwise Reward Models</h4>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Performance comparison across various benchmarks. All values represent accuracy (↑). PRB is an abbreviation for PosterRewardBench.
+                    </p>
+                    <div class="table-scroll-wrapper">
+                        <table class="results-table" style="max-width: 900px; margin: 0 auto;">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>MMRB2</th>
+                                    <th>HPDv3</th>
+                                    <th>PRB-Basic</th>
+                                    <th>PRB-Ad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ImageReward</td>
+                                    <td>53.0</td>
+                                    <td>58.6</td>
+                                    <td>60.7</td>
+                                    <td>49.3</td>
+                                </tr>
+                                <tr>
+                                    <td>PickScore</td>
+                                    <td>57.6</td>
+                                    <td>65.6</td>
+                                    <td>66.7</td>
+                                    <td>44.1</td>
+                                </tr>
+                                <tr>
+                                    <td>HPSv2</td>
+                                    <td>55.0</td>
+                                    <td>65.3</td>
+                                    <td>70.8</td>
+                                    <td>43.7</td>
+                                </tr>
+                                <tr>
+                                    <td>UnifiedReward*</td>
+                                    <td>56.9</td>
+                                    <td>59.4</td>
+                                    <td>60.0</td>
+                                    <td>52.7</td>
+                                </tr>
+                                <tr>
+                                    <td>HPSv3</td>
+                                    <td>58.5</td>
+                                    <td>76.9</td>
+                                    <td>72.9</td>
+                                    <td>41.2</td>
+                                </tr>
+                                <tr style="background: rgba(251, 191, 36, 0.08);">
+                                    <td><strong>PosterReward-Lite</strong></td>
+                                    <td><strong>60.5</strong></td>
+                                    <td><strong>77.1</strong></td>
+                                    <td><strong>83.9</strong></td>
+                                    <td><strong>85.0</strong></td>
+                                </tr>
+                                <tr style="background: rgba(251, 191, 36, 0.12);">
+                                    <td><strong>PosterReward</strong></td>
+                                    <td><strong>59.6</strong></td>
+                                    <td><strong>77.8</strong></td>
+                                    <td><strong>86.7</strong></td>
+                                    <td><strong>86.0</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pairwise Reward Models -->
+                <div style="margin-bottom: 3rem;">
+                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Pairwise Reward Models</h4>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Performance comparison on PosterRewardBench (PRB). "Yes" and "No" refer to the accuracy on samples with positive and negative ground truth labels, respectively.
+                    </p>
+                    <div class="table-scroll-wrapper">
+                        <table class="results-table" style="max-width: 900px; margin: 0 auto;">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">Model</th>
+                                    <th colspan="3" style="text-align: center;">PRB-Basic Acc. ↑</th>
+                                    <th colspan="3" style="text-align: center;">PRB-Ad Acc. ↑</th>
+                                </tr>
+                                <tr>
+                                    <th>Yes</th>
+                                    <th>No</th>
+                                    <th>Avg.</th>
+                                    <th>Yes</th>
+                                    <th>No</th>
+                                    <th>Avg.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>UnifiedReward-think</td>
+                                    <td>75.1</td>
+                                    <td>61.5</td>
+                                    <td>68.3</td>
+                                    <td>52.6</td>
+                                    <td>48.5</td>
+                                    <td>50.6</td>
+                                </tr>
+                                <tr>
+                                    <td>Qwen3-VL-Plus</td>
+                                    <td>89.9</td>
+                                    <td>39.2</td>
+                                    <td>64.5</td>
+                                    <td>98.7</td>
+                                    <td>14.2</td>
+                                    <td>56.4</td>
+                                </tr>
+                                <tr>
+                                    <td>Gemini-2.5-Flash</td>
+                                    <td>94.7</td>
+                                    <td>33.3</td>
+                                    <td>64.0</td>
+                                    <td>95.2</td>
+                                    <td>28.8</td>
+                                    <td>62.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Gemini-2.5-Pro</td>
+                                    <td>75.6</td>
+                                    <td>83.1</td>
+                                    <td>79.3</td>
+                                    <td>81.8</td>
+                                    <td>68.6</td>
+                                    <td>75.2</td>
+                                </tr>
+                                <tr>
+                                    <td>GPT-5</td>
+                                    <td>90.4</td>
+                                    <td>80.5</td>
+                                    <td>85.4</td>
+                                    <td>89.8</td>
+                                    <td>75.9</td>
+                                    <td>82.9</td>
+                                </tr>
+                                <tr style="background: rgba(251, 191, 36, 0.12);">
+                                    <td><strong>PosterReward-Pairwise</strong></td>
+                                    <td><strong>82.0</strong></td>
+                                    <td><strong>84.0</strong></td>
+                                    <td><strong>83.0</strong></td>
+                                    <td><strong>84.1</strong></td>
+                                    <td><strong>83.6</strong></td>
+                                    <td><strong>83.8</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
