@@ -822,9 +822,9 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </tr>
                                 <tr>
                                     <td>HPSv3</td>
-                                    <td><span class="rank-2">58.5</span></td>
-                                    <td><span class="rank-2">76.9</span></td>
-                                    <td><span class="rank-2">72.9</span></td>
+                                    <td>58.5</span></td>
+                                    <td>76.9</span></td>
+                                    <td>72.9</span></td>
                                     <td>41.2</td>
                                 </tr>
                                 <tr>
