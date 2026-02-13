@@ -766,7 +766,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 </p>
 
                 <!-- Pointwise Reward Models -->
-                <div style="margin-bottom: 4rem;">
+                <div class="v-media-card" style="margin-bottom: 2rem;">
                     <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Pointwise Reward Models</h4>
                     <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
                         Performance comparison across various benchmarks. All values represent accuracy (↑). PRB is an abbreviation for PosterRewardBench.
@@ -838,7 +838,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 </div>
 
                 <!-- Pairwise Reward Models -->
-                <div style="margin-bottom: 3rem;">
+                <div class="v-media-card" style="margin-bottom: 3rem;">
                     <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Pairwise Reward Models</h4>
                     <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
                         Performance comparison on PosterRewardBench (PRB). "Yes" and "No" refer to the accuracy on samples with positive and negative ground truth labels, respectively.
@@ -1054,11 +1054,11 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         </p>
     </div>
 
-    <!-- Section 5: Application - Reward Model in Post Training -->
+    <!-- Section 5: Application - Reward Model in Post Training and Test-Time Scaling -->
     <div class="split-section stacked-showcase" id="posttraining">
         <div class="split-text">
             <span class="section-label">Application</span>
-            <h2 class="section-title">Reward Model in Post Training</h2>
+            <h2 class="section-title">Reward Model in Post Training and Test-Time Scaling</h2>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
