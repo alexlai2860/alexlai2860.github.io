@@ -461,6 +461,15 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             background: rgba(251, 191, 36, 0.22);
             border: 1px solid rgba(251, 191, 36, 0.45);
         }
+        .rank-2 {
+            display: inline-block;
+            padding: 0.1rem 0.38rem;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #1e40af;
+            background: rgba(147, 197, 253, 0.35);
+            border: 1px solid rgba(96, 165, 250, 0.5);
+        }
         .bench-group-row td {
             text-align: left;
             font-style: normal;
@@ -813,24 +822,24 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </tr>
                                 <tr>
                                     <td>HPSv3</td>
-                                    <td>58.5</td>
-                                    <td>76.9</td>
-                                    <td>72.9</td>
+                                    <td><span class="rank-2">58.5</span></td>
+                                    <td><span class="rank-2">76.9</span></td>
+                                    <td><span class="rank-2">72.9</span></td>
                                     <td>41.2</td>
                                 </tr>
-                                <tr style="background: rgba(251, 191, 36, 0.08);">
+                                <tr>
                                     <td><strong>PosterReward-Lite</strong></td>
-                                    <td><strong>60.5</strong></td>
-                                    <td><strong>77.1</strong></td>
-                                    <td><strong>83.9</strong></td>
-                                    <td><strong>85.0</strong></td>
+                                    <td><span class="rank-1">60.5</span></td>
+                                    <td>77.1</td>
+                                    <td><span class="rank-2">83.9</span></td>
+                                    <td><span class="rank-2">85.0</span></td>
                                 </tr>
-                                <tr style="background: rgba(251, 191, 36, 0.12);">
+                                <tr>
                                     <td><strong>PosterReward</strong></td>
-                                    <td><strong>59.6</strong></td>
-                                    <td><strong>77.8</strong></td>
-                                    <td><strong>86.7</strong></td>
-                                    <td><strong>86.0</strong></td>
+                                    <td>59.6</td>
+                                    <td><span class="rank-1">77.8</span></td>
+                                    <td><span class="rank-1">86.7</span></td>
+                                    <td><span class="rank-1">86.0</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -902,19 +911,19 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                     <td>GPT-5</td>
                                     <td>90.4</td>
                                     <td>80.5</td>
-                                    <td>85.4</td>
+                                    <td><span class="rank-2">85.4</span></td>
                                     <td>89.8</td>
                                     <td>75.9</td>
-                                    <td>82.9</td>
+                                    <td><span class="rank-2">82.9</span></td>
                                 </tr>
-                                <tr style="background: rgba(251, 191, 36, 0.12);">
+                                <tr>
                                     <td><strong>PosterReward-Pairwise</strong></td>
-                                    <td><strong>82.0</strong></td>
-                                    <td><strong>84.0</strong></td>
-                                    <td><strong>83.0</strong></td>
-                                    <td><strong>84.1</strong></td>
-                                    <td><strong>83.6</strong></td>
-                                    <td><strong>83.8</strong></td>
+                                    <td>82.0</td>
+                                    <td>84.0</td>
+                                    <td><span class="rank-1">83.0</span></td>
+                                    <td>84.1</td>
+                                    <td>83.6</td>
+                                    <td><span class="rank-1">83.8</span></td>
                                 </tr>
                             </tbody>
                         </table>
