@@ -602,7 +602,9 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     .replace(/'/g, '&#39;');
             }
             function highlightMeaningfulSentences(html) {
-                var sentenceSignal = /(text rendering|typographical|nonsensical text|garbled line of text|artifact|distortion|fundamental integrity|technical quality|free from technical flaws|professional and flawless|fully compliant|excellent legibility|visual hierarchy|negative space|prompt|composition|balanced|thematically coherent|aesthetically pleasing|harmonious visual flow|sense of depth|significantly better|superior adherence|flawless text rendering|completely misses|failed attempt|severely undermines|realism)/i;
+                var sentenceSignal = /(significantly better|superior adherence|flawless text rendering|significant flaw|extraneous,?\s+nonsensical text|extraneous,?\s+garbled line of text|clear ai artifact|minor ai artifacts?|failed attempt|severely undermines|completely misses|excellent fundamental integrity|strong fundamental quality|free from technical flaws|fully compliant|typographical execution is precise|typographical execution is a mixed success)/i;
+                var maxHighlights = 6;
+                var highlightCount = 0;
                 var lines = html.split('\n');
                 return lines.map(function(line) {
                     var trimmed = line.trim();
@@ -612,7 +614,8 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     return sentences.map(function(sentence) {
                         var part = sentence.trim();
                         if (!part) return sentence;
-                        if (sentenceSignal.test(part)) {
+                        if (highlightCount < maxHighlights && sentenceSignal.test(part)) {
+                            highlightCount += 1;
                             return '<span class="analysis-key-highlight">' + part + '</span>';
                         }
                         return part;
@@ -757,76 +760,76 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </tr>
                     <tr>
                         <td>Nano-Banana</td>
-                        <td><span class="rank-1">9.86</span></td>
-                        <td>9.63</td>
-                        <td><span class="rank-1">5.59</span></td>
-                        <td>13.17</td>
+                        <td>11.60</td>
+                        <td>11.69</td>
+                        <td>4.94</td>
+                        <td>14.49</td>
                     </tr>
                     <tr>
                         <td>Seedream4.0</td>
-                        <td>9.23</td>
-                        <td><span class="rank-1">10.38</span></td>
-                        <td>6.81</td>
-                        <td><span class="rank-1">13.90</span></td>
+                        <td>11.46</td>
+                        <td>11.44</td>
+                        <td>4.95</td>
+                        <td>13.93</td>
                     </tr>
                     <tr>
                         <td>GPT-Image-1</td>
-                        <td>6.57</td>
-                        <td>6.72</td>
-                        <td>6.04</td>
-                        <td>11.73</td>
+                        <td>11.16</td>
+                        <td>11.38</td>
+                        <td>4.85</td>
+                        <td>13.43</td>
                     </tr>
                     <tr>
                         <td>Seedream3.0</td>
-                        <td>2.21</td>
-                        <td>1.93</td>
-                        <td>7.13</td>
-                        <td>8.40</td>
+                        <td>5.01</td>
+                        <td>5.13</td>
+                        <td>6.28</td>
+                        <td>9.75</td>
                     </tr>
                     <tr>
                         <td colspan="5" style="text-align: left; font-style: italic; color: var(--text-secondary);">Open-Source Models</td>
                     </tr>
                     <tr>
                         <td>Z-Image-Turbo</td>
-                        <td>6.83</td>
-                        <td>7.34</td>
-                        <td>7.05</td>
-                        <td>12.28</td>
+                        <td>7.65</td>
+                        <td>7.31</td>
+                        <td>6.00</td>
+                        <td>10.47</td>
                     </tr>
                     <tr>
                         <td>Qwen-Image-2512</td>
-                        <td>6.83</td>
-                        <td>7.34</td>
-                        <td>7.05</td>
-                        <td>12.28</td>
+                        <td>11.86</td>
+                        <td>11.63</td>
+                        <td>5.28</td>
+                        <td>13.85</td>
                     </tr>
                     <tr>
                         <td>Qwen-Image</td>
-                        <td>6.83</td>
-                        <td>7.34</td>
-                        <td>7.05</td>
-                        <td>12.28</td>
+                        <td>7.69</td>
+                        <td>7.72</td>
+                        <td>5.57</td>
+                        <td>11.06</td>
                     </tr>
                     <tr>
                         <td>Flux.1-dev</td>
-                        <td>4.89</td>
-                        <td>4.93</td>
-                        <td>5.89</td>
-                        <td>10.56</td>
+                        <td>2.55</td>
+                        <td>2.42</td>
+                        <td>7.10</td>
+                        <td>7.81</td>
                     </tr>
                     <tr>
                         <td>Flux-Krea</td>
-                        <td>4.38</td>
-                        <td>5.47</td>
-                        <td>8.36</td>
-                        <td>9.11</td>
+                        <td>5.00</td>
+                        <td>5.14</td>
+                        <td>6.87</td>
+                        <td>9.58</td>
                     </tr>
                     <tr>
                         <td>SD3.5-L</td>
-                        <td>-2.19</td>
-                        <td>-3.57</td>
-                        <td>6.52</td>
-                        <td>2.80</td>
+                        <td>-2.90</td>
+                        <td>-3.92</td>
+                        <td>5.76</td>
+                        <td>1.24</td>
                     </tr>
                 </tbody>
             </table>
