@@ -350,6 +350,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             font-size: 0.95rem;
             line-height: 1.7;
             box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            white-space: pre-wrap;
         }
         .analysis-overlay-close {
             position: absolute;
@@ -482,7 +483,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 <img src="/images/posterreward/p001_reject.png" alt="Candidate B">
                             </div>
                             <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-judge-node analysis-expand" data-full="Yes. \n\nImage 1 is significantly better than Image 2 primarily due to its superior adherence to the \"serene minimalist poster with Japanese negative space\" aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the \"minimalist\" and \"Japanese negative space\" requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (\"Landmark Ueeepan.\") below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes. \n\nImage 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</div>
+                            <div class="flow-node flow-judge-node analysis-expand" data-full="Yes.&#10;&#10;Image 1 is significantly better than Image 2 primarily due to its superior adherence to the &quot;serene minimalist poster with Japanese negative space&quot; aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the &quot;minimalist&quot; and &quot;Japanese negative space&quot; requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (&quot;Landmark Ueeepan.&quot;) below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes.<br><br>Image 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</div>
                         </div>
                     </div>
                 </div>
