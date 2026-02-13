@@ -452,6 +452,24 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             line-height: 1;
         }
         .analysis-overlay-close:hover { background: rgba(255,255,255,0.35); }
+        .rank-1 {
+            display: inline-block;
+            padding: 0.1rem 0.38rem;
+            border-radius: 6px;
+            font-weight: 700;
+            color: #92400e;
+            background: rgba(251, 191, 36, 0.22);
+            border: 1px solid rgba(251, 191, 36, 0.45);
+        }
+        .bench-group-row td {
+            text-align: left;
+            font-style: normal;
+            font-weight: 600;
+            color: #475569;
+            background: rgba(148, 163, 184, 0.08);
+            padding-left: 1rem;
+            white-space: nowrap;
+        }
         .img-overlay {
             display: none;
             position: fixed;
@@ -734,7 +752,69 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         </div>
     </div>
 
-    <!-- Section 4: Application - Test Time Scaling and Graphic Design Evaluation -->
+    <!-- Section 4: Experiments -->
+    <div class="split-section stacked-showcase" id="experiments">
+        <div class="split-text">
+            <span class="section-label">Experiments</span>
+            <h2 class="section-title">Experimental Results</h2>
+            
+            <!-- 对比实验 -->
+            <div style="margin-bottom: 5rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; color: var(--text-main);">Main Comparisons</h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    We evaluate PosterReward against existing reward models on poster assessment tasks, demonstrating superior performance in both pairwise accuracy and pointwise correlation.
+                </p>
+                <div class="table-scroll-wrapper">
+                    <table class="results-table" style="max-width: 900px; margin: 0 auto;">
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Pairwise Acc (%) ↑</th>
+                                <th>Spearman ρ ↑</th>
+                                <th>Kendall τ ↑</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TODO: 添加对比实验数据 -->
+                            <tr>
+                                <td colspan="4" style="text-align: center; color: var(--text-secondary); padding: 3rem;">
+                                    [对比实验数据待添加]
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 消融实验 -->
+            <div style="margin-bottom: 3rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; color: var(--text-main);">Ablation Study</h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    We analyze the contribution of each component in our cascaded training framework.
+                </p>
+                <div class="table-scroll-wrapper">
+                    <table class="results-table" style="max-width: 700px; margin: 0 auto;">
+                        <thead>
+                            <tr>
+                                <th>Configuration</th>
+                                <th>Pairwise Acc (%) ↑</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TODO: 添加消融实验数据 -->
+                            <tr>
+                                <td colspan="2" style="text-align: center; color: var(--text-secondary); padding: 3rem;">
+                                    [消融实验数据待添加]
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: PosterBench -->
     <div class="table-container" id="results">
         <h2 style="text-align: center; margin-bottom: 0.8rem; font-family: 'Plus Jakarta Sans', sans-serif;">
             PosterBench Leaderboard
@@ -755,15 +835,15 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="5" style="text-align: left; font-style: italic; color: var(--text-secondary);">Closed-Source Models</td>
+                    <tr class="bench-group-row">
+                        <td colspan="5">Closed-Source Models</td>
                     </tr>
                     <tr>
                         <td>Nano-Banana</td>
-                        <td>11.60</td>
-                        <td>11.69</td>
+                        <td><span class="rank-1">11.60</span></td>
+                        <td><span class="rank-1">11.69</span></td>
                         <td>4.94</td>
-                        <td>14.49</td>
+                        <td><span class="rank-1">14.49</span></td>
                     </tr>
                     <tr>
                         <td>Seedream4.0</td>
@@ -776,7 +856,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <td>GPT-Image-1</td>
                         <td>11.16</td>
                         <td>11.38</td>
-                        <td>4.85</td>
+                        <td><span class="rank-1">4.85</span></td>
                         <td>13.43</td>
                     </tr>
                     <tr>
@@ -786,8 +866,8 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <td>6.28</td>
                         <td>9.75</td>
                     </tr>
-                    <tr>
-                        <td colspan="5" style="text-align: left; font-style: italic; color: var(--text-secondary);">Open-Source Models</td>
+                    <tr class="bench-group-row">
+                        <td colspan="5">Open-Source Models</td>
                     </tr>
                     <tr>
                         <td>Z-Image-Turbo</td>
@@ -798,10 +878,10 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </tr>
                     <tr>
                         <td>Qwen-Image-2512</td>
-                        <td>11.86</td>
-                        <td>11.63</td>
-                        <td>5.28</td>
-                        <td>13.85</td>
+                        <td><span class="rank-1">11.86</span></td>
+                        <td><span class="rank-1">11.63</span></td>
+                        <td><span class="rank-1">5.28</span></td>
+                        <td><span class="rank-1">13.85</span></td>
                     </tr>
                     <tr>
                         <td>Qwen-Image</td>
@@ -859,6 +939,42 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     <div class="number-badge">3</div>
                     <span class="feature-heading">Transferable to diverse post-training scenarios</span>
                     <p class="feature-desc">Beyond benchmark ranking, the reward can guide rejection sampling, reranking, and reinforcement fine-tuning for poster generation, helping models move from generic aesthetics to task-specific design quality.</p>
+                </div>
+            </div>
+
+            <!-- 视觉比较 -->
+            <div style="margin-top: 5rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; color: var(--text-main);">Visual Comparison</h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    PosterReward enables effective post-training improvement through Best-of-8 selection and GRPO training. Below we show qualitative comparisons between models before and after applying PosterReward-guided optimization.
+                </p>
+
+                <!-- BO8筛选效果对比 -->
+                <div style="margin-bottom: 4rem;">
+                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Best-of-8 Selection with PosterReward</h4>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Using PosterReward to select the best from 8 candidates significantly improves output quality compared to random selection.
+                    </p>
+                    <div class="v-media-stack">
+                        <div class="v-media-card">
+                            <img src="" alt="BO8 selection comparison" onerror="this.parentElement.style.display='none'">
+                            <p class="v-media-caption">Left: Random selection from 8 candidates. Right: PosterReward-guided selection.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRPO训练效果对比 -->
+                <div style="margin-bottom: 3rem;">
+                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">GRPO Post-Training with PosterReward</h4>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Fine-tuning with PosterReward as reward signal improves typography, layout coherence, and prompt adherence.
+                    </p>
+                    <div class="v-media-stack">
+                        <div class="v-media-card">
+                            <img src="" alt="GRPO training comparison" onerror="this.parentElement.style.display='none'">
+                            <p class="v-media-caption">Comparison between base model and GRPO-trained model using PosterReward.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
