@@ -847,11 +847,12 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <table class="results-table" style="max-width: 900px; margin: 0 auto;">
                             <thead>
                                 <tr>
-                                    <th rowspan="2">Model</th>
-                                    <th colspan="3" style="text-align: center;">PRB-Basic Acc. ↑</th>
-                                    <th colspan="3" style="text-align: center;">PRB-Ad Acc. ↑</th>
+                                    <th>Model</th>
+                                    <th colspan="3">PRB-Basic Acc. ↑</th>
+                                    <th colspan="3">PRB-Ad Acc. ↑</th>
                                 </tr>
-                                <tr>
+                                <tr style="font-size: 0.9rem;">
+                                    <th></th>
                                     <th>Yes</th>
                                     <th>No</th>
                                     <th>Avg.</th>
@@ -921,29 +922,127 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 </div>
             </div>
 
+            <!-- User Study on Analysis Module -->
+            <div style="margin-bottom: 4rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; color: var(--text-main);">User Study on Analysis Module</h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    Human evaluation demonstrates the progressive improvement of our cascaded training strategy.
+                </p>
+                <div class="v-media-card" style="max-width: 900px; margin: 0 auto;">
+                    <img src="/images/posterreward/comparison_plot_gemini3flash_v2.png" alt="User study on analysis module" style="width: 100%; border-radius: 12px; display: block;">
+                    <p class="v-media-caption" style="margin-top: 1rem; text-align: center;">Overall preference comparison across different training stages. Right model win rate increases progressively with each component.</p>
+                </div>
+            </div>
+
             <!-- 消融实验 -->
             <div style="margin-bottom: 3rem;">
                 <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; color: var(--text-main);">Ablation Study</h3>
                 <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
                     We analyze the contribution of each component in our cascaded training framework.
                 </p>
-                <div class="table-scroll-wrapper">
-                    <table class="results-table" style="max-width: 700px; margin: 0 auto;">
-                        <thead>
-                            <tr>
-                                <th>Configuration</th>
-                                <th>Pairwise Acc (%) ↑</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TODO: 添加消融实验数据 -->
-                            <tr>
-                                <td colspan="2" style="text-align: center; color: var(--text-secondary); padding: 3rem;">
-                                    [消融实验数据待添加]
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                
+                <!-- 两个消融实验表格并排 -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
+                    <!-- Table 3: Ablation on PosterReward-Pairwise -->
+                    <div class="v-media-card">
+                        <h4 style="text-align: center; margin-bottom: 1rem; font-size: 1rem; color: var(--text-secondary);">PosterReward-Pairwise</h4>
+                        <div class="table-scroll-wrapper">
+                            <table class="results-table" style="width: 100%; font-size: 0.85rem;">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">Method</th>
+                                        <th colspan="3" style="text-align: center;">Advanced Acc. ↑</th>
+                                        <th colspan="3" style="text-align: center;">Basic Acc. ↑</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Yes</th>
+                                        <th>No</th>
+                                        <th>Avg.</th>
+                                        <th>Yes</th>
+                                        <th>No</th>
+                                        <th>Avg.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>SFT (Single)</td>
+                                        <td>81.77</td>
+                                        <td>82.09</td>
+                                        <td>81.93</td>
+                                        <td>80.85</td>
+                                        <td>82.59</td>
+                                        <td>81.72</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SFT (Joint)</td>
+                                        <td>82.09</td>
+                                        <td>83.32</td>
+                                        <td>82.71</td>
+                                        <td>80.08</td>
+                                        <td>83.75</td>
+                                        <td>81.92</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ RSFT (Single)</td>
+                                        <td>82.67</td>
+                                        <td>83.24</td>
+                                        <td>82.96</td>
+                                        <td>80.66</td>
+                                        <td>83.56</td>
+                                        <td>82.11</td>
+                                    </tr>
+                                    <tr style="background: rgba(251, 191, 36, 0.12);">
+                                        <td><strong>+ RSFT (Joint)</strong></td>
+                                        <td><strong>84.06</strong></td>
+                                        <td><strong>83.57</strong></td>
+                                        <td><strong>83.82</strong></td>
+                                        <td><strong>82.01</strong></td>
+                                        <td><strong>83.95</strong></td>
+                                        <td><strong>82.98</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.8rem; text-align: center;">"Yes" and "No" refer to the ground truth of the response.</p>
+                    </div>
+
+                    <!-- Table 4: Ablation on PosterReward Components -->
+                    <div class="v-media-card">
+                        <h4 style="text-align: center; margin-bottom: 1rem; font-size: 1rem; color: var(--text-secondary);">PosterReward Components</h4>
+                        <div class="table-scroll-wrapper">
+                            <table class="results-table" style="width: 100%; font-size: 0.85rem;">
+                                <thead>
+                                    <tr>
+                                        <th>Model / Component</th>
+                                        <th>HPDv3</th>
+                                        <th>PRB-Basic</th>
+                                        <th>PRB-Ad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><em>PosterReward-Lite</em></td>
+                                        <td>77.1</td>
+                                        <td>83.9</td>
+                                        <td>85.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ Analysis</td>
+                                        <td>77.5</td>
+                                        <td>85.7</td>
+                                        <td>85.8</td>
+                                    </tr>
+                                    <tr style="background: rgba(251, 191, 36, 0.12);">
+                                        <td><strong>+ Analysis + GRPO</strong></td>
+                                        <td><strong>77.8</strong></td>
+                                        <td><strong>86.7</strong></td>
+                                        <td><strong>86.0</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.8rem; text-align: center;">Cumulative impact of each component on key benchmarks.</p>
+                    </div>
                 </div>
             </div>
         </div>
