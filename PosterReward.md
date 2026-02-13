@@ -346,9 +346,9 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
-        .flow-pairwise-imgs .img-wrap { width: 300px; flex-shrink: 0; }
+        .flow-pairwise-imgs .img-wrap { width: 240px; min-width: 200px; flex-shrink: 0; }
         .flow-pairwise-imgs .img-wrap img { width: 100%; height: auto; display: block; }
         .flow-pairwise-question {
             background: rgba(15, 23, 42, 0.06);
