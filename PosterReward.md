@@ -34,7 +34,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
     </div>
 
     <div style="margin-top: 2rem;">
-        <a href="https://arxiv.org/abs/2501.11646" class="btn btn-primary"><span>📄</span> Paper</a>
+        <a href="/mypaper/posterreward/PosterReward_Arxiv_official.pdf" class="btn btn-primary"><span>📄</span> Paper</a>
         <a href="https://alexlai2860.github.io/PosterReward/" class="btn btn-secondary"><span>💻</span> Code</a>
         <a href="https://huggingface.co/PosterReward" class="btn btn-secondary"><span>🤗</span> Model</a>
     </div>
