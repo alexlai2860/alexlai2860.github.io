@@ -382,6 +382,47 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         }
         .flow-pairwise-imgs .img-wrap { width: 230px; min-width: 180px; flex-shrink: 0; }
         .flow-pairwise-imgs .img-wrap img { width: 100%; height: auto; display: block; }
+        .flux-grpo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .flux-grpo-grid .img-wrap {
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .flux-grpo-grid .img-wrap:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+        }
+        .flux-grpo-grid .img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .flux-grpo-prompt {
+            background: rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            color: var(--text-secondary);
+            border-radius: 12px;
+            padding: 0.8rem 1rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            text-align: left;
+        }
+        @media (max-width: 900px) {
+            .flux-grpo-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .flux-grpo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         .flow-pairwise-question {
             background: rgba(15, 23, 42, 0.06);
             border: 1px solid rgba(15, 23, 42, 0.08);
@@ -822,9 +863,9 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </tr>
                                 <tr>
                                     <td>HPSv3</td>
-                                    <td>58.5</span></td>
-                                    <td>76.9</span></td>
-                                    <td>72.9</span></td>
+                                    <td>58.5</td>
+                                    <td>76.9</td>
+                                    <td>72.9</td>
                                     <td>41.2</td>
                                 </tr>
                                 <tr>
@@ -1224,86 +1265,110 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 <div style="margin-bottom: 3rem;">
                     <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Flow-GRPO Fine-tuning on Flux.1-dev</h4>
                     <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
-                        Visual comparison of Flux.1-dev fine-tuned with different reward models. From left to right: Base, PR (PosterReward), HPSv3, UR (User-Retro), PickScore.
+                        Visual comparison of Flux.1-dev fine-tuned with various reward models. From left to right, the columns display the outputs of the original Flux.1-dev, followed by models fine-tuned using PosterReward, HPSv3, UnifiedReward and PickScore. The corresponding prompts are enclosed at the bottom.
                     </p>
                     
                     <!-- 00051 -->
                     <div class="v-media-stack" style="margin-bottom: 2rem;">
                         <div class="v-media-card">
-                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
-                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_base.jpg" alt="00051 Base" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_pr.jpg" alt="00051 PR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_hpsv3.jpg" alt="00051 HPSv3" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_ur.jpg" alt="00051 UR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_pickscore.jpg" alt="00051 PickScore" style="width: 100%; border-radius: 8px;">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_base.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00051_flux_base.jpg" alt="00051 Base">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_pr.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_pr.jpg" alt="00051 PR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_hpsv3.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_hpsv3.jpg" alt="00051 HPSv3">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_ur.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_ur.jpg" alt="00051 UR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_pickscore.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00051_flux_pickscore.jpg" alt="00051 PickScore">
+                                </div>
                             </div>
-                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
-                            </p>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> A minimalist poster for a new single-origin coffee launch, featuring a glass pour-over dripper on the left, a ceramic mug filled with dark coffee to its right, a pile of roasted coffee beans in the foreground, and a small paper bag labeled "Single Origin" behind the beans. The background is a soft beige, creating a serene, sophisticated atmosphere. At the top is the title "New Single-Origin Coffee", and below the subjects is the text "Freshly Roasted & Ready to Brew".
+                            </div>
                         </div>
                     </div>
 
                     <!-- 00060 -->
                     <div class="v-media-stack" style="margin-bottom: 2rem;">
                         <div class="v-media-card">
-                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
-                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_base.jpg" alt="00060 Base" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_pr.jpg" alt="00060 PR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_hpsv3.jpg" alt="00060 HPSv3" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_ur.jpg" alt="00060 UR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_pickscore.jpg" alt="00060 PickScore" style="width: 100%; border-radius: 8px;">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_base.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00060_flux_base.jpg" alt="00060 Base">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_pr.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00060_flux_pr.jpg" alt="00060 PR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_hpsv3.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00060_flux_hpsv3.jpg" alt="00060 HPSv3">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_ur.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00060_flux_ur.jpg" alt="00060 UR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_pickscore.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00060_flux_pickscore.jpg" alt="00060 PickScore">
+                                </div>
                             </div>
-                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
-                            </p>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> This historical poster for "DC 9/11 Time of Crisis" features a serious portrait. At the top, centered horizontally and rendered in black, is "TIMOTHY BOTTOMS". Below this, with a black horizontal line above and below, and occupying the middle of the right half of the frame, is the title "DC 9/11", also in large black sans-serif. Underneath this, between another black horizontal line and the bottom, is the impactful subtitle "TIME OF CRISIS", rendered in the same large, bold black sans-serif font. All text is oriented horizontally.
+                            </div>
                         </div>
                     </div>
 
                     <!-- 00079 -->
                     <div class="v-media-stack" style="margin-bottom: 2rem;">
                         <div class="v-media-card">
-                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
-                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_base.jpg" alt="00079 Base" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_pr.jpg" alt="00079 PR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_hpsv3.jpg" alt="00079 HPSv3" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_ur.jpg" alt="00079 UR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_pickscore.jpg" alt="00079 PickScore" style="width: 100%; border-radius: 8px;">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_base.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00079_flux_base.jpg" alt="00079 Base">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_pr.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_pr.jpg" alt="00079 PR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_hpsv3.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_hpsv3.jpg" alt="00079 HPSv3">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_ur.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_ur.jpg" alt="00079 UR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_pickscore.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00079_flux_pickscore.jpg" alt="00079 PickScore">
+                                </div>
                             </div>
-                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
-                            </p>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> A neumorphic poster for a new tech product launch, featuring a sleek silver smartphone centered, a matte black earbud case to its right, and a compact gold-accented power bank below. Soft gray backgrounds with metallic blue highlights create a futuristic mood. At the top is the title "Introducing NextGen Innovations", and in the center below the devices is the text "Available Worldwide".
+                            </div>
                         </div>
                     </div>
 
                     <!-- 00102 -->
                     <div class="v-media-stack" style="margin-bottom: 2rem;">
                         <div class="v-media-card">
-                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
-                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_base.jpg" alt="00102 Base" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_pr_19.2k.jpg" alt="00102 PR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_hpsv3_19.2k.jpg" alt="00102 HPSv3" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_generalset_ur.jpg" alt="00102 UR" style="width: 100%; border-radius: 8px;">
-                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_pickscore.jpg" alt="00102 PickScore" style="width: 100%; border-radius: 8px;">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_base.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00102_flux_base.jpg" alt="00102 Base">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_pr_19.2k.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00102_flux_pr_19.2k.jpg" alt="00102 PR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_hpsv3_19.2k.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00102_flux_hpsv3_19.2k.jpg" alt="00102 HPSv3">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_generalset_ur.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00102_flux_generalset_ur.jpg" alt="00102 UR">
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_pickscore.jpg">
+                                    <img src="/images/posterreward/flux_grpo_comp/00102_flux_pickscore.jpg" alt="00102 PickScore">
+                                </div>
                             </div>
-                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
-                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
-                            </p>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> A neumorphic poster for a new tech product launch, featuring a sleek silver smartphone centered, a matte black earbud case to its right, and a compact gold-accented power bank below. Soft gray backgrounds with metallic blue highlights create a futuristic mood. At the top is the title "Introducing NextGen Innovations", and in the center below the devices is the text "Available Worldwide".
+                            </div>
                         </div>
                     </div>
                 </div>
