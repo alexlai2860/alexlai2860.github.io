@@ -212,18 +212,34 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             text-align: center;
         }
         .flow-text-node {
-            min-width: 200px;
-            max-width: 360px;
+            min-width: 260px;
+            max-width: 460px;
+            min-height: 118px;
             color: var(--text-secondary);
             font-size: 0.83rem;
-            line-height: 1.38;
+            line-height: 1.45;
             cursor: pointer;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 1.65rem;
         }
         .flow-text-node:hover { color: var(--primary); }
         .flow-text-node::after {
-            content: " ⊞";
-            font-size: 0.75em;
-            opacity: 0.6;
+            content: "... 点击查看完整分析 ↗";
+            position: absolute;
+            right: 0.55rem;
+            bottom: 0.4rem;
+            font-size: 0.73rem;
+            line-height: 1;
+            color: #475569;
+            background: rgba(241, 245, 249, 0.96);
+            padding: 0.2rem 0.42rem;
+            border-radius: 6px;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            pointer-events: none;
         }
         .flow-score-node {
             min-width: 90px;
@@ -245,9 +261,9 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         }
         .flow-judge-node:hover { color: var(--primary); }
         .flow-judge-node::after {
-            content: " ⊞";
-            font-size: 0.75em;
-            opacity: 0.6;
+            content: " 点击展开完整分析 ↗";
+            font-size: 0.73rem;
+            opacity: 0.78;
         }
         .flow-arrow {
             color: #6366f1;
@@ -332,24 +348,36 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         .flow-pairwise-row .img-wrap img { width: 100%; height: auto; display: block; }
         .flow-pairwise-grid {
             display: grid;
-            grid-template-columns: 1fr auto;
-            grid-template-rows: auto auto;
-            gap: 1rem;
+            grid-template-columns: 1fr;
+            gap: 0.85rem;
             align-items: start;
         }
-        .flow-pairwise-left {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        .flow-pairwise-main {
+            display: grid;
+            grid-template-columns: minmax(440px, 1fr) auto minmax(300px, 1fr);
+            gap: 0.85rem;
+            align-items: center;
         }
         .flow-pairwise-imgs {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.7rem;
             flex-wrap: nowrap;
         }
-        .flow-pairwise-imgs .img-wrap { width: 240px; min-width: 200px; flex-shrink: 0; }
+        .flow-pairwise-imgs .img-wrap { width: 230px; min-width: 180px; flex-shrink: 0; }
         .flow-pairwise-imgs .img-wrap img { width: 100%; height: auto; display: block; }
+        .flow-pairwise-arrow {
+            font-size: 1.25rem;
+            color: #6366f1;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 999px;
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
         .flow-pairwise-question {
             background: rgba(15, 23, 42, 0.06);
             border: 1px solid rgba(15, 23, 42, 0.08);
@@ -360,19 +388,20 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             line-height: 1.4;
         }
         .flow-pairwise-right {
-            grid-row: 1 / -1;
-            grid-column: 2;
-            min-width: 240px;
-            max-width: 420px;
+            min-width: 300px;
+            max-width: 100%;
         }
         @media (max-width: 900px) {
-            .flow-pairwise-grid {
+            .flow-pairwise-main {
                 grid-template-columns: 1fr;
-                grid-template-rows: auto;
+                gap: 0.65rem;
             }
-            .flow-pairwise-right {
-                grid-row: auto;
-                grid-column: 1;
+            .flow-pairwise-imgs {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .flow-pairwise-arrow {
+                justify-self: center;
             }
         }
         .analysis-overlay {
@@ -523,7 +552,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "A serene minimalist poster with Japanese negative space, showcasing a pagoda, skyscraper, cherry blossom tree, and stone lantern in a quiet urban park. At the top is the title "Tokyo Landmark Check-In Tour", and below the tree is the text "Discover Iconic Spots"."</div>
                         <div class="flow-pairwise-grid">
-                            <div class="flow-pairwise-left">
+                            <div class="flow-pairwise-main">
                                 <div class="flow-pairwise-imgs">
                                     <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
                                         <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Image 1">
@@ -531,13 +560,13 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                     <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_reject.png">
                                         <img src="/images/posterreward/p001_reject.png" alt="Image 2">
                                     </div>
-                                    <div class="flow-arrow">→</div>
                                 </div>
-                                <div class="flow-pairwise-question">Is Image 1 better than Image 2? Please answer Yes or No first, then provide the reason.</div>
+                                <div class="flow-arrow flow-pairwise-arrow">→</div>
+                                <div class="flow-pairwise-right">
+                                    <div class="flow-node flow-judge-node analysis-expand" data-full="Yes.&#10;&#10;Image 1 is significantly better than Image 2 primarily due to its superior adherence to the &quot;serene minimalist poster with Japanese negative space&quot; aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the &quot;minimalist&quot; and &quot;Japanese negative space&quot; requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (&quot;Landmark Ueeepan.&quot;) below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes.<br><br>Image 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</div>
+                                </div>
                             </div>
-                            <div class="flow-pairwise-right">
-                                <div class="flow-node flow-judge-node analysis-expand" data-full="Yes.&#10;&#10;Image 1 is significantly better than Image 2 primarily due to its superior adherence to the &quot;serene minimalist poster with Japanese negative space&quot; aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the &quot;minimalist&quot; and &quot;Japanese negative space&quot; requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (&quot;Landmark Ueeepan.&quot;) below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes.<br><br>Image 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</div>
-                            </div>
+                            <div class="flow-pairwise-question">Is Image 1 better than Image 2? Please answer Yes or No first, then provide the reason.</div>
                         </div>
                     </div>
                 </div>
