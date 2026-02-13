@@ -152,6 +152,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             color: var(--text-main);
             margin-bottom: 0.45rem;
         }
+        .model-left-name .title-gradient { font-weight: 700; }
         .model-left-desc {
             font-size: 0.9rem;
             color: var(--text-secondary);
@@ -258,12 +259,23 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             font-size: 0.86rem;
             line-height: 1.42;
             cursor: pointer;
+            position: relative;
+            padding-bottom: 1.6rem;
         }
         .flow-judge-node:hover { color: var(--primary); }
         .flow-judge-node::after {
-            content: " Click to view full analysis ↗";
+            content: "... Click to view full analysis ↗";
+            position: absolute;
+            right: 0.55rem;
+            bottom: 0.4rem;
             font-size: 0.73rem;
-            opacity: 0.78;
+            line-height: 1;
+            color: #475569;
+            background: rgba(241, 245, 249, 0.96);
+            padding: 0.2rem 0.42rem;
+            border-radius: 6px;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            pointer-events: none;
         }
         .analysis-key-highlight {
             color: #ea580c;
@@ -277,13 +289,13 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         }
         .flow-arrow:hover { opacity: 1; }
         .flow-chunk-scroll {
-            width: 100%;
-            max-width: 960px;
+            width: calc(100% + 1.15rem);
+            max-width: none;
             height: 320px;
             overflow-y: scroll;
             overflow-x: hidden;
             margin-top: 0.5rem;
-            margin-right: -1rem;
+            margin-right: -1.15rem;
             overscroll-behavior-y: contain;
             direction: ltr;
             scrollbar-gutter: stable;
@@ -487,7 +499,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             <div class="model-eval-board">
                 <div class="model-eval-row">
                     <div class="model-left-card">
-                        <div class="model-left-name">PosterReward</div>
+                        <div class="model-left-name"><span class="title-gradient">PosterReward</span></div>
                         <p class="model-left-desc">Image + prompt are first analyzed, then mapped to scalar reward scores via the scoring module.</p>
                     </div>
                     <div class="eval-flow-card">
@@ -498,7 +510,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                     <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Chosen poster">
                                 </div>
                                 <div class="flow-arrow">→</div>
-                                <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Chosen):&#10;&#10;**Image Analysis**&#10;&#10;**1. Fundamental Image Integrity:**&#10;The image exhibits excellent fundamental integrity. As a digital illustration, it is free from technical flaws like pixelation, unintended blur, or digital noise. The lines are crisp, and the color fields are solid and clean, consistent with a high-quality vector-style graphic. There are no signs of over or underexposure; the lighting is intentionally flat and even, which is appropriate for the minimalist poster style. The overall technical quality is professional and flawless.&#10;&#10;**2. AI Artifact and Realism Evaluation:**&#10;The image is exceptionally clean of common AI artifacts. The illustrative style is cohesive and consistently applied across all elements. The pagoda, skyscraper, cherry blossom tree, and stone lantern are all well-formed without any of the typical AI-generated distortions, such as illogical merging of objects or misshapen geometry. The simplified, graphic representation of the blossoms and leaves is a deliberate stylistic choice, not an artifact. The image successfully maintains its intended aesthetic without any disruptive elements that would break the illusion of a polished, human-made graphic design.&#10;&#10;**3. Typographical Precision Analysis:**&#10;The typographical execution is precise and fully compliant with the prompt. The title, &quot;Tokyo Landmark Check-In Tour,&quot; is correctly spelled, capitalized, and positioned at the top. The subtitle, &quot;Discover Iconic Spots,&quot; is also rendered accurately and placed below the central cherry blossom tree as specified. A clean, modern sans-serif font is used for both, ensuring excellent legibility. The scale difference between the title and subtitle creates a clear visual hierarchy. The text is seamlessly integrated into the composition, appearing as an intentional design element rather than an overlay.&#10;&#10;**4. Visual Prompt Interpretation:**&#10;The image is a masterful interpretation of the prompt. It successfully captures the &quot;serene minimalist poster&quot; aesthetic through its clean lines and muted color palette. The concept of &quot;Japanese negative space&quot; is well-realized, with ample empty space in the upper half that allows the title to breathe and draws focus to the key visual elements. All four specified landmarks—pagoda, skyscraper, cherry blossom tree, and stone lantern—are present and clearly depicted. The setting of a &quot;quiet urban park&quot; is effectively conveyed by blending traditional Japanese architecture with a modern city skyline in the background. The composition adheres perfectly to the layout instructions, creating a balanced and thematically coherent scene.&#10;&#10;**5. Standalone Artistic Evaluation:**&#10;Viewed independently of the prompt, this is a highly effective and aesthetically pleasing piece of graphic art. The composition is strong, using a central focal point (the cherry blossom tree) balanced by elements on the left and right, creating a harmonious visual flow. The color palette is sophisticated and calming, using a limited range of blues, greys, and a soft pink to evoke a tranquil mood. The use of negative space is excellent, giving the image a modern, uncluttered feel. The stylized, flat-shaded approach to light and shadow adds depth without compromising the minimalist aesthetic. It is a compelling, well-crafted image that successfully communicates a sense of peace and discovery.">Analysis (Chosen): The image exhibits <span class="analysis-key-highlight">excellent fundamental integrity</span>. As a digital illustration, it is free from technical flaws like pixelation, unintended blur, or digital noise.</div>
+                                <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Chosen):&#10;&#10;**Image Analysis**&#10;&#10;**1. Fundamental Image Integrity:**&#10;The image exhibits excellent fundamental integrity. As a digital illustration, it is free from technical flaws like pixelation, unintended blur, or digital noise. The lines are crisp, and the color fields are solid and clean, consistent with a high-quality vector-style graphic. There are no signs of over or underexposure; the lighting is intentionally flat and even, which is appropriate for the minimalist poster style. The overall technical quality is professional and flawless.&#10;&#10;**2. AI Artifact and Realism Evaluation:**&#10;The image is exceptionally clean of common AI artifacts. The illustrative style is cohesive and consistently applied across all elements. The pagoda, skyscraper, cherry blossom tree, and stone lantern are all well-formed without any of the typical AI-generated distortions, such as illogical merging of objects or misshapen geometry. The simplified, graphic representation of the blossoms and leaves is a deliberate stylistic choice, not an artifact. The image successfully maintains its intended aesthetic without any disruptive elements that would break the illusion of a polished, human-made graphic design.&#10;&#10;**3. Typographical Precision Analysis:**&#10;The typographical execution is precise and fully compliant with the prompt. The title, &quot;Tokyo Landmark Check-In Tour,&quot; is correctly spelled, capitalized, and positioned at the top. The subtitle, &quot;Discover Iconic Spots,&quot; is also rendered accurately and placed below the central cherry blossom tree as specified. A clean, modern sans-serif font is used for both, ensuring excellent legibility. The scale difference between the title and subtitle creates a clear visual hierarchy. The text is seamlessly integrated into the composition, appearing as an intentional design element rather than an overlay.&#10;&#10;**4. Visual Prompt Interpretation:**&#10;The image is a masterful interpretation of the prompt. It successfully captures the &quot;serene minimalist poster&quot; aesthetic through its clean lines and muted color palette. The concept of &quot;Japanese negative space&quot; is well-realized, with ample empty space in the upper half that allows the title to breathe and draws focus to the key visual elements. All four specified landmarks—pagoda, skyscraper, cherry blossom tree, and stone lantern—are present and clearly depicted. The setting of a &quot;quiet urban park&quot; is effectively conveyed by blending traditional Japanese architecture with a modern city skyline in the background. The composition adheres perfectly to the layout instructions, creating a balanced and thematically coherent scene.&#10;&#10;**5. Standalone Artistic Evaluation:**&#10;Viewed independently of the prompt, this is a highly effective and aesthetically pleasing piece of graphic art. The composition is strong, using a central focal point (the cherry blossom tree) balanced by elements on the left and right, creating a harmonious visual flow. The color palette is sophisticated and calming, using a limited range of blues, greys, and a soft pink to evoke a tranquil mood. The use of negative space is excellent, giving the image a modern, uncluttered feel. The stylized, flat-shaded approach to light and shadow adds depth without compromising the minimalist aesthetic. It is a compelling, well-crafted image that successfully communicates a sense of peace and discovery.">Analysis (Chosen): <span class="analysis-key-highlight">The image exhibits excellent fundamental integrity.</span> As a digital illustration, it is free from technical flaws like pixelation, unintended blur, or digital noise.</div>
                                 <div class="flow-arrow">→</div>
                                 <div class="flow-node flow-score-node flow-score-high">17.38</div>
                             </div>
@@ -507,7 +519,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                     <img src="/images/posterreward/p001_reject.png" alt="Rejected poster">
                                 </div>
                                 <div class="flow-arrow">→</div>
-                                <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Rejected):&#10;&#10;**Image Analysis**&#10;&#10;**1. Fundamental Image Integrity:**&#10;The image exhibits strong fundamental quality. It is sharp, well-resolved, and free from distracting digital noise, pixelation, or compression artifacts. The lighting is soft and evenly distributed, avoiding any harsh overexposure or deep, underexposed shadows that would obscure detail. The overall technical execution provides a clean and professional foundation, with no objective flaws that detract from its clarity or impact.&#10;&#10;**2. AI Artifact and Realism Evaluation:**&#10;The image presents a high degree of realism, but minor AI artifacts are present upon close inspection. The architecture of the pagoda and skyscraper is coherent and structurally sound. However, the carvings on the stone lantern are indistinct and appear as repetitive, slightly garbled patterns rather than legible characters. The texture of the grass in the foreground is somewhat uniform and lacks natural variation. The cherry blossoms on the tree, while beautiful, have a slightly soft, painterly quality that blurs the line between photorealism and digital art. These subtle artifacts do not significantly disrupt the overall illusion but mark it as a generated image.&#10;&#10;**3. Typographical Precision Analysis:**&#10;The typographical execution is a mixed success. The image correctly renders the main title, &quot;Tokyo Landmark Check-In Tour,&quot; at the top in a clean, bold, black sans-serif font. It also accurately includes the secondary text, &quot;Discover Iconic Spots.,&quot; below the tree in a legible white font. However, a significant flaw is the inclusion of extraneous, nonsensical text—&quot;Landmark Uleevpa.&quot;—directly below the main title. This appears to be a failed attempt by the AI to generate a subtitle, and it severely undermines the poster's professionalism and adherence to the prompt.&#10;&#10;**4. Visual Prompt Interpretation:**&#10;The image successfully interprets most of the prompt's core visual directives. It effectively showcases the four specified elements: a pagoda, a skyscraper, a cherry blossom tree, and a stone lantern, all within a &quot;quiet urban park&quot; setting. The juxtaposition of the traditional and modern architecture perfectly captures the &quot;urban park&quot; concept. The composition, while not strictly minimalist, uses negative space in the upper half to create a clean, uncluttered poster feel. The overall mood is serene and contemplative, aligning with the prompt's intent. The primary deviation is the failure to adhere strictly to a &quot;minimalist&quot; style, which is a common challenge for AI in combining multiple complex subjects.&#10;&#10;**5. Standalone Artistic Evaluation:**&#10;As a standalone piece, the image is aesthetically compelling and well-composed. The composition uses a strong diagonal line, guiding the viewer's eye from the pagoda on the left, across the central cherry blossom tree, to the lantern on the right. This creates a balanced and dynamic visual flow. The use of atmospheric perspective, with the background skyscrapers fading into the haze, adds a convincing sense of depth. The color palette is harmonious, contrasting the cool blues of the sky and modern buildings with the warm, earthy tones of the traditional architecture and the soft pink of the blossoms. The image successfully evokes a feeling of peaceful discovery and the beautiful coexistence of nature and city.">Analysis (Rejected): The image exhibits strong fundamental quality. However, a <span class="analysis-key-highlight">significant flaw</span> is the inclusion of <span class="analysis-key-highlight">extraneous, nonsensical text</span>—"Landmark Uleevpa."—directly below the main title.</div>
+                                <div class="flow-node flow-text-node analysis-expand" data-full="Analysis (Rejected):&#10;&#10;**Image Analysis**&#10;&#10;**1. Fundamental Image Integrity:**&#10;The image exhibits strong fundamental quality. It is sharp, well-resolved, and free from distracting digital noise, pixelation, or compression artifacts. The lighting is soft and evenly distributed, avoiding any harsh overexposure or deep, underexposed shadows that would obscure detail. The overall technical execution provides a clean and professional foundation, with no objective flaws that detract from its clarity or impact.&#10;&#10;**2. AI Artifact and Realism Evaluation:**&#10;The image presents a high degree of realism, but minor AI artifacts are present upon close inspection. The architecture of the pagoda and skyscraper is coherent and structurally sound. However, the carvings on the stone lantern are indistinct and appear as repetitive, slightly garbled patterns rather than legible characters. The texture of the grass in the foreground is somewhat uniform and lacks natural variation. The cherry blossoms on the tree, while beautiful, have a slightly soft, painterly quality that blurs the line between photorealism and digital art. These subtle artifacts do not significantly disrupt the overall illusion but mark it as a generated image.&#10;&#10;**3. Typographical Precision Analysis:**&#10;The typographical execution is a mixed success. The image correctly renders the main title, &quot;Tokyo Landmark Check-In Tour,&quot; at the top in a clean, bold, black sans-serif font. It also accurately includes the secondary text, &quot;Discover Iconic Spots.,&quot; below the tree in a legible white font. However, a significant flaw is the inclusion of extraneous, nonsensical text—&quot;Landmark Uleevpa.&quot;—directly below the main title. This appears to be a failed attempt by the AI to generate a subtitle, and it severely undermines the poster's professionalism and adherence to the prompt.&#10;&#10;**4. Visual Prompt Interpretation:**&#10;The image successfully interprets most of the prompt's core visual directives. It effectively showcases the four specified elements: a pagoda, a skyscraper, a cherry blossom tree, and a stone lantern, all within a &quot;quiet urban park&quot; setting. The juxtaposition of the traditional and modern architecture perfectly captures the &quot;urban park&quot; concept. The composition, while not strictly minimalist, uses negative space in the upper half to create a clean, uncluttered poster feel. The overall mood is serene and contemplative, aligning with the prompt's intent. The primary deviation is the failure to adhere strictly to a &quot;minimalist&quot; style, which is a common challenge for AI in combining multiple complex subjects.&#10;&#10;**5. Standalone Artistic Evaluation:**&#10;As a standalone piece, the image is aesthetically compelling and well-composed. The composition uses a strong diagonal line, guiding the viewer's eye from the pagoda on the left, across the central cherry blossom tree, to the lantern on the right. This creates a balanced and dynamic visual flow. The use of atmospheric perspective, with the background skyscrapers fading into the haze, adds a convincing sense of depth. The color palette is harmonious, contrasting the cool blues of the sky and modern buildings with the warm, earthy tones of the traditional architecture and the soft pink of the blossoms. The image successfully evokes a feeling of peaceful discovery and the beautiful coexistence of nature and city.">Analysis (Rejected): The image exhibits strong fundamental quality. <span class="analysis-key-highlight">However, a significant flaw is the inclusion of extraneous, nonsensical text—"Landmark Uleevpa."—directly below the main title.</span></div>
                                 <div class="flow-arrow">→</div>
                                 <div class="flow-node flow-score-node flow-score-low">1.15</div>
                             </div>
@@ -517,7 +529,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
 
                 <div class="model-eval-row">
                     <div class="model-left-card">
-                        <div class="model-left-name">PosterReward-Lite</div>
+                        <div class="model-left-name"><span class="title-gradient">PosterReward</span>-Lite</div>
                         <p class="model-left-desc">A lightweight pointwise evaluator that predicts scores directly from image + prompt with minimal latency.</p>
                     </div>
                     <div class="eval-flow-card">
@@ -543,7 +555,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
 
                 <div class="model-eval-row">
                     <div class="model-left-card">
-                        <div class="model-left-name">PosterReward-Pairwise</div>
+                        <div class="model-left-name"><span class="title-gradient">PosterReward</span>-Pairwise</div>
                         <p class="model-left-desc">A pairwise judge that compares two candidates and outputs preference decisions with interpretable textual reasoning.</p>
                     </div>
                     <div class="eval-flow-card">
@@ -560,7 +572,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                                 <div class="flow-arrow">→</div>
                                 <div class="flow-pairwise-right">
-                                    <div class="flow-node flow-judge-node analysis-expand" data-full="Yes.&#10;&#10;Image 1 is significantly better than Image 2 primarily due to its superior adherence to the &quot;serene minimalist poster with Japanese negative space&quot; aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the &quot;minimalist&quot; and &quot;Japanese negative space&quot; requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (&quot;Landmark Ueeepan.&quot;) below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes.<br><br>Image 1 is <span class="analysis-key-highlight">significantly better</span> than Image 2 primarily due to its <span class="analysis-key-highlight">superior adherence</span> to the "serene minimalist poster with Japanese negative space" aesthetic and its <span class="analysis-key-highlight">flawless text rendering</span>.</div>
+                                    <div class="flow-node flow-judge-node analysis-expand" data-full="Yes.&#10;&#10;Image 1 is significantly better than Image 2 primarily due to its superior adherence to the &quot;serene minimalist poster with Japanese negative space&quot; aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the &quot;minimalist&quot; and &quot;Japanese negative space&quot; requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (&quot;Landmark Ueeepan.&quot;) below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes.<br><br><span class="analysis-key-highlight">Image 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</span></div>
                                 </div>
                             </div>
                             <div class="flow-pairwise-question">Is Image 1 better than Image 2? Please answer Yes or No first, then provide the reason.</div>
@@ -589,61 +601,37 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     .replace(/"/g, '&quot;')
                     .replace(/'/g, '&#39;');
             }
-            function applyKeywordHighlights(html) {
-                var highlightPatterns = [
-                    /image analysis/gi,
-                    /fundamental image integrity/gi,
-                    /ai artifact and realism evaluation/gi,
-                    /typographical precision analysis/gi,
-                    /visual prompt interpretation/gi,
-                    /standalone artistic evaluation/gi,
-                    /excellent fundamental integrity/gi,
-                    /strong fundamental quality/gi,
-                    /professional and flawless/gi,
-                    /free from technical flaws/gi,
-                    /well-resolved/gi,
-                    /fully compliant/gi,
-                    /accurately rendered/gi,
-                    /accurately includes/gi,
-                    /exceptionally clean/gi,
-                    /high degree of realism/gi,
-                    /masterful interpretation/gi,
-                    /successfully interprets/gi,
-                    /superior adherence/gi,
-                    /flawless text rendering/gi,
-                    /excellent legibility/gi,
-                    /clear visual hierarchy/gi,
-                    /negative space/gi,
-                    /balanced/gi,
-                    /thematically coherent/gi,
-                    /aesthetically pleasing/gi,
-                    /harmonious visual flow/gi,
-                    /convincing sense of depth/gi,
-                    /harmonious/gi,
-                    /peaceful discovery/gi,
-                    /extraneous,?\s+nonsensical text/gi,
-                    /extraneous,?\s+garbled line of text/gi,
-                    /significant flaw/gi,
-                    /failed attempt/gi,
-                    /severely undermines/gi,
-                    /minor ai artifacts?/gi,
-                    /clear ai artifact/gi,
-                    /typical ai-generated distortions/gi,
-                    /completely misses/gi,
-                    /significantly better/gi,
-                    /in contrast/gi,
-                    /whereas/gi,
-                    /primarily due to/gi
-                ];
-                highlightPatterns.forEach(function(re) {
-                    html = html.replace(re, function(m){ return '<span class="analysis-key-highlight">' + m + '</span>'; });
-                });
-                return html;
+            function highlightMeaningfulSentences(html) {
+                var sentenceSignal = /(text rendering|typographical|nonsensical text|garbled line of text|artifact|distortion|fundamental integrity|technical quality|free from technical flaws|professional and flawless|fully compliant|excellent legibility|visual hierarchy|negative space|prompt|composition|balanced|thematically coherent|aesthetically pleasing|harmonious visual flow|sense of depth|significantly better|superior adherence|flawless text rendering|completely misses|failed attempt|severely undermines|realism)/i;
+                var lines = html.split('\n');
+                return lines.map(function(line) {
+                    var trimmed = line.trim();
+                    if (!trimmed || trimmed.indexOf('@@B') !== -1) return line;
+                    var sentences = line.match(/[^.!?]+[.!?]?/g);
+                    if (!sentences) return line;
+                    return sentences.map(function(sentence) {
+                        var part = sentence.trim();
+                        if (!part) return sentence;
+                        if (sentenceSignal.test(part)) {
+                            return '<span class="analysis-key-highlight">' + part + '</span>';
+                        }
+                        return part;
+                    }).join(' ');
+                }).join('\n');
             }
             function formatAnalysisContent(raw) {
                 var html = escapeHtml(raw || '');
-                html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="analysis-strong">$1</strong>');
-                html = applyKeywordHighlights(html);
+                var boldTokens = [];
+                html = html.replace(/\*\*(.*?)\*\*/g, function(_, txt) {
+                    var token = '@@B' + boldTokens.length + '@@';
+                    boldTokens.push('<strong class="analysis-strong">' + txt + '</strong>');
+                    return token;
+                });
+                html = highlightMeaningfulSentences(html);
+                boldTokens.forEach(function(block, idx) {
+                    var tokenRe = new RegExp('@@B' + idx + '@@', 'g');
+                    html = html.replace(tokenRe, block);
+                });
                 return html.replace(/\n/g, '<br>');
             }
             document.querySelectorAll('.analysis-expand').forEach(function(el){
