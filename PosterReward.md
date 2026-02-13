@@ -1219,6 +1219,94 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         </div>
                     </div>
                 </div>
+
+                <!-- Flux-GRPO微调效果对比 -->
+                <div style="margin-bottom: 3rem;">
+                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Flow-GRPO Fine-tuning on Flux.1-dev</h4>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Visual comparison of Flux.1-dev fine-tuned with different reward models. From left to right: Base, PR (PosterReward), HPSv3, UR (User-Retro), PickScore.
+                    </p>
+                    
+                    <!-- 00051 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_base.jpg" alt="00051 Base" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_pr.jpg" alt="00051 PR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_hpsv3.jpg" alt="00051 HPSv3" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_ur.jpg" alt="00051 UR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00051_flux_pickscore.jpg" alt="00051 PickScore" style="width: 100%; border-radius: 8px;">
+                            </div>
+                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 00060 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_base.jpg" alt="00060 Base" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_pr.jpg" alt="00060 PR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_hpsv3.jpg" alt="00060 HPSv3" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_ur.jpg" alt="00060 UR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00060_flux_pickscore.jpg" alt="00060 PickScore" style="width: 100%; border-radius: 8px;">
+                            </div>
+                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 00079 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_base.jpg" alt="00079 Base" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_pr.jpg" alt="00079 PR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_hpsv3.jpg" alt="00079 HPSv3" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_ur.jpg" alt="00079 UR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00079_flux_pickscore.jpg" alt="00079 PickScore" style="width: 100%; border-radius: 8px;">
+                            </div>
+                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 00102 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_base.jpg" alt="00102 Base" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_pr_19.2k.jpg" alt="00102 PR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_hpsv3_19.2k.jpg" alt="00102 HPSv3" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_generalset_ur.jpg" alt="00102 UR" style="width: 100%; border-radius: 8px;">
+                                <img src="/images/posterreward/flux_grpo_comp/00102_flux_pickscore.jpg" alt="00102 PickScore" style="width: 100%; border-radius: 8px;">
+                            </div>
+                            <p class="v-media-caption" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>Base</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>HPSv3</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>UR</strong></span> →
+                                <span style="display: inline-block; margin: 0 0.3rem;"><strong>PickScore</strong></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
