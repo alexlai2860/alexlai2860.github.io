@@ -417,7 +417,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <p class="model-left-desc">Image + prompt are first analyzed, then mapped to scalar reward scores via the scoring module.</p>
                     </div>
                     <div class="eval-flow-card">
-                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
+                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "A serene minimalist poster with Japanese negative space, showcasing a pagoda, skyscraper, cherry blossom tree, and stone lantern in a quiet urban park. At the top is the title "Tokyo Landmark Check-In Tour", and below the tree is the text "Discover Iconic Spots"."</div>
                         <div class="flow-chunk-scroll" id="posterreward-scroll" tabindex="0">
                             <div class="flow-chunk">
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
@@ -447,7 +447,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <p class="model-left-desc">A lightweight pointwise evaluator that predicts scores directly from image + prompt with minimal latency.</p>
                     </div>
                     <div class="eval-flow-card">
-                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
+                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "A serene minimalist poster with Japanese negative space, showcasing a pagoda, skyscraper, cherry blossom tree, and stone lantern in a quiet urban park. At the top is the title "Tokyo Landmark Check-In Tour", and below the tree is the text "Discover Iconic Spots"."</div>
                         <div class="flow-lite-row">
                             <div class="flow-lane">
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
@@ -473,7 +473,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <p class="model-left-desc">A pairwise judge that compares two candidates and outputs preference decisions with interpretable textual reasoning.</p>
                     </div>
                     <div class="eval-flow-card">
-                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "Tokyo Landmark Check-In Tour — Discover Iconic Spots."</div>
+                        <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "A serene minimalist poster with Japanese negative space, showcasing a pagoda, skyscraper, cherry blossom tree, and stone lantern in a quiet urban park. At the top is the title "Tokyo Landmark Check-In Tour", and below the tree is the text "Discover Iconic Spots"."</div>
                         <div class="flow-pairwise-row">
                             <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
                                 <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Candidate A">
@@ -482,7 +482,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 <img src="/images/posterreward/p001_reject.png" alt="Candidate B">
                             </div>
                             <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-judge-node analysis-expand" data-full="Judgment: Prefer Candidate A (left image). Reasoning: Stronger text realism and semantic clarity. The chosen candidate shows cleaner typography hierarchy, coherent skyline composition, and higher instruction faithfulness. The rejected candidate exhibits text readability issues and weaker global visual balance.">Judgment: Prefer Candidate A. Reasoning highlights stronger text realism, clearer semantics, and better composition consistency.</div>
+                            <div class="flow-node flow-judge-node analysis-expand" data-full="Yes. \n\nImage 1 is significantly better than Image 2 primarily due to its superior adherence to the \"serene minimalist poster with Japanese negative space\" aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the \"minimalist\" and \"Japanese negative space\" requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (\"Landmark Ueeepan.\") below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes. \n\nImage 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</div>
                         </div>
                     </div>
                 </div>
