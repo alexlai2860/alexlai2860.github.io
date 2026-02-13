@@ -830,13 +830,13 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 <tr>
                                     <td><strong>PosterReward-Lite</strong></td>
                                     <td><span class="rank-1">60.5</span></td>
-                                    <td>77.1</td>
+                                    <td><span class="rank-2">77.1</span></td>
                                     <td><span class="rank-2">83.9</span></td>
                                     <td><span class="rank-2">85.0</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>PosterReward</strong></td>
-                                    <td>59.6</td>
+                                    <td><span class="rank-2">59.6</span></td>
                                     <td><span class="rank-1">77.8</span></td>
                                     <td><span class="rank-1">86.7</span></td>
                                     <td><span class="rank-1">86.0</span></td>
@@ -911,7 +911,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                     <td>GPT-5</td>
                                     <td>90.4</td>
                                     <td>80.5</td>
-                                    <td><span class="rank-2">85.4</span></td>
+                                    <td><span class="rank-1">85.4</span></td>
                                     <td>89.8</td>
                                     <td>75.9</td>
                                     <td><span class="rank-2">82.9</span></td>
@@ -920,7 +920,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                     <td><strong>PosterReward-Pairwise</strong></td>
                                     <td>82.0</td>
                                     <td>84.0</td>
-                                    <td><span class="rank-1">83.0</span></td>
+                                    <td><span class="rank-2">83.0</span></td>
                                     <td>84.1</td>
                                     <td>83.6</td>
                                     <td><span class="rank-1">83.8</span></td>
@@ -951,11 +951,11 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 </p>
                 
                 <!-- 两个消融实验表格并排 -->
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; align-items: stretch;">
                     <!-- Table 3: Ablation on PosterReward-Pairwise -->
-                    <div class="v-media-card">
+                    <div class="v-media-card" style="display: flex; flex-direction: column;">
                         <h4 style="text-align: center; margin-bottom: 1rem; font-size: 1rem; color: var(--text-secondary);">PosterReward-Pairwise</h4>
-                        <div class="table-scroll-wrapper">
+                        <div class="table-scroll-wrapper" style="flex: 1;">
                             <table class="results-table" style="width: 100%; font-size: 0.85rem;">
                                 <thead>
                                     <tr>
@@ -1016,9 +1016,9 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
 
                     <!-- Table 4: Ablation on PosterReward Components -->
-                    <div class="v-media-card">
+                    <div class="v-media-card" style="display: flex; flex-direction: column;">
                         <h4 style="text-align: center; margin-bottom: 1rem; font-size: 1rem; color: var(--text-secondary);">PosterReward Components</h4>
-                        <div class="table-scroll-wrapper">
+                        <div class="table-scroll-wrapper" style="flex: 1; display: flex; align-items: center;">
                             <table class="results-table" style="width: 100%; font-size: 0.85rem;">
                                 <thead>
                                     <tr>
