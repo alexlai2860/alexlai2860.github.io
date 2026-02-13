@@ -307,14 +307,16 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         }
         .flow-lite-row .flow-lane { margin-bottom: 0; }
         .flow-lite-row .img-wrap,
-        .flow-pairwise-row .img-wrap {
+        .flow-pairwise-row .img-wrap,
+        .flow-pairwise-imgs .img-wrap {
             cursor: pointer;
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
         .flow-lite-row .img-wrap:hover,
-        .flow-pairwise-row .img-wrap:hover {
+        .flow-pairwise-row .img-wrap:hover,
+        .flow-pairwise-imgs .img-wrap:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
         }
@@ -328,6 +330,51 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         }
         .flow-pairwise-row .img-wrap { width: 300px; }
         .flow-pairwise-row .img-wrap img { width: 100%; height: auto; display: block; }
+        .flow-pairwise-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto auto;
+            gap: 1rem;
+            align-items: start;
+        }
+        .flow-pairwise-left {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .flow-pairwise-imgs {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .flow-pairwise-imgs .img-wrap { width: 300px; flex-shrink: 0; }
+        .flow-pairwise-imgs .img-wrap img { width: 100%; height: auto; display: block; }
+        .flow-pairwise-question {
+            background: rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            color: var(--text-secondary);
+            border-radius: 12px;
+            padding: 0.6rem 0.9rem;
+            font-size: 0.88rem;
+            line-height: 1.4;
+        }
+        .flow-pairwise-right {
+            grid-row: 1 / -1;
+            grid-column: 2;
+            min-width: 240px;
+            max-width: 420px;
+        }
+        @media (max-width: 900px) {
+            .flow-pairwise-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .flow-pairwise-right {
+                grid-row: auto;
+                grid-column: 1;
+            }
+        }
         .analysis-overlay {
             display: none;
             position: fixed;
@@ -475,15 +522,22 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                     <div class="eval-flow-card">
                         <div class="flow-shared-prompt"><strong>Shared Prompt:</strong> "A serene minimalist poster with Japanese negative space, showcasing a pagoda, skyscraper, cherry blossom tree, and stone lantern in a quiet urban park. At the top is the title "Tokyo Landmark Check-In Tour", and below the tree is the text "Discover Iconic Spots"."</div>
-                        <div class="flow-pairwise-row">
-                            <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
-                                <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Candidate A">
+                        <div class="flow-pairwise-grid">
+                            <div class="flow-pairwise-left">
+                                <div class="flow-pairwise-imgs">
+                                    <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_01_seed684633929_chosen.jpg">
+                                        <img src="/images/posterreward/p001_01_seed684633929_chosen.jpg" alt="Image 1">
+                                    </div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_reject.png">
+                                        <img src="/images/posterreward/p001_reject.png" alt="Image 2">
+                                    </div>
+                                </div>
+                                <div class="flow-pairwise-question">Is Image 1 better than Image 2? Please answer Yes or No first, then provide the reason.</div>
                             </div>
-                            <div class="img-wrap img-zoomable" data-src="/images/posterreward/p001_reject.png">
-                                <img src="/images/posterreward/p001_reject.png" alt="Candidate B">
+                            <div class="flow-pairwise-right">
+                                <div class="flow-node flow-judge-node analysis-expand" data-full="Yes.&#10;&#10;Image 1 is significantly better than Image 2 primarily due to its superior adherence to the &quot;serene minimalist poster with Japanese negative space&quot; aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the &quot;minimalist&quot; and &quot;Japanese negative space&quot; requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (&quot;Landmark Ueeepan.&quot;) below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes.<br><br>Image 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</div>
                             </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node flow-judge-node analysis-expand" data-full="Yes.&#10;&#10;Image 1 is significantly better than Image 2 primarily due to its superior adherence to the &quot;serene minimalist poster with Japanese negative space&quot; aesthetic and its flawless text rendering. Image 1 perfectly captures the requested minimalist style with its clean lines, simplified forms, and ample negative space, creating a tranquil and cohesive design that aligns with the prompt's core artistic direction. In contrast, Image 2 adopts a realistic, photographic style that completely misses the &quot;minimalist&quot; and &quot;Japanese negative space&quot; requirements, making it less aligned with the prompt's aesthetic vision. Furthermore, Image 1 accurately renders all requested text without any AI artifacts, whereas Image 2 includes an extraneous, garbled line of text (&quot;Landmark Ueeepan.&quot;) below the main title, which is a clear AI artifact and detracts from its overall quality and prompt adherence.">Yes.<br><br>Image 1 is significantly better than Image 2 primarily due to its superior adherence to the "serene minimalist poster with Japanese negative space" aesthetic and its flawless text rendering.</div>
                         </div>
                     </div>
                 </div>
