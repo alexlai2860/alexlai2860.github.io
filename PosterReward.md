@@ -1267,20 +1267,6 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                     </div>
                 </div>
 
-                <!-- GRPO训练效果对比 -->
-                <div style="margin-bottom: 3rem;">
-                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">GRPO Post-Training with PosterReward</h4>
-                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
-                        Fine-tuning with PosterReward as reward signal improves typography, layout coherence, and prompt adherence.
-                    </p>
-                    <div class="v-media-stack">
-                        <div class="v-media-card">
-                            <img src="" alt="GRPO training comparison" onerror="this.parentElement.style.display='none'">
-                            <p class="v-media-caption">Comparison between base model and GRPO-trained model using PosterReward.</p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Flux-GRPO微调效果对比 -->
                 <div style="margin-bottom: 3rem;">
                     <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Flow-GRPO Fine-tuning on Flux.1-dev</h4>
@@ -1408,6 +1394,138 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                             </div>
                             <div class="flux-grpo-prompt">
                                 <strong>Prompt:</strong> A neumorphic poster for a new tech product launch, featuring a sleek silver smartphone centered, a matte black earbud case to its right, and a compact gold-accented power bank below. Soft gray backgrounds with metallic blue highlights create a futuristic mood. At the top is the title "Introducing NextGen Innovations", and in the center below the devices is the text "Available Worldwide".
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qwen-GRPO微调效果对比 -->
+                <div style="margin-bottom: 3rem;">
+                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Qwen-GRPO Fine-tuning</h4>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Visual comparison of Qwen model fine-tuned with various reward models. From left to right, the columns display the outputs of the original Qwen, followed by models fine-tuned using PosterReward, HPSv3, UnifiedReward and PickScore. The corresponding prompts are enclosed at the bottom.
+                    </p>
+                    
+                    <!-- 00038 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_base.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_base.jpg" alt="00038 Base">
+                                    <div class="model-label">Before RL</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_pr.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_pr.jpg" alt="00038 PR">
+                                    <div class="model-label">PosterReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_hpsv3.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_hpsv3.jpg" alt="00038 HPSv3">
+                                    <div class="model-label">HPSv3</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_ur.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_ur.jpg" alt="00038 UR">
+                                    <div class="model-label">UnifiedReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_pickscore.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00038_qwen_noncineset_pickscore.jpg" alt="00038 PickScore">
+                                    <div class="model-label">PickScore</div>
+                                </div>
+                            </div>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> A sample prompt for Qwen model testing with non-cinematic style poster generation. This is a placeholder prompt that can be replaced later.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 00039 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_base.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_base.jpg" alt="00039 Base">
+                                    <div class="model-label">Before RL</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_pr.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_pr.jpg" alt="00039 PR">
+                                    <div class="model-label">PosterReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_hpsv3.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_hpsv3.jpg" alt="00039 HPSv3">
+                                    <div class="model-label">HPSv3</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_ur.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_ur.jpg" alt="00039 UR">
+                                    <div class="model-label">UnifiedReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_pickscore.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00039_qwen_cineset_pickscore.jpg" alt="00039 PickScore">
+                                    <div class="model-label">PickScore</div>
+                                </div>
+                            </div>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> A sample prompt for Qwen model testing with cinematic style poster generation. This is a placeholder prompt that can be replaced later.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 00083 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_base.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_base.jpg" alt="00083 Base">
+                                    <div class="model-label">Before RL</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_pr.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_pr.jpg" alt="00083 PR">
+                                    <div class="model-label">PosterReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_hpsv3.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_hpsv3.jpg" alt="00083 HPSv3">
+                                    <div class="model-label">HPSv3</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_ur.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_ur.jpg" alt="00083 UR">
+                                    <div class="model-label">UnifiedReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_pickscore.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00083_qwen_cineset_pickscore.jpg" alt="00083 PickScore">
+                                    <div class="model-label">PickScore</div>
+                                </div>
+                            </div>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> Another sample prompt for Qwen cinematic poster generation testing. Placeholder text to be replaced with actual prompt.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 00108 -->
+                    <div class="v-media-stack" style="margin-bottom: 2rem;">
+                        <div class="v-media-card">
+                            <div class="flux-grpo-grid">
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_base.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_base.jpg" alt="00108 Base">
+                                    <div class="model-label">Before RL</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_pr.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_pr.jpg" alt="00108 PR">
+                                    <div class="model-label">PosterReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_hpsv3.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_hpsv3.jpg" alt="00108 HPSv3">
+                                    <div class="model-label">HPSv3</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_ur.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_ur.jpg" alt="00108 UR">
+                                    <div class="model-label">UnifiedReward</div>
+                                </div>
+                                <div class="img-wrap img-zoomable" data-src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_pickscore.jpg">
+                                    <img src="/images/posterreward/qwen_grpo_comp/00108_qwen_cineset_pickscore.jpg" alt="00108 PickScore">
+                                    <div class="model-label">PickScore</div>
+                                </div>
+                            </div>
+                            <div class="flux-grpo-prompt">
+                                <strong>Prompt:</strong> Final sample prompt for Qwen cinematic poster generation. Placeholder to be updated with real content.
                             </div>
                         </div>
                     </div>
