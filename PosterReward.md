@@ -1438,7 +1438,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
-                                <strong>Prompt:</strong> A sample prompt for Qwen model testing with non-cinematic style poster generation. This is a placeholder prompt that can be replaced later.
+                                <strong>Prompt:</strong> A striking Art Deco poster for "Eye Protection Action" in nature and public welfare, showcasing a golden magnifying glass at top left, a vibrant green leaf at center right, and an open amber book at bottom left. At the top, the bold title "Eye Protection Action"; in the center, the tagline "See Nature, Protect Your Vision".
                             </div>
                         </div>
                     </div>
@@ -1469,7 +1469,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
-                                <strong>Prompt:</strong> A sample prompt for Qwen model testing with cinematic style poster generation. This is a placeholder prompt that can be replaced later.
+                                <strong>Prompt:</strong> The poster depicts a close-up, three-quarters view of a woman's face in the foreground, her gaze directed upwards and to the right, set against a vast, icy landscape under a clear, pale blue sky. Scattered across the snow and ice are subtle streaks of light blue, suggesting cracks or meltwater, with a small figure in the distance providing a sense of scale against the immense backdrop. The style is cinematic and naturalistic, emphasizing the human element against a formidable natural environment. Prominently displayed is the main title, "MOUNTAIN QUEEN," positioned at the top left in two lines. To the right, spread across several lines, is the subtitle, "THE SUMMITS OF LHAKPA SHERPA." Both titles are in a clear, sans-serif font, with "MOUNTAIN QUEEN" in red and "THE SUMMITS OF LHAKPA SHERPA" in a deep blue, echoing the colors of the landscape and the subject's attire. The text is sharp and legible against the light background. The title "MOUNTAIN QUEEN" is positioned horizontally, while the subtitle is also horizontal but arranged vertically across the upper right quadrant, drawing the eye upwards towards the distant figure and the vastness of the mountains. The layout cleverly uses the subject's upward gaze to lead the viewer's attention from her face towards the text and the expansive landscape beyond, creating a sense of aspiration and scale. In the bottom left, the official selection laurel of the "tiff toronto international film festival" is present in white, providing context for the film's recognition.
                             </div>
                         </div>
                     </div>
@@ -1500,7 +1500,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
-                                <strong>Prompt:</strong> Another sample prompt for Qwen cinematic poster generation testing. Placeholder text to be replaced with actual prompt.
+                                <strong>Prompt:</strong> This dramatic poster for "Wind River" presents a stark, layered landscape under a deep blue, nearly black sky illuminated by a single white moon. Bare, snow-covered branches of trees dominate the foreground on both sides, framing a central view of jagged, snow-capped mountains receding into the distance in shades of blue and purple, suggesting a chilling and remote setting. The style is a blend of illustration and cinematic mood, emphasizing the harsh beauty and isolation of a winter landscape. The bold, white sans-serif title "WIND RIVER" is prominently displayed at the top left, conveying the film's name with directness and strength. Below the title, in smaller sans-serif white text, is "TAYLOR SHERIDAN," the director's name, positioned just beneath and slightly to the right of "RIVER." Further down, centered below the mountains, the text "From the Writer of SICARIO & HELL OR HIGH WATER" appears in smaller white sans-serif font, emphasizing the film's pedigree and suggesting a similar tone of intensity and grit. The typography throughout is clean and modern, starkly contrasting with the natural, organic shapes of the landscape, and is consistently horizontal. The layout draws the eye from the foreground branches towards the imposing mountains in the middle distance and finally to the dark expanse of the sky, with the text strategically placed to be easily readable against the varying shades of blue and white, creating a sense of depth and highlighting the key information about the film.
                             </div>
                         </div>
                     </div>
@@ -1531,7 +1531,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
-                                <strong>Prompt:</strong> Final sample prompt for Qwen cinematic poster generation. Placeholder to be updated with real content.
+                                <strong>Prompt:</strong> This movie poster for "No Time To Die" employs a gritty, illustrative style, reminiscent of classic spy thrillers, featuring prominent portraits of the main cast. A large, head-and-shoulders shot of Daniel Craig as James Bond, facing right and looking intently off-frame, dominates the top and center, superimposed over a target graphic marked with bullet holes. Below and to the left, a close-up portrait of Rami Malek as the villain looms, while to Bond's left, Ana de Armas in a black dress holds a pistol. A smaller image of Ben Whishaw as Q is positioned below Rami Malek, and to the right of the text, Léa Seydoux as Madeleine Swann stands with her arms crossed. Action scenes are layered throughout the lower portion: a motorcycle chase with Bond at the forefront, a distant explosion, and a vintage car driving down a road. The title, "NO TIME TO DIE," is presented in large, blocky, all-caps sans-serif font, rendered in a stark white with no texture, positioned horizontally across the center of the poster, appearing to break through the composite image. The layout is a dynamic collage, with the large central figures establishing a hierarchy and the surrounding elements, including the action scenes and supporting characters, creating a sense of depth and narrative, all anchored by the bold, central title which draws the eye and clearly communicates the film's name.
                             </div>
                         </div>
                     </div>
