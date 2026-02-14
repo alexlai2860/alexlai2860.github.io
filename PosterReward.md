@@ -1306,7 +1306,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
-                                <strong>Prompt:</strong> A minimalist poster for a new single-origin coffee launch, featuring a glass pour-over dripper on the left, a ceramic mug filled with dark coffee to its right, a pile of roasted coffee beans in the foreground, and a small paper bag labeled "Single Origin" behind the beans. The background is a soft beige, creating a serene, sophisticated atmosphere. At the top is the title "New Single-Origin Coffee", and below the subjects is the text "Freshly Roasted & Ready to Brew".
+                                <strong>Prompt:</strong> This historical poster for "DC 9/11 Time of Crisis" features a serious portrait of actor Timothy Bottoms portraying George W. Bush, his face partially veiled by the American flag on the left. Behind him, a hazy, sky-blue background is subtly patterned with faint stars and stylized depictions of the New York City skyline and the World Trade Center towers. The overall style is earnest and somber, conveying the gravity of the events being portrayed. Bold, blocky sans-serif text dominates the right side of the poster. At the top, centered horizontally and rendered in black, is "TIMOTHY BOTTOMS". Below this, with a black horizontal line above and below, and occupying the middle of the right half of the frame, is the title "DC 9/11", also in large black sans-serif. Underneath this, between another black horizontal line and the bottom, is the impactful subtitle "TIME OF CRISIS", rendered in the same large, bold black sans-serif font. All text is oriented horizontally. The layout strategically places the actor's portrait and the American flag on the left, drawing the viewer's eye to the central figure, while the bold, prominent text on the right immediately conveys the film's subject matter and tone. The visual elements and typography work together to create a sense of historical weight and national significance, focusing on the human face of leadership during a defining moment.
                             </div>
                         </div>
                     </div>
@@ -1337,7 +1337,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
-                                <strong>Prompt:</strong> This historical poster for "DC 9/11 Time of Crisis" features a serious portrait. At the top, centered horizontally and rendered in black, is "TIMOTHY BOTTOMS". Below this, with a black horizontal line above and below, and occupying the middle of the right half of the frame, is the title "DC 9/11", also in large black sans-serif. Underneath this, between another black horizontal line and the bottom, is the impactful subtitle "TIME OF CRISIS", rendered in the same large, bold black sans-serif font. All text is oriented horizontally.
+                                <strong>Prompt:</strong> Study abroad info session poster, Neue Bauhaus style, geometric composition, globe, laptop, digital tablet, muted blue-gray palette, modern informative atmosphere, title "Study Abroad Info Session" at top, subtitle "Culture & Tech Pathways" at bottom
                             </div>
                         </div>
                     </div>
@@ -1368,7 +1368,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
-                                <strong>Prompt:</strong> A neumorphic poster for a new tech product launch, featuring a sleek silver smartphone centered, a matte black earbud case to its right, and a compact gold-accented power bank below. Soft gray backgrounds with metallic blue highlights create a futuristic mood. At the top is the title "Introducing NextGen Innovations", and in the center below the devices is the text "Available Worldwide".
+                                <strong>Prompt:</strong> A minimalist poster for a new single-origin coffee launch, featuring a glass pour-over dripper on the left, a ceramic mug filled with dark coffee to its right, a pile of roasted coffee beans in the foreground, and a small paper bag labeled "Single Origin" behind the beans. The background is a soft beige, creating a serene, sophisticated atmosphere. At the top is the title "New Single-Origin Coffee", and below the subjects is the text "Freshly Roasted & Ready to Brew".
                             </div>
                         </div>
                     </div>
