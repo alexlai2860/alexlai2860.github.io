@@ -393,15 +393,34 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
         }
         .flux-grpo-grid .img-wrap:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.35);
         }
         .flux-grpo-grid .img-wrap img {
             width: 100%;
             height: auto;
             display: block;
+        }
+        .flux-grpo-grid .img-wrap .model-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+            color: white;
+            padding: 1.2rem 0.6rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            pointer-events: none;
+        }
+        .flux-grpo-grid .img-wrap:hover .model-label {
+            opacity: 1;
         }
         .flux-grpo-prompt {
             background: rgba(15, 23, 42, 0.06);
@@ -715,7 +734,8 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             });
             document.querySelectorAll('.img-zoomable').forEach(function(el){
                 el.addEventListener('click', function(){
-                    var src = el.getAttribute('data-src') || el.querySelector('img')?.src;
+                    var imgEl = el.querySelector('img');
+                    var src = el.getAttribute('data-src') || (imgEl && imgEl.src);
                     if (src) {
                         var overlay = document.getElementById('img-overlay');
                         overlay.querySelector('img').src = src;
@@ -1274,18 +1294,23 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                             <div class="flux-grpo-grid">
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_base.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00051_flux_base.jpg" alt="00051 Base">
+                                    <div class="model-label">Before RL</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_pr.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_pr.jpg" alt="00051 PR">
+                                    <div class="model-label">PosterReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_hpsv3.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_hpsv3.jpg" alt="00051 HPSv3">
+                                    <div class="model-label">HPSv3</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_ur.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00051_flux_generalset_ur.jpg" alt="00051 UR">
+                                    <div class="model-label">UnifiedReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00051_flux_pickscore.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00051_flux_pickscore.jpg" alt="00051 PickScore">
+                                    <div class="model-label">PickScore</div>
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
@@ -1300,18 +1325,23 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                             <div class="flux-grpo-grid">
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_base.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00060_flux_base.jpg" alt="00060 Base">
+                                    <div class="model-label">Before RL</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_pr.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00060_flux_pr.jpg" alt="00060 PR">
+                                    <div class="model-label">PosterReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_hpsv3.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00060_flux_hpsv3.jpg" alt="00060 HPSv3">
+                                    <div class="model-label">HPSv3</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_ur.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00060_flux_ur.jpg" alt="00060 UR">
+                                    <div class="model-label">UnifiedReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00060_flux_pickscore.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00060_flux_pickscore.jpg" alt="00060 PickScore">
+                                    <div class="model-label">PickScore</div>
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
@@ -1326,18 +1356,23 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                             <div class="flux-grpo-grid">
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_base.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00079_flux_base.jpg" alt="00079 Base">
+                                    <div class="model-label">Before RL</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_pr.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_pr.jpg" alt="00079 PR">
+                                    <div class="model-label">PosterReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_hpsv3.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_hpsv3.jpg" alt="00079 HPSv3">
+                                    <div class="model-label">HPSv3</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_ur.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00079_flux_generalset_ur.jpg" alt="00079 UR">
+                                    <div class="model-label">UnifiedReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00079_flux_pickscore.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00079_flux_pickscore.jpg" alt="00079 PickScore">
+                                    <div class="model-label">PickScore</div>
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
@@ -1352,18 +1387,23 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                             <div class="flux-grpo-grid">
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_base.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00102_flux_base.jpg" alt="00102 Base">
+                                    <div class="model-label">Before RL</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_pr_19.2k.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00102_flux_pr_19.2k.jpg" alt="00102 PR">
+                                    <div class="model-label">PosterReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_hpsv3_19.2k.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00102_flux_hpsv3_19.2k.jpg" alt="00102 HPSv3">
+                                    <div class="model-label">HPSv3</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_generalset_ur.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00102_flux_generalset_ur.jpg" alt="00102 UR">
+                                    <div class="model-label">UnifiedReward</div>
                                 </div>
                                 <div class="img-wrap img-zoomable" data-src="/images/posterreward/flux_grpo_comp/00102_flux_pickscore.jpg">
                                     <img src="/images/posterreward/flux_grpo_comp/00102_flux_pickscore.jpg" alt="00102 PickScore">
+                                    <div class="model-label">PickScore</div>
                                 </div>
                             </div>
                             <div class="flux-grpo-prompt">
