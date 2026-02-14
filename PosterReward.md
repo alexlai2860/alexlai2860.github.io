@@ -54,12 +54,13 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
 
     <style>
         .stacked-showcase {
-            display: block;
+            display: block !important;
             margin: 7rem 0;
         }
         .stacked-showcase .split-text {
-            width: 100%;
-            min-width: 0;
+            width: 100% !important;
+            min-width: 0 !important;
+            flex: none !important;
         }
         .v-media-stack {
             display: flex;
@@ -67,10 +68,11 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             gap: 1.4rem;
             margin-top: 2rem;
             width: 100%;
-            max-width: 1240px;
+            max-width: 100%;
         }
         .v-media-card {
             width: 100%;
+            max-width: 100%;
             background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.7);
@@ -78,6 +80,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             padding: 0.95rem;
             box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.15);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-sizing: border-box;
         }
         .v-media-card:hover {
             transform: translateY(-4px);
@@ -85,10 +88,13 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
         }
         .v-media-card img {
             width: 100%;
+            max-width: 100%;
+            height: auto;
             border-radius: 12px;
             display: block;
             background: white;
             border: 1px solid rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
         }
         .v-media-caption {
             margin-top: 0.9rem;
