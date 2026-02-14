@@ -1418,6 +1418,19 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
 
     <script>
         (function () {
+            // Bind click events for img-zoomable elements in Flux-GRPO section
+            document.querySelectorAll('.flux-grpo-grid .img-zoomable').forEach(function(el){
+                el.addEventListener('click', function(){
+                    var imgEl = el.querySelector('img');
+                    var src = el.getAttribute('data-src') || (imgEl && imgEl.src);
+                    if (src) {
+                        var overlay = document.getElementById('img-overlay');
+                        overlay.querySelector('img').src = src;
+                        overlay.classList.add('active');
+                    }
+                });
+            });
+
             const table = document.getElementById('posterbench-leaderboard');
             if (!table) return;
 
