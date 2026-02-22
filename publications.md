@@ -259,15 +259,82 @@ body {
   <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
 </div>
 
-<!-- 2025年论文 -->
+<!-- 2026年论文 -->
+<div class="year-section">
+  <div class="year-divider">
+    <h2 class="year-2025">2026</h2>
+  </div>
+  
+  <!-- PosterReward -->
+  <div class="publication-item">
+    <div class="image-wrapper" data-description="CVPR'26">
+        <a href="/images/posterreward/teaser.jpg" target="_blank" title="Click to view full image">
+            <img src="/images/posterreward/teaser.jpg" alt="PosterReward">
+        </a>
+    </div>
+    <div class="text-wrapper">
+      <papertitle>
+        <strong>
+          PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation
+        </strong>
+      </papertitle>
+      <br>
+      <div>
+        <span class="paper-tag tag-method">Reward Model</span>
+        <span class="paper-tag tag-application">Graphic Design Evaluation</span>
+      </div>
+      <div class="pub-authors">
+        <strong><u>Jianyu Lai*</u></strong>, Sixiang Chen*, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu<sup>✉️</sup>.
+      </div>
+      <div class="pub-venue"><em>Computer Vision and Pattern Recognition (CVPR)</em>, 2026</div>
+      <div class="pub-links">
+        <a href="/mypaper/posterreward/PosterReward_Arxiv_official.pdf" class="custom-link—paper">[Paper]</a>
+        <a href="https://alexlai2860.github.io/PosterReward/" class="custom-link—code">[GitHub]</a>
+        <a href="https://alexlai2860.github.io/PosterReward/" class="custom-link—project">[Project Website]</a>
+        <a href="https://huggingface.co/PosterReward" class="custom-link—project">[Model]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PosterOmni -->
+  <div class="publication-item">
+    <div class="image-wrapper" data-description="CVPR'26">
+        <a href="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" target="_blank" title="Click to view full image">
+            <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterOmni">
+        </a>
+    </div>
+    <div class="text-wrapper">
+      <papertitle>
+        <strong>
+          PosterOmni: Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback
+        </strong>
+      </papertitle>
+      <br>
+      <div>
+        <span class="paper-tag tag-method">Task Distillation</span>
+        <span class="paper-tag tag-application">Generalized Poster Creation</span>
+      </div>
+      <div class="pub-authors">
+        Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+      </div>
+      <div class="pub-venue"><em>Computer Vision and Pattern Recognition (CVPR)</em>, 2026</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2602.12127" class="custom-link—paper">[Paper]</a>
+        <a href="https://github.com/Ephemeral182/PosterOmni" class="custom-link—code">[GitHub]</a>
+        <a href="https://huggingface.co/PosterOmni" class="custom-link—project">[Model]</a>
+        <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link—project">[Project Website]</a>
+      </div>
+    </div>
+  </div>
+
 <div class="year-section">
   <div class="year-divider">
     <h2 class="year-2025">2025</h2>
   </div>
-  
+
   <!-- PosterCraft -->
   <div class="publication-item">
-    <div class="image-wrapper" data-description="arXiv'25">
+    <div class="image-wrapper" data-description="ICLR'26">
         <a href="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" target="_blank" title="Click to view full image">
             <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterCraft">
         </a>
@@ -275,7 +342,7 @@ body {
     <div class="text-wrapper">
       <papertitle>
         <strong>
-          🔥🔥🔥 PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
+          PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
         </strong>
       </papertitle>
       <br>
@@ -286,7 +353,7 @@ body {
       <div class="pub-authors">
         Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
       </div>
-      <div class="pub-venue"><em>arXiv</em>, 2025</div>
+      <div class="pub-venue"><em>International Conference on Learning Representations (ICLR)</em>, 2026</div>
       <div class="pub-links">
         <a href="https://arxiv.org/abs/2506.10741" class="custom-link—paper">[Paper]</a>
         <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link—code">[GitHub]</a>
@@ -294,6 +361,7 @@ body {
       </div>
     </div>
   </div>
+</div>
 
   <!-- GenHaze -->
   <div class="publication-item">

@@ -281,6 +281,9 @@ If you are interested in my work or research, please feel free to contact me.
 
 <div class="scrollable-news">
  <ul>
+  <li><strong>Feb. 2026:</strong> Our work <em><a href="https://arxiv.org/abs/2506.10741" target="_blank">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</a></em> has been accepted by ICLR 2026!</li>
+  <li><strong>Feb. 2026:</strong> Our work <em><a href="/PosterReward/" target="_blank">PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</a></em> has been accepted by CVPR 2026!</li>
+  <li><strong>Jan. 2026:</strong> Our work <em><a href="https://ephemeral182.github.io/PosterOmni/" target="_blank">PosterOmni: Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</a></em> has been accepted by CVPR 2026!</li>
   <li><strong>Jun. 2025:</strong> Our work <em><a href="https://ephemeral182.github.io/GenHaze/" target="_blank">GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing</a></em> has been accepted by ICCV 2025!</li>
   <li><strong>Jun. 2025:</strong> We released our latest work, <em><a href="https://arxiv.org/abs/2506.10741" target="_blank">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</a></em>, on Arxiv.</li>
   <li><strong>Mar. 2025:</strong> Luckily, our paper <em><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lai_SnowMaster_Comprehensive_Real-world_Image_Desnowing_via_MLLM_with_Multi-Model_Feedback_CVPR_2025_paper.pdf" target="_blank">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</a></em> was accepted by CVPR 2025.</li>
