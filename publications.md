@@ -299,8 +299,8 @@ body {
   <!-- PosterOmni -->
   <div class="publication-item">
     <div class="image-wrapper" data-description="CVPR'26">
-        <a href="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" target="_blank" title="Click to view full image">
-            <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterOmni">
+        <a href="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" target="_blank" title="Click to view full image">
+            <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni">
         </a>
     </div>
     <div class="text-wrapper">
@@ -395,7 +395,9 @@ body {
   <!-- SnowMaster -->
   <div class="publication-item">
     <div class="image-wrapper" data-description="CVPR'25">
-      <img src="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
+        <a href="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" target="_blank" title="Click to view full image">
+            <img src="https://alexlai2860.github.io/images/snowmaster/overview_cvpr2025_snowmaster.png" alt="SnowMaster">
+        </a>
     </div>
     <div class="text-wrapper">
       <papertitle>
