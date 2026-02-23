@@ -7,7 +7,13 @@ layout: fancy_home
         <h1 class="hero-title">About Me</h1>
         <p class="hero-subtitle">MPhil Student & AI Researcher</p>
         <div class="hero-description">
-            I'm <span class="highlight">Jianyu Lai (赖建宇)</span>, a Master of Philosophy student at HKUST(GZ) advised by <a href="https://sites.google.com/site/indexlzhu/home"><strong>Prof. Lei Zhu</strong></a>. My research focuses on <strong>Low-level Vision</strong>, <strong>AIGC</strong>, and <strong>Multimodal Large Language Models</strong>. I am passionate about developing robust solutions for image restoration in real-world complex environments and exploring AIGC applications for practical scenarios. I am fortunate to have my work <strong>PosterCraft</strong> accepted by ICLR 2026, <strong>PosterReward</strong> and <strong>PosterOmni</strong> accepted by CVPR 2026, and <strong>SnowMaster</strong> accepted by CVPR 2025.
+            I'm <span class="highlight">Jianyu Lai (赖建宇)</span>, an MPhil student at HKUST(GZ) advised by <a href="https://sites.google.com/site/indexlzhu/home"><strong>Prof. Lei Zhu</strong></a>. My research focuses on <strong>MLLM</strong> and <strong>AIGC</strong> applications.
+            <br><br>
+            My first work, <strong>SnowMaster</strong>, leverages MLLM for image degradation assessment to enhance restoration generalization. It was accepted by <strong>CVPR 2025</strong>.
+            <br><br>
+            I then co-developed <strong>PosterCraft</strong> with Sixiang Chen, a poster generation model that achieves state-of-the-art aesthetics and text rendering through high-quality datasets and advanced post-training strategies. Released in June 2025, it gained hundreds of stars on github and was accepted by <strong>ICLR 2026</strong>.
+            <br><br>
+            As a research intern at Meituan's Intelligent Vision Department since June 2025, I completed <strong>PosterOmni</strong> and <strong>PosterReward</strong>, focusing on poster editing and reward modeling, both accepted by <strong>CVPR 2026</strong>.
         </div>
         <div class="social-links">
             <a href="https://github.com/alexlai2860" class="social-link github" title="GitHub">
