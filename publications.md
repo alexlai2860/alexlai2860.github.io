@@ -448,7 +448,7 @@ title: Publications
         <div class="highlight-list">
             <article class="highlight-card">
                 <div class="highlight-media">
-                    <img src="https://alexlai2860.github.io/images/posterreward/concat.png" alt="PosterReward">
+                    <img src="https://ephemeral182.github.io/images/posterreward/teaser2.png" alt="PosterReward">
                     <span class="badge badge-teal">CVPR 2026</span>
                 </div>
                 <div class="highlight-content">
