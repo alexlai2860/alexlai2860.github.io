@@ -10,29 +10,35 @@ title: Publications
     margin: 0 auto;
 }
 
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.85rem;
+    margin: 0;
+    color: #0d9488;
+    font-weight: 600;
+}
+
 .intro {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     padding: 2.5rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 15px 35px rgba(30, 41, 59, 0.08);
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 24px 60px rgba(30, 41, 59, 0.1);
     border: 1px solid rgba(13, 148, 136, 0.1);
 }
 
-.intro-text .eyebrow {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: #0d9488;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
+.intro-text {
+    flex: 1 1 360px;
 }
 
 .intro-text h1 {
-    font-size: 2.25rem;
+    margin: 0.4rem 0 1rem;
+    font-size: 2.4rem;
     font-weight: 800;
     color: #0f172a;
-    margin-bottom: 1.25rem;
     line-height: 1.2;
 }
 
@@ -40,319 +46,355 @@ title: Publications
     font-size: 1.05rem;
     color: #334155;
     line-height: 1.75;
-    margin-bottom: 1.5rem;
 }
 
 .intro-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 
 .intro-tags span {
-    background: linear-gradient(135deg, rgba(13, 148, 136, 0.12), rgba(15, 118, 110, 0.12));
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(13, 148, 136, 0.3);
+    margin: 0 0.5rem 0.5rem 0;
+    font-size: 0.85rem;
     color: #0d9488;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid rgba(13, 148, 136, 0.2);
+    background: rgba(13, 148, 136, 0.08);
 }
 
 .intro-counters {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
+    display: flex;
+    flex: 1 1 260px;
+    gap: 1rem;
 }
 
 .counter-card {
-    background: rgba(248, 250, 252, 0.9);
-    border-radius: 16px;
-    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 22px;
+    border: 1px solid rgba(13, 148, 136, 0.15);
     text-align: center;
-    border: 1px solid rgba(13, 148, 136, 0.1);
+    padding: 1.2rem;
     transition: all 0.3s ease;
 }
 
 .counter-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.15);
+    box-shadow: 0 15px 35px rgba(13, 148, 136, 0.15);
     border-color: rgba(13, 148, 136, 0.3);
 }
 
 .counter-value {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #0d9488, #0f766e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #0d9488;
 }
 
 .counter-label {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #64748b;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
 }
 
 .section-header {
-    margin-bottom: 2rem;
+    margin: 3rem 0 1.5rem;
 }
 
-.section-header h2 {
-    font-size: 1.75rem;
+.section-header h2,
+.timeline-heading h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #0f766e;
     font-weight: 700;
-    color: #0f172a;
-    position: relative;
-    display: inline-block;
-}
-
-.section-header h2::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #0d9488, #0f766e);
-    border-radius: 2px;
-}
-
-.highlight-block {
-    margin: 3rem 0;
 }
 
 .highlight-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .highlight-card {
+    position: relative;
     display: flex;
-    gap: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(30, 41, 59, 0.08);
+    align-items: stretch;
+    gap: 1.8rem;
+    padding: 1.6rem 1.8rem 1.6rem 2.8rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(30, 41, 59, 0.06);
+    box-shadow: 0 25px 65px rgba(30, 41, 59, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: visible;
     transition: all 0.4s ease;
-    border: 1px solid rgba(30, 41, 59, 0.05);
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 18px;
+    bottom: 18px;
+    width: 10px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #0d9488, #0891b2);
+    box-shadow: 0 6px 18px rgba(13, 148, 136, 0.35);
+}
+
+.highlight-card::after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 10px;
+    bottom: 10px;
+    width: 22px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(13, 148, 136, 0.16), rgba(8, 145, 178, 0.12));
+    filter: blur(5px);
+    z-index: -1;
 }
 
 .highlight-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(13, 148, 136, 0.12);
-    border-color: rgba(13, 148, 136, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 30px 70px rgba(13, 148, 136, 0.15);
 }
 
 .highlight-media {
     flex: 0 0 280px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .highlight-media img {
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.1);
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 22px;
+    background: #fff;
+    padding: 0.35rem;
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12);
 }
 
-.highlight-media .badge {
+.badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 0.35rem 0.85rem;
-    border-radius: 20px;
+    top: -8px;
+    left: -12px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
     font-size: 0.75rem;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+    color: #fff;
+    font-weight: 600;
 }
 
-.badge-cyan {
+.badge-teal {
     background: linear-gradient(135deg, #0d9488, #0891b2);
-    color: white;
 }
 
 .badge-green {
     background: linear-gradient(135deg, #059669, #047857);
-    color: white;
 }
 
-.badge-teal {
-    background: linear-gradient(135deg, #0f766e, #115e59);
-    color: white;
+.badge-cyan {
+    background: linear-gradient(135deg, #0891b2, #0e7490);
 }
 
 .highlight-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .highlight-content h3 {
-    font-size: 1.25rem;
+    margin: 0 0 0.35rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
     font-weight: 700;
     color: #0f172a;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
 }
 
-.highlight-content .authors {
-    font-size: 0.9rem;
+.authors {
+    margin: 0 0 0.6rem;
+    font-size: 0.85rem;
     color: #64748b;
-    margin-bottom: 0.75rem;
 }
 
-.highlight-content .summary {
+.authors strong u {
+    color: #0d9488 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    background: rgba(13, 148, 136, 0.12) !important;
+    padding: 1px 4px !important;
+    border-radius: 4px !important;
+}
+
+.summary {
+    margin: 0;
     font-size: 0.95rem;
     color: #475569;
     line-height: 1.6;
-    margin-bottom: 1rem;
 }
 
 .resource-list {
+    margin-top: auto;
+    padding-top: 0.8rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.6rem;
+    align-items: center;
 }
 
 .resource-list a {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background: rgba(13, 148, 136, 0.1);
-    color: #0d9488;
-    border-radius: 8px;
     font-size: 0.85rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(13, 148, 136, 0.2);
+    font-weight: 600;
+    text-decoration: none;
+    color: #0d9488;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(13, 148, 136, 0.08);
+    transition: all 0.2s ease;
 }
 
 .resource-list a:hover {
-    background: rgba(13, 148, 136, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+    background: rgba(13, 148, 136, 0.15);
+    color: #0f766e;
 }
 
 .timeline-block {
-    margin: 3rem 0;
+    margin-top: 4rem;
 }
 
 .timeline-heading {
-    margin-bottom: 2rem;
-}
-
-.timeline-heading h2 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #0f172a;
+    margin-bottom: 1rem;
 }
 
 .timeline-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    border-top: 2px solid rgba(13, 148, 136, 0.2);
 }
 
 .timeline-row {
     display: flex;
     gap: 1.5rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 24px rgba(30, 41, 59, 0.06);
+    padding: 1.6rem 0;
+    border-bottom: 1px solid rgba(30, 41, 59, 0.08);
     transition: all 0.3s ease;
-    border-left: 4px solid transparent;
 }
 
 .timeline-row:hover {
-    transform: translateX(8px);
-    box-shadow: 0 12px 32px rgba(13, 148, 136, 0.1);
-    border-left-color: #0d9488;
+    background: rgba(13, 148, 136, 0.03);
+    padding-left: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-right: 1rem;
+    border-radius: 12px;
 }
 
 .timeline-meta {
-    flex: 0 0 100px;
+    min-width: 150px;
+    text-align: right;
+}
+
+.meta-type {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #94a3b8;
 }
 
 .meta-date {
-    font-size: 0.85rem;
+    margin-top: 0.3rem;
     font-weight: 600;
     color: #0d9488;
-    background: rgba(13, 148, 136, 0.1);
-    padding: 0.35rem 0.75rem;
-    border-radius: 6px;
-}
-
-.timeline-body {
-    flex: 1;
 }
 
 .timeline-body h3 {
+    margin: 0 0 0.35rem;
     font-size: 1.1rem;
     font-weight: 600;
     color: #0f172a;
-    margin-bottom: 0.5rem;
     line-height: 1.4;
 }
 
-.pub-prefix {
-    font-weight: 700;
+.timeline-body .pub-prefix {
     color: #0d9488;
+    font-weight: 700;
+    margin-right: 0.4rem;
 }
 
 .timeline-authors {
+    margin: 0.2rem 0 0.35rem;
     font-size: 0.9rem;
-    color: #64748b;
-    margin-bottom: 0.5rem;
+    color: #6b7280;
+}
+
+.timeline-authors strong u {
+    color: #0d9488 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    background: rgba(13, 148, 136, 0.12) !important;
+    padding: 1px 4px !important;
+    border-radius: 4px !important;
 }
 
 .timeline-body p {
-    font-size: 0.95rem;
+    margin: 0;
     color: #475569;
     line-height: 1.5;
-    margin-bottom: 0.75rem;
 }
 
 .resource-inline {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
 }
 
 .resource-inline a {
-    font-size: 0.85rem;
     color: #0d9488;
-    padding: 0.25rem 0.5rem;
-    background: rgba(13, 148, 136, 0.08);
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .resource-inline a:hover {
-    background: rgba(13, 148, 136, 0.15);
+    color: #0f766e;
 }
 
-@media (max-width: 768px) {
+.resource-inline a + a::before {
+    content: " | ";
+    color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+    }
+    
+    .intro-counters {
+        width: 100%;
+    }
+    
     .highlight-card {
         flex-direction: column;
     }
     
     .highlight-media {
-        flex: none;
-    }
-    
-    .intro-counters {
-        grid-template-columns: 1fr;
+        width: 100%;
     }
     
     .timeline-row {
         flex-direction: column;
-        gap: 0.75rem;
     }
     
     .timeline-meta {
-        flex: none;
+        text-align: left;
     }
 }
 </style>
@@ -386,7 +428,7 @@ title: Publications
         </div>
     </section>
 
-    <section class="highlight-block fade-in">
+    <section class="highlight-block">
         <div class="section-header">
             <h2>Highlight Research</h2>
         </div>
@@ -395,7 +437,7 @@ title: Publications
             <article class="highlight-card">
                 <div class="highlight-media">
                     <img src="https://alexlai2860.github.io/images/posterreward/concat.png" alt="PosterReward">
-                    <span class="badge badge-cyan">CVPR 2026</span>
+                    <span class="badge badge-teal">CVPR 2026</span>
                 </div>
                 <div class="highlight-content">
                     <h3>PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</h3>
@@ -412,7 +454,7 @@ title: Publications
             <article class="highlight-card">
                 <div class="highlight-media">
                     <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni">
-                    <span class="badge badge-cyan">CVPR 2026</span>
+                    <span class="badge badge-teal">CVPR 2026</span>
                 </div>
                 <div class="highlight-content">
                     <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
@@ -454,6 +496,7 @@ title: Publications
         <div class="timeline-list">
             <article class="timeline-row">
                 <div class="timeline-meta">
+                    <span class="meta-type">Conference</span>
                     <span class="meta-date">Feb 2026</span>
                 </div>
                 <div class="timeline-body">
@@ -471,6 +514,7 @@ title: Publications
 
             <article class="timeline-row">
                 <div class="timeline-meta">
+                    <span class="meta-type">Conference</span>
                     <span class="meta-date">Feb 2026</span>
                 </div>
                 <div class="timeline-body">
@@ -487,6 +531,7 @@ title: Publications
 
             <article class="timeline-row">
                 <div class="timeline-meta">
+                    <span class="meta-type">Conference</span>
                     <span class="meta-date">Jan 2026</span>
                 </div>
                 <div class="timeline-body">
@@ -504,6 +549,7 @@ title: Publications
 
             <article class="timeline-row">
                 <div class="timeline-meta">
+                    <span class="meta-type">Conference</span>
                     <span class="meta-date">Jun 2025</span>
                 </div>
                 <div class="timeline-body">
@@ -518,6 +564,7 @@ title: Publications
 
             <article class="timeline-row">
                 <div class="timeline-meta">
+                    <span class="meta-type">Conference</span>
                     <span class="meta-date">Feb 2025</span>
                 </div>
                 <div class="timeline-body">
