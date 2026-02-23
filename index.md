@@ -36,8 +36,8 @@ layout: fancy_home
     </div>
     <div class="service-card">
         <div class="service-list">
-            <p><strong>Visual Frontiers & Generative Models.</strong> I believe research should matter to real users. I lead the development of <strong>PosterCraft [ICLR'26]</strong> and <strong>PosterOmni [CVPR'26]</strong>, which redefine artistic creation, pushing the boundaries of high-quality aesthetic content, achieving widespread community adoption and industrial applications.</p>
-            <p><strong>Reward Modeling & Foundation.</strong> I am passionate about discovering and designing reward models to align AI outputs with human aesthetic and functional standards. Through feedback optimization in <strong>PosterReward [CVPR'26]</strong> and <strong>SnowMaster [CVPR'25]</strong>, I establish robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
+            <p><strong>Reward Modeling & MLLM.</strong> I am passionate about exploring MLLM applications in image evaluation and generating feedback signals. In <strong>SnowMaster [CVPR'25]</strong>, I lead the development of preference optimization and generative reward-based assessment methods to enhance MLLM perception of image degradation levels. In <strong>PosterReward [CVPR'26]</strong>, we propose a unified framework for training both discriminative and generative reward models.</p>
+            <p><strong>Generative Models.</strong> I believe research should matter to real users. My work advances <strong>PosterCraft [ICLR'26]</strong> for high-quality aesthetic poster generation and <strong>PosterOmni [CVPR'26]</strong> for versatile poster editing, pushing the boundaries of visual content creation and achieving widespread community adoption.</p>
         </div>
     </div>
 </div>
