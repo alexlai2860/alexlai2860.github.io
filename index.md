@@ -29,6 +29,19 @@ layout: fancy_home
     </div>
 </div>
 
+<div class="experience-section fade-in">
+    <div class="experience-header">
+        <i class="fas fa-book-open" style="font-size: 2rem; color: #0d9488;"></i>
+        <h2 class="experience-title">Education</h2>
+    </div>
+    <div class="experience-card">
+        <ul class="experience-list">
+            <li><strong>Sept. 2024 – Jun. 2026:</strong> MPhil in Data Science and Analytics, The Hong Kong University of Science and Technology (Guangzhou)</li>
+            <li><strong>Sept. 2020 – Jun. 2024:</strong> B.Eng. in Automation, South China University of Technology</li>
+        </ul>
+    </div>
+</div>
+
 <div class="service-section fade-in">
     <div class="service-header">
         <i class="fas fa-microscope" style="font-size: 2rem; color: #0d9488;"></i>
@@ -73,31 +86,5 @@ layout: fancy_home
             <li><strong>Aug. 2022:</strong> 🏆 Awarded the National First Prize at the RoboMaster University Championship.</li>
             <li><strong>Jun. 2023:</strong> 📜 Granted a patent for an automatic focusing system based on depth vision.</li>
         </ul>
-    </div>
-</div>
-
-<div class="experience-section fade-in">
-    <div class="experience-header">
-        <i class="fas fa-book-open" style="font-size: 2rem; color: #0d9488;"></i>
-        <h2 class="experience-title">Education</h2>
-    </div>
-    <div class="experience-card">
-        <ul class="experience-list">
-            <li><strong>Sept. 2024 – Jun. 2026:</strong> MPhil in Data Science and Analytics, The Hong Kong University of Science and Technology (Guangzhou)</li>
-            <li><strong>Sept. 2020 – Jun. 2024:</strong> B.Eng. in Automation, South China University of Technology</li>
-        </ul>
-    </div>
-</div>
-
-<div class="service-section fade-in">
-    <div class="service-header">
-        <i class="fas fa-award" style="font-size: 2rem; color: #0d9488;"></i>
-        <h2 class="service-title">Awards & Patents</h2>
-    </div>
-    <div class="service-card">
-        <div class="service-list">
-            <p><i class="fas fa-trophy" style="color: #f59e0b; margin-right: 8px;"></i><strong>Patent (Jun. 2023):</strong> Inventor of an automatic focusing system based on depth vision and target detection (Patent CN219268990U).</p>
-            <p><i class="fas fa-trophy" style="color: #f59e0b; margin-right: 8px;"></i><strong>National First Prize (Aug. 2022):</strong> Awarded as a technical team member in the RoboMaster University Championship.</p>
-        </div>
     </div>
 </div>
