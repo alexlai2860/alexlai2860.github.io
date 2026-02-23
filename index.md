@@ -1,394 +1,106 @@
 ---
-layout: page
----
-<style>
-body {
-  background-color: #f0f5fa;  /* A very light blue background */
-  position: relative;
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
-}
-
-/* Page flowing light effect */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(100, 180, 255, 0.2), transparent);
-  z-index: -1;
-  animation: page-flow-light 8s infinite linear;
-  pointer-events: none;
-}
-
-/* Flowing light animation */
-@keyframes page-flow-light {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-.scrollable-news {
-  max-height: 400px;
-  overflow-y: auto;
-  border-radius: 12px;
-  padding: 15px;
-  background-color: #f8fbff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  margin: 15px 0;
-  list-style: none;
-}
-
-.scrollable-news li {
-  margin-bottom: 4px;
-  padding: 5px;
-  border-bottom: 1px solid #e6f0ff;
-  line-height: 1.4;
-}
-
-.scrollable-news li:hover {
-  background-color: #e6f2ff;
-  transition: background-color 0.3s ease;
-}
-
-.scrollable-news li:last-child {
-  border-bottom: none;
-}
-
-.scrollable-news::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scrollable-news::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.scrollable-news::-webkit-scrollbar-thumb {
-  background: #c0c0c0;
-  border-radius: 10px;
-}
-
-.scrollable-news::-webkit-scrollbar-thumb:hover {
-  background: #a0a0a0;
-}
-
-.mouse-particle {
-  pointer-events: none;
-  position: fixed;
-  border-radius: 50%;
-  background: rgba(255, 215, 0, 0.25);
-  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3);
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-}
-
-/* Research Interests fancy styling */
-.research-interests-container {
-  margin: 20px 0;
-  padding: 0;
-}
-
-.research-interests-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.research-card {
-  background: linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%);
-  border: 2px solid transparent;
-  border-radius: 12px;
-  padding: 20px;
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-  min-height: 200px;
-}
-
-.research-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.6s;
-}
-
-.research-card:hover::before {
-  left: 100%;
-}
-
-.research-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
-  border: 2px solid #4a90e2;
-}
-
-.research-card-icon {
-  font-size: 1.8em;
-  margin-bottom: 12px;
-  display: block;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.research-card:hover .research-card-icon {
-  transform: scale(1.1) rotate(5deg);
-}
-
-.research-card-title {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #2c5aa0;
-  margin-bottom: 12px;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.research-card-content {
-  color: #4a4a4a;
-  line-height: 1.6;
-  text-align: left;
-  font-size: 0.9em;
-}
-
-.research-interests-title {
-  text-align: center;
-  font-size: 2.2em;
-  color: #2c5aa0;
-  margin-bottom: 25px;
-  position: relative;
-}
-
-.research-interests-title::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #4a90e2, #5ba3f5);
-  margin: 10px auto;
-  border-radius: 2px;
-}
-
-@media screen and (max-width: 768px) {
-  .research-interests-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .research-card {
-    padding: 16px;
-    min-height: 160px;
-  }
-  
-  .research-interests-title {
-    font-size: 1.8em;
-  }
-}
-
-.profile-image {
-  aspect-ratio: 1.624;  /* 4724/2910 ≈ 1.624 */
-  object-fit: cover;
-}
-
-@media screen and (max-width: 768px) {
-  .profile-image {
-    width: 100% !important;
-    max-width: 400px !important;
-    float: none !important;
-    margin: 1em auto !important;
-    display: block;
-  }
-}
-</style>
-
-# About Me
-
-<img src="images/JianyuLai_img5_20250702.jpg" class="floatpic profile-image" style="width: 43%; max-width: 400px; height: auto; float: right; margin-left: 1.5em; margin-bottom: 1em; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-
-<!-- My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. I earned my Bachelor's degree in Automation Engineering from South China University of Technology. During my undergraduate studies, I was a vision team member for the RoboMaster University Championship 2022, where our team won the National First Prize. Concurrently, I independently developed an automatic focusing system based on depth vision. Currently, as an MPhil student, I am involved in a Red Bird project focused on the Research and Development of More Capable and Intelligent UAV and Novel Applications.
-
-My graduate studies have further fueled my strong interest in low-level vision and AIGC. I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas, including computational photography.
-
-If you are interested in my work or research, please feel free to contact me. -->
-
-<!-- My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. My graduate studies have further fueled my strong interest in low-level vision and AIGC. I am fortunate that my first paper has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas, including computational photography.
-
-If you are interested in my work or research, please feel free to contact me. -->
-
-My name is **Jianyu Lai (赖建宇)**. I am a Master of Philosophy student in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), supervised by Prof. Lei Zhu. During my graduate studies, I have developed a strong interest and focus on **Low-level Vision**, **Multi-modal Models**, and **Generative Models** . I am fortunate that my first paper **SnowMaster** has been accepted by CVPR 2025, and I am actively exploring new frontiers in these areas. My recent work includes **Postercraft**, an end-to-end poster generation framework that leverages cutting-edge AIGC techniques.
-
-If you are interested in my work or research, please feel free to contact me.
-
-
-<br>
-
-## Education
-
-- **Sep. 2024 – Jun 2026:** The Hong Kong University of Science and Technology (Guangzhou)  
-  *Master of Philosophy in Data Science and Analytics (DSA)*
-- **Sep. 2020 – Jun 2024:** South China University of Technology  
-  *Bachelor of Engineering in Automation*
-
-<br>
-
+layout: fancy_home
 ---
 
-## Research Interests
-
-<div class="research-interests-container">
-  <div class="research-interests-grid">
-    <div class="research-card" onclick="highlightCard(this)">
-      <div class="research-card-icon">🔧</div>
-      <div class="research-card-title">Low-level Vision</div>
-      <div class="research-card-content">
-        Image restoration problems in real-world complex environments<br><br>
-        Computational photography combined with AIGC techniques
-      </div>
+<div class="hero">
+    <div class="hero-content slide-in-left">
+        <h1 class="hero-title">About Me</h1>
+        <div class="typing-text-container">
+            <p id="motto" class="typed-motto"></p>
+        </div>
+        <p class="hero-subtitle">MPhil Student & AI Researcher</p>
+        <div class="hero-description">
+            I'm <span class="highlight">Jianyu Lai (赖建宇)</span>, a Master of Philosophy student at HKUST(GZ) advised by <a href="https://sites.google.com/site/indexlzhu/home"><strong>Prof. Lei Zhu</strong></a>. My research focuses on <strong>Low-level Vision</strong>, <strong>AIGC</strong>, and <strong>Multimodal Large Language Models</strong>. I am passionate about developing robust solutions for image restoration in real-world complex environments and exploring AIGC applications for practical scenarios. I am fortunate to have my work <strong>PosterCraft</strong> accepted by ICLR 2026, <strong>PosterReward</strong> and <strong>PosterOmni</strong> accepted by CVPR 2026, and <strong>SnowMaster</strong> accepted by CVPR 2025.
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/alexlai2860" class="social-link github" title="GitHub">
+                <i class="fab fa-github"></i>
+                <span class="social-text">GitHub</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link scholar" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="social-text">Google Scholar</span>
+            </a>
+            <a href="mailto:jlai2860@gmail.com" class="social-link email" title="Email">
+                <i class="fas fa-envelope"></i>
+                <span class="social-text">Email</span>
+            </a>
+        </div>
     </div>
-    
-    <div class="research-card" onclick="highlightCard(this)">
-      <div class="research-card-icon">🎨</div>
-      <div class="research-card-title">AIGC<br><small style="font-size: 0.7em; color: #666;">(AI Generated Content)</small></div>
-      <div class="research-card-content">
-        AIGC applications for real-world scenarios<br><br>
-        Post-training of advanced generative models
-      </div>
+    <div class="hero-image slide-in-right">
+        <img src="/images/JianyuLai_img5_20250702.jpg" alt="Jianyu Lai" class="profile-image">
     </div>
-    
-    <div class="research-card" onclick="highlightCard(this)">
-      <div class="research-card-icon">🧠</div>
-      <div class="research-card-title">MLLM<br><small style="font-size: 0.7em; color: #666;">(Multimodal Large Language Models)</small></div>
-      <div class="research-card-content">
-        MLLM applications in image restoration and evaluation<br><br>
-        Integration of MLLM and AIGC
-      </div>
-    </div>
-  </div>
 </div>
 
-<br>
-
----
-
-## News and Updates
-
-<div class="scrollable-news">
- <ul>
-  <li><strong>Feb. 2026:</strong> Our work <em><a href="/PosterReward/" target="_blank">PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</a></em> has been accepted by CVPR 2026!</li>
-  <li><strong>Feb. 2026:</strong> Our work <em><a href="https://ephemeral182.github.io/PosterOmni/" target="_blank">PosterOmni: Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</a></em> has been accepted by CVPR 2026!</li>
-  <li><strong>Jan. 2026:</strong> Our work <em><a href="https://arxiv.org/abs/2506.10741" target="_blank">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</a></em> has been accepted by ICLR 2026!</li>
-  <li><strong>Jun. 2025:</strong> Our work <em><a href="https://ephemeral182.github.io/GenHaze/" target="_blank">GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing</a></em> has been accepted by ICCV 2025!</li>
-  <li><strong>Jun. 2025:</strong> We released our latest work, <em><a href="https://arxiv.org/abs/2506.10741" target="_blank">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</a></em>, on Arxiv.</li>
-  <li><strong>Mar. 2025:</strong> Luckily, our paper <em><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lai_SnowMaster_Comprehensive_Real-world_Image_Desnowing_via_MLLM_with_Multi-Model_Feedback_CVPR_2025_paper.pdf" target="_blank">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</a></em> was accepted by CVPR 2025.</li>
-  <li><strong>Sept. 2024:</strong> Began my MPhil program in Data Science and Analytics at HKUST (Guangzhou).</li>
-  <li><strong>Aug. 2022:</strong> Awarded the National First Prize at the RoboMaster University Championship as a technical team member.</li>
-  <li><strong>Jun. 2023:</strong> Granted a patent for an automatic focusing system based on depth vision and target detection.</li>
- </ul>
+<div class="service-section fade-in">
+    <div class="service-header">
+        <i class="fas fa-microscope" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="service-title">Research Interests</h2>
+    </div>
+    <div class="service-card">
+        <div class="service-list">
+            <p><strong>Low-level Vision & Image Restoration.</strong> I focus on solving image restoration problems in real-world complex environments, such as desnowing, dehazing, and low-light enhancement. My work <strong>SnowMaster [CVPR'25]</strong> and <strong>GenHaze [ICCV'25]</strong> demonstrate the potential of combining MLLM with traditional restoration tasks.</p>
+            <p><strong>AIGC & Generative Models.</strong> I am passionate about AIGC applications for real-world scenarios. Through <strong>PosterCraft [ICLR'26]</strong> and <strong>PosterOmni [CVPR'26]</strong>, I explore end-to-end poster generation frameworks that leverage cutting-edge generative techniques.</p>
+            <p><strong>Reward Modeling & MLLM.</strong> I investigate MLLM applications in image evaluation and generation. <strong>PosterReward [CVPR'26]</strong> establishes robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
+        </div>
+    </div>
 </div>
 
-<!-- <br>
+<div class="service-section fade-in">
+    <div class="service-header">
+        <i class="fas fa-trophy" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="service-title">Recent Achievements</h2>
+    </div>
+    <div class="service-card">
+        <div class="service-list">
+            <p><strong>PosterOmni</strong> accepted by <strong>CVPR'2026</strong></p>
+            <p><strong>PosterReward</strong> accepted by <strong>CVPR'2026</strong></p>
+            <p><strong>PosterCraft</strong> accepted by <strong>ICLR'2026</strong></p>
+            <p><strong>GenHaze</strong> accepted by <strong>ICCV'2025</strong></p>
+            <p><strong>SnowMaster</strong> accepted by <strong>CVPR'2025</strong></p>
+        </div>
+    </div>
+</div>
 
----
+<div class="news-section fade-in">
+    <h2 class="news-title">📰 News and Updates</h2>
+    <div class="scrollable-news">
+        <ul>
+            <li><strong>Feb. 2026:</strong> 🎓 <strong>PosterOmni</strong> has been accepted by <strong>CVPR'2026</strong>.</li>
+            <li><strong>Feb. 2026:</strong> 🎓 <strong>PosterReward</strong> has been accepted by <strong>CVPR'2026</strong>.</li>
+            <li><strong>Jan. 2026:</strong> 🎓 <strong>PosterCraft</strong> has been accepted by <strong>ICLR'2026</strong>.</li>
+            <li><strong>Jun. 2025:</strong> 🚀 Announcing the release of <a href="https://ephemeral182.github.io/PosterCraft/"><strong>PosterCraft</strong></a>! A new framework for high-quality aesthetic poster generation.</li>
+            <li><strong>Jun. 2025:</strong> 🎉 Luckily, <strong>GenHaze</strong> has been accepted by <strong>ICCV'2025</strong>.</li>
+            <li><strong>Mar. 2025:</strong> 🎉 Fortunately, <strong>SnowMaster</strong> has been accepted by <strong>CVPR'2025</strong>.</li>
+            <li><strong>Sept. 2024:</strong> 🎓 Began my MPhil program in Data Science and Analytics at HKUST (Guangzhou).</li>
+            <li><strong>Aug. 2022:</strong> 🏆 Awarded the National First Prize at the RoboMaster University Championship.</li>
+            <li><strong>Jun. 2023:</strong> 📜 Granted a patent for an automatic focusing system based on depth vision.</li>
+        </ul>
+    </div>
+</div>
 
-## Projects
+<div class="experience-section fade-in">
+    <div class="experience-header">
+        <i class="fas fa-book-open" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="experience-title">Education</h2>
+    </div>
+    <div class="experience-card">
+        <ul class="experience-list">
+            <li><strong>Sept. 2024 – Jun. 2026:</strong> MPhil in Data Science and Analytics, The Hong Kong University of Science and Technology (Guangzhou)</li>
+            <li><strong>Sept. 2020 – Jun. 2024:</strong> B.Eng. in Automation, South China University of Technology</li>
+        </ul>
+    </div>
+</div>
 
-- **Gait Face Fusion Recognition System Based on Multi Perspective Collaboration:**  
-  A national-level project developing a multi-person gait recognition system with a visual interface that integrates facial and gait features. I led the design and implementation of the occlusion gait restoration module to significantly improve recognition accuracy.
-
-- **Auto-Focus-Assistant:**  
-  An independent R&D project leveraging depth cameras and advanced computer vision techniques to deliver an efficient auto-focus system. It processes both spatial depth and RGB data via YolofastestV2 for object detection, supporting multiple focusing modes (manual, automatic, continuous tracking).
-
-- **Original Aspiration: RoboMaster Short Film Project:**  
-  A team-driven filmmaking project where I served as the team leader, overseeing screenwriting, directing, cinematography, and post-production. The short film documents the journey of preparing for a robotics competition and has received positive attention.
-
-- **National College Student Robot Competition (RoboMaster University Championship):**  
-  A robotics contest in which I participated as a UAV team member; responsible for designing and developing the target detection system, assisting in debugging and flight testing, as well as maintaining the robot vision repository.
-
-<br> -->
-
----
-
-## Awards
-
-- **Patent (Jun. 2023):** Inventor of an automatic focusing system based on depth vision and target detection (Patent CN219268990U).
-- **National First Prize (Aug. 2022):** Awarded as a technical team member in the RoboMaster University Championship.
-
-<br>
-
-<script>
-// Mouse particle effect
-document.addEventListener('DOMContentLoaded', function() {
-  function createParticle(x, y, size) {
-    const particle = document.createElement('div');
-    particle.className = 'mouse-particle';
-    const actualSize = size * (0.5 + Math.random() * 0.5);
-    particle.style.width = actualSize + 'px';
-    particle.style.height = actualSize + 'px';
-    const hue = Math.floor(Math.random() * 360);
-    particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
-    particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
-    particle.style.left = x + 'px';
-    particle.style.top = y + 'px';
-    document.body.appendChild(particle);
-    setTimeout(() => {
-      particle.style.opacity = '0';
-      particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
-      particle.style.transition = 'all 0.6s ease-out';
-      setTimeout(() => {
-        document.body.removeChild(particle);
-      }, 600);
-    }, 10);
-  }
-  
-  let lastX = 0, lastY = 0, throttle = false;
-  document.addEventListener('mousemove', function(e) {
-    if (throttle) return;
-    throttle = true;
-    setTimeout(() => { throttle = false; }, 10);
-    const x = e.clientX, y = e.clientY;
-    const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
-    const size = Math.min(16, Math.max(5, speed * 0.4));
-    createParticle(x, y, size);
-    lastX = x; lastY = y;
-  });
-});
-
-// Research card interaction
-function highlightCard(card) {
-  // Remove highlight from all cards
-  document.querySelectorAll('.research-card').forEach(c => {
-    c.style.background = 'linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%)';
-    c.style.border = '2px solid transparent';
-  });
-  
-  // Highlight clicked card
-  card.style.background = 'linear-gradient(135deg, #e8f4ff 0%, #d1e9ff 100%)';
-  card.style.border = '2px solid #4a90e2';
-  
-  // Add pulse effect
-  card.style.animation = 'pulse 0.6s';
-  setTimeout(() => {
-    card.style.animation = '';
-  }, 600);
-}
-
-// Add pulse animation
-const style = document.createElement('style');
-style.textContent = `
-@keyframes pulse {
-  0% { transform: translateY(-8px) scale(1.02); }
-  50% { transform: translateY(-12px) scale(1.05); }
-  100% { transform: translateY(-8px) scale(1.02); }
-}
-`;
-document.head.appendChild(style);
-</script>
-
----
+<div class="service-section fade-in">
+    <div class="service-header">
+        <i class="fas fa-award" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="service-title">Awards & Patents</h2>
+    </div>
+    <div class="service-card">
+        <div class="service-list">
+            <p><i class="fas fa-trophy" style="color: #f59e0b; margin-right: 8px;"></i><strong>Patent (Jun. 2023):</strong> Inventor of an automatic focusing system based on depth vision and target detection (Patent CN219268990U).</p>
+            <p><i class="fas fa-trophy" style="color: #f59e0b; margin-right: 8px;"></i><strong>National First Prize (Aug. 2022):</strong> Awarded as a technical team member in the RoboMaster University Championship.</p>
+        </div>
+    </div>
+</div>
