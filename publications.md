@@ -315,7 +315,7 @@ body {
         <span class="paper-tag tag-application">Generalized Poster Creation</span>
       </div>
       <div class="pub-authors">
-        Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+        Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
       </div>
       <div class="pub-venue"><em>Computer Vision and Pattern Recognition (CVPR)</em>, 2026</div>
       <div class="pub-links">
