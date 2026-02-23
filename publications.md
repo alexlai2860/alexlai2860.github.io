@@ -11,18 +11,19 @@ title: Publications
 }
 
 .intro {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 24px;
     padding: 2.5rem;
     margin-bottom: 3rem;
-    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 15px 35px rgba(30, 41, 59, 0.08);
+    border: 1px solid rgba(13, 148, 136, 0.1);
 }
 
 .intro-text .eyebrow {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #6366f1;
+    color: #0d9488;
     font-weight: 600;
     margin-bottom: 0.75rem;
 }
@@ -49,13 +50,13 @@ title: Publications
 }
 
 .intro-tags span {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.12));
-    color: #6366f1;
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.12), rgba(15, 118, 110, 0.12));
+    color: #0d9488;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(13, 148, 136, 0.2);
 }
 
 .intro-counters {
@@ -70,20 +71,20 @@ title: Publications
     border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
-    border: 1px solid rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(13, 148, 136, 0.1);
     transition: all 0.3s ease;
 }
 
 .counter-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
-    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.15);
+    border-color: rgba(13, 148, 136, 0.3);
 }
 
 .counter-value {
     font-size: 2.5rem;
     font-weight: 800;
-    background: linear-gradient(45deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #0d9488, #0f766e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -114,7 +115,7 @@ title: Publications
     left: 0;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    background: linear-gradient(90deg, #0d9488, #0f766e);
     border-radius: 2px;
 }
 
@@ -134,15 +135,15 @@ title: Publications
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 30px rgba(30, 41, 59, 0.08);
     transition: all 0.4s ease;
-    border: 1px solid rgba(15, 23, 42, 0.05);
+    border: 1px solid rgba(30, 41, 59, 0.05);
 }
 
 .highlight-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
-    border-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 20px 50px rgba(13, 148, 136, 0.12);
+    border-color: rgba(13, 148, 136, 0.2);
 }
 
 .highlight-media {
@@ -153,7 +154,7 @@ title: Publications
 .highlight-media img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.1);
 }
 
 .highlight-media .badge {
@@ -169,17 +170,17 @@ title: Publications
 }
 
 .badge-cyan {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    background: linear-gradient(135deg, #0d9488, #0891b2);
     color: white;
 }
 
 .badge-green {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: linear-gradient(135deg, #059669, #047857);
     color: white;
 }
 
-.badge-purple {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+.badge-teal {
+    background: linear-gradient(135deg, #0f766e, #115e59);
     color: white;
 }
 
@@ -218,19 +219,19 @@ title: Publications
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background: rgba(99, 102, 241, 0.1);
-    color: #6366f1;
+    background: rgba(13, 148, 136, 0.1);
+    color: #0d9488;
     border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(13, 148, 136, 0.2);
 }
 
 .resource-list a:hover {
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(13, 148, 136, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
 }
 
 .timeline-block {
@@ -256,18 +257,18 @@ title: Publications
 .timeline-row {
     display: flex;
     gap: 1.5rem;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     padding: 1.5rem;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 8px 24px rgba(30, 41, 59, 0.06);
     transition: all 0.3s ease;
     border-left: 4px solid transparent;
 }
 
 .timeline-row:hover {
     transform: translateX(8px);
-    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
-    border-left-color: #6366f1;
+    box-shadow: 0 12px 32px rgba(13, 148, 136, 0.1);
+    border-left-color: #0d9488;
 }
 
 .timeline-meta {
@@ -277,8 +278,8 @@ title: Publications
 .meta-date {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #6366f1;
-    background: rgba(99, 102, 241, 0.1);
+    color: #0d9488;
+    background: rgba(13, 148, 136, 0.1);
     padding: 0.35rem 0.75rem;
     border-radius: 6px;
 }
@@ -297,7 +298,7 @@ title: Publications
 
 .pub-prefix {
     font-weight: 700;
-    color: #6366f1;
+    color: #0d9488;
 }
 
 .timeline-authors {
@@ -321,15 +322,15 @@ title: Publications
 
 .resource-inline a {
     font-size: 0.85rem;
-    color: #6366f1;
+    color: #0d9488;
     padding: 0.25rem 0.5rem;
-    background: rgba(99, 102, 241, 0.08);
+    background: rgba(13, 148, 136, 0.08);
     border-radius: 4px;
     transition: all 0.2s ease;
 }
 
 .resource-inline a:hover {
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(13, 148, 136, 0.15);
 }
 
 @media (max-width: 768px) {

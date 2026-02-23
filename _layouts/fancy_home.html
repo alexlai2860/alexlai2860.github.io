@@ -17,11 +17,11 @@
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #0f172a;
+            color: #1e293b;
             line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
             position: relative;
         }
 
@@ -34,12 +34,12 @@
         }
 
         body::before {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            opacity: 0.08;
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 50%, #115e59 100%);
+            opacity: 0.06;
         }
 
         body::after {
-            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.95));
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98));
             z-index: -1;
         }
         
@@ -49,7 +49,7 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            border-bottom: 1px solid rgba(30, 41, 59, 0.08);
             z-index: 1000;
             padding: 1rem 0;
             transition: all 0.3s ease;
@@ -57,7 +57,7 @@
         
         .navbar.scrolled {
             background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.15);
+            box-shadow: 0 5px 20px rgba(30, 41, 59, 0.12);
         }
         
         .nav-container {
@@ -72,7 +72,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #0d9488, #0f766e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -91,7 +91,7 @@
         }
         
         .nav-menu a {
-            color: #1f2937;
+            color: #334155;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -101,8 +101,8 @@
         }
         
         .nav-menu a:hover {
-            color: #0f172a;
-            background: rgba(99, 102, 241, 0.15);
+            color: #0f766e;
+            background: rgba(13, 148, 136, 0.1);
         }
         
         .main-content {
@@ -135,15 +135,15 @@
             width: 100%;
             height: auto;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
             transition: all 0.5s ease;
             filter: brightness(1);
         }
         
         .profile-image:hover {
             transform: translateY(-15px) rotateY(5deg);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
-            filter: brightness(1.1);
+            box-shadow: 0 40px 80px rgba(13, 148, 136, 0.2);
+            filter: brightness(1.05);
         }
         
         .hero-title {
@@ -164,15 +164,16 @@
 
         .hero-description {
             font-size: 1.1rem;
-            color: #1f2937;
+            color: #334155;
             margin-bottom: 3rem;
             line-height: 1.8;
             animation: fadeInUp 0.8s ease-out 0.4s both;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 24px;
             padding: 1.5rem;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+            box-shadow: 0 15px 35px rgba(30, 41, 59, 0.08);
             backdrop-filter: blur(6px);
+            border: 1px solid rgba(13, 148, 136, 0.1);
         }
         
         .social-links {
@@ -190,10 +191,10 @@
             min-width: 50px;
             height: 50px;
             padding: 0 15px;
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(30, 41, 59, 0.1);
             border-radius: 12px;
-            color: #1f2937;
+            color: #334155;
             text-decoration: none;
             font-size: 1.2rem;
             transition: all 0.4s ease;
@@ -217,29 +218,29 @@
         .social-link:hover {
             transform: translateY(-5px) scale(1.05);
             color: #ffffff;
-            background: rgba(99, 102, 241, 0.8);
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+            background: rgba(13, 148, 136, 0.9);
+            border-color: rgba(13, 148, 136, 0.4);
+            box-shadow: 0 10px 25px rgba(13, 148, 136, 0.25);
         }
         
         .social-link.github:hover {
-            background: linear-gradient(135deg, #1f2937, #475569);
-            box-shadow: 0 10px 25px rgba(31, 41, 55, 0.25);
+            background: linear-gradient(135deg, #1e293b, #334155);
+            box-shadow: 0 10px 25px rgba(30, 41, 59, 0.25);
         }
         
         .social-link.scholar:hover {
-            background: linear-gradient(135deg, #2563eb, #34a853);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+            background: linear-gradient(135deg, #0d9488, #0891b2);
+            box-shadow: 0 10px 25px rgba(13, 148, 136, 0.25);
         }
         
         .social-link.email:hover {
-            background: linear-gradient(135deg, #ea4335, #fbbc05);
-            box-shadow: 0 10px 25px rgba(234, 67, 53, 0.25);
+            background: linear-gradient(135deg, #0f766e, #115e59);
+            box-shadow: 0 10px 25px rgba(15, 118, 110, 0.25);
         }
         
         .service-section {
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(15, 23, 42, 0.08);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(30, 41, 59, 0.08);
             border-radius: 20px;
             padding: 2rem;
             margin: 2rem 0;
@@ -265,7 +266,7 @@
         .service-title {
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #0d9488, #0f766e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -286,13 +287,13 @@
         }
         
         .service-list p:hover {
-            background: rgba(99, 102, 241, 0.08);
+            background: rgba(13, 148, 136, 0.08);
             transform: translateX(10px);
         }
         
         .news-section {
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(15, 23, 42, 0.08);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(30, 41, 59, 0.08);
             border-radius: 20px;
             padding: 2rem;
             margin: 2rem 0;
@@ -312,7 +313,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #0d9488, #0f766e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -362,20 +363,20 @@
             height: 12px;
             border-radius: 50%;
             background: #fff;
-            border: 2px solid #6366f1;
+            border: 2px solid #0d9488;
             z-index: 1;
             transition: all 0.3s ease;
         }
         
         .scrollable-news li:hover {
-            background-color: rgba(99, 102, 241, 0.08);
+            background-color: rgba(13, 148, 136, 0.08);
             transform: translateX(5px);
         }
         
         .scrollable-news li:hover::before {
-            background: #6366f1;
+            background: #0d9488;
             transform: scale(1.2);
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.2);
         }
         
         .scrollable-news::-webkit-scrollbar {
@@ -383,18 +384,18 @@
         }
         
         .scrollable-news::-webkit-scrollbar-track {
-            background: rgba(15, 23, 42, 0.05);
+            background: rgba(30, 41, 59, 0.05);
             border-radius: 10px;
         }
         
         .scrollable-news::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #0d9488, #0f766e);
             border-radius: 10px;
         }
         
         .experience-section {
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(15, 23, 42, 0.08);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(30, 41, 59, 0.08);
             border-radius: 20px;
             padding: 2rem;
             margin: 2rem 0;
@@ -420,7 +421,7 @@
         .experience-title {
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #0d9488, #0f766e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -447,8 +448,8 @@
         }
         
         .experience-list li:hover {
-            background: rgba(99, 102, 241, 0.08);
-            border-left-color: #6366f1;
+            background: rgba(13, 148, 136, 0.08);
+            border-left-color: #0d9488;
             transform: translateX(5px);
         }
         
@@ -544,7 +545,7 @@
         }
         
         .highlight {
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #0d9488, #0f766e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -552,13 +553,13 @@
         }
         
         a {
-            color: #6366f1;
+            color: #0d9488;
             text-decoration: none;
             transition: all 0.3s ease;
         }
         
         a:hover {
-            color: #8b5cf6;
+            color: #0f766e;
         }
     </style>
 </head>
@@ -604,8 +605,6 @@
             document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .service-section, .news-section, .experience-section').forEach(el => {
                 observer.observe(el);
             });
-            
-
         });
     </script>
 </body>
