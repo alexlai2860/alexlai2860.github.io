@@ -36,9 +36,8 @@ layout: fancy_home
     </div>
     <div class="service-card">
         <div class="service-list">
-            <p><strong>Low-level Vision & Image Restoration.</strong> I focus on solving image restoration problems in real-world complex environments, such as desnowing, dehazing, and low-light enhancement. My work <strong>SnowMaster [CVPR'25]</strong> and <strong>GenHaze [ICCV'25]</strong> demonstrate the potential of combining MLLM with traditional restoration tasks.</p>
-            <p><strong>AIGC & Generative Models.</strong> I am passionate about AIGC applications for real-world scenarios. Through <strong>PosterCraft [ICLR'26]</strong> and <strong>PosterOmni [CVPR'26]</strong>, I explore end-to-end poster generation frameworks that leverage cutting-edge generative techniques.</p>
-            <p><strong>Reward Modeling & MLLM.</strong> I investigate MLLM applications in image evaluation and generation. <strong>PosterReward [CVPR'26]</strong> establishes robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
+            <p><strong>Visual Frontiers & Generative Models.</strong> I believe research should matter to real users. I lead the development of <strong>PosterCraft [ICLR'26]</strong> and <strong>PosterOmni [CVPR'26]</strong>, which redefine artistic creation, pushing the boundaries of high-quality aesthetic content, achieving widespread community adoption and industrial applications.</p>
+            <p><strong>Reward Modeling & Foundation.</strong> I am passionate about discovering and designing reward models to align AI outputs with human aesthetic and functional standards. Through feedback optimization in <strong>PosterReward [CVPR'26]</strong> and <strong>SnowMaster [CVPR'25]</strong>, I establish robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
         </div>
     </div>
 </div>
