@@ -7,7 +7,7 @@ layout: fancy_home
         <h1 class="hero-title">About Me</h1>
         <p class="hero-subtitle">MPhil Student & AI Researcher</p>
         <div class="hero-description">
-            I'm <span class="highlight">Jianyu Lai (赖建宇)</span>, an MPhil student at HKUST(GZ) advised by <a href="https://sites.google.com/site/indexlzhu/home"><strong>Prof. Lei Zhu</strong></a>, focusing on the application of MLLM and AIGC. My first work <strong>SnowMaster</strong> (CVPR 2025) applies generative rewards and reinforcement learning to optimize image degradation assessment, improving the generalization capability of restoration models. I then co-developed <strong>PosterCraft</strong> (ICLR 2026) with Sixiang Chen, a poster generation model that achieves high aesthetic quality with accurate text rendering, gaining hundreds of GitHub stars. During my internship at Meituan, I completed <strong>PosterOmni</strong> (CVPR 2026) and <strong>PosterReward</strong> (CVPR 2026) for poster editing and reward modeling.
+            I'm <span class="highlight">Jianyu Lai (赖建宇)</span>, an MPhil student at HKUST(GZ) advised by <a href="https://sites.google.com/site/indexlzhu/home"><strong>Prof. Lei Zhu</strong></a>, focusing on the application of MLLM and AIGC. My first work <strong>SnowMaster</strong> (CVPR 2025) applies generative rewards and reinforcement learning to optimize image degradation assessment. I then co-developed <strong>PosterCraft</strong> (ICLR 2026) with Sixiang Chen, a poster generation model that achieves high aesthetic quality with accurate text rendering, gaining hundreds of GitHub stars. During my internship at Meituan, I completed <strong>PosterOmni</strong> (CVPR 2026) and <strong>PosterReward</strong> (CVPR 2026) for poster editing and reward modeling.
         </div>
         <div class="social-links">
             <a href="https://github.com/alexlai2860" class="social-link github" title="GitHub">
@@ -29,6 +29,20 @@ layout: fancy_home
     </div>
 </div>
 
+<div class="service-section fade-in">
+    <div class="service-header">
+        <i class="fas fa-microscope" style="font-size: 2rem; color: #0d9488;"></i>
+        <h2 class="service-title">Research Interests</h2>
+    </div>
+    <div class="service-card">
+        <div class="service-list">
+            <p><strong>Low-level Vision & Image Restoration.</strong> I focus on solving image restoration problems in real-world complex environments, such as desnowing, dehazing, and low-light enhancement. My work <strong>SnowMaster [CVPR'25]</strong> and <strong>GenHaze [ICCV'25]</strong> demonstrate the potential of combining MLLM with traditional restoration tasks.</p>
+            <p><strong>AIGC & Generative Models.</strong> I am passionate about AIGC applications for real-world scenarios. Through <strong>PosterCraft [ICLR'26]</strong> and <strong>PosterOmni [CVPR'26]</strong>, I explore end-to-end poster generation frameworks that leverage cutting-edge generative techniques.</p>
+            <p><strong>Reward Modeling & MLLM.</strong> I investigate MLLM applications in image evaluation and generation. <strong>PosterReward [CVPR'26]</strong> establishes robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
+        </div>
+    </div>
+</div>
+
 <div class="experience-section fade-in">
     <div class="experience-header">
         <i class="fas fa-book-open" style="font-size: 2rem; color: #0d9488;"></i>
@@ -42,17 +56,18 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="service-section fade-in">
-    <div class="service-header">
-        <i class="fas fa-microscope" style="font-size: 2rem; color: #0d9488;"></i>
-        <h2 class="service-title">Research Interests</h2>
+<div class="experience-section fade-in">
+    <div class="experience-header">
+        <i class="fas fa-flask" style="font-size: 2rem; color: #0d9488;"></i>
+        <h2 class="experience-title">Research Experience</h2>
     </div>
-    <div class="service-card">
-        <div class="service-list">
-            <p><strong>Low-level Vision & Image Restoration.</strong> I focus on solving image restoration problems in real-world complex environments, such as desnowing, dehazing, and low-light enhancement. My work <strong>SnowMaster [CVPR'25]</strong> and <strong>GenHaze [ICCV'25]</strong> demonstrate the potential of combining MLLM with traditional restoration tasks.</p>
-            <p><strong>AIGC & Generative Models.</strong> I am passionate about AIGC applications for real-world scenarios. Through <strong>PosterCraft [ICLR'26]</strong> and <strong>PosterOmni [CVPR'26]</strong>, I explore end-to-end poster generation frameworks that leverage cutting-edge generative techniques.</p>
-            <p><strong>Reward Modeling & MLLM.</strong> I investigate MLLM applications in image evaluation and generation. <strong>PosterReward [CVPR'26]</strong> establishes robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
-        </div>
+    <div class="experience-card">
+        <ul class="experience-list">
+            <li><strong>Jan. 2026 – Present:</strong> <strong>Research Assistant</strong>, City University of Hong Kong<br>
+            <span style="padding-left: 1.5rem; display: block;">Supervised by <a href="https://kedema.org/">Prof. Kede Ma</a>; Developing a multi-modal agent with spatial reasoning capabilities to guide aesthetic photography composition.</span></li>
+            <li><strong>Jun. 2025 – Feb. 2026:</strong> <strong>Research Intern</strong>, Meituan, Intelligent Vision Department<br>
+            <span style="padding-left: 1.5rem; display: block;">Supervised by <a href="https://scholar.google.com/citations?user=G2-nmIQAAAAJ">Jialin Gao</a>; Designing poster generation/editing models, vision reward models and the optimization of unified multimodal understanding and generation models.</span></li>
+        </ul>
     </div>
 </div>
 
@@ -83,8 +98,6 @@ layout: fancy_home
             <li><strong>Jun. 2025:</strong> 🎉 Luckily, <strong>GenHaze</strong> has been accepted by <strong>ICCV'2025</strong>.</li>
             <li><strong>Mar. 2025:</strong> 🎉 Fortunately, <strong>SnowMaster</strong> has been accepted by <strong>CVPR'2025</strong>.</li>
             <li><strong>Sept. 2024:</strong> 🎓 Began my MPhil program in Data Science and Analytics at HKUST (Guangzhou).</li>
-            <li><strong>Aug. 2022:</strong> 🏆 Awarded the National First Prize at the RoboMaster University Championship.</li>
-            <li><strong>Jun. 2023:</strong> 📜 Granted a patent for an automatic focusing system based on depth vision.</li>
         </ul>
     </div>
 </div>
