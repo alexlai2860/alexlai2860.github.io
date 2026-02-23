@@ -268,8 +268,8 @@ body {
   <!-- PosterReward -->
   <div class="publication-item">
     <div class="image-wrapper" data-description="CVPR'26">
-        <a href="/images/posterreward/teaser.jpg" target="_blank" title="Click to view full image">
-            <img src="/images/posterreward/teaser.jpg" alt="PosterReward">
+        <a href="https://alexlai2860.github.io/images/posterreward/concat.png" target="_blank" title="Click to view full image">
+            <img src="https://alexlai2860.github.io/images/posterreward/concat.png" alt="PosterReward">
         </a>
     </div>
     <div class="text-wrapper">
@@ -315,7 +315,7 @@ body {
         <span class="paper-tag tag-application">Generalized Poster Creation</span>
       </div>
       <div class="pub-authors">
-        Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+        Sixiang Chen*, <strong><u>Jianyu Lai*</u></strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
       </div>
       <div class="pub-venue"><em>Computer Vision and Pattern Recognition (CVPR)</em>, 2026</div>
       <div class="pub-links">
