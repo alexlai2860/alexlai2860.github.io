@@ -431,10 +431,6 @@ title: Publications
             </div>
             <div class="counter-card">
                 <div class="counter-value">5</div>
-                <div class="counter-label">ICCV/CVPR/ECCV<br>ICLR/ICML/NeurIPS</div>
-            </div>
-            <div class="counter-card">
-                <div class="counter-value">5</div>
                 <div class="counter-label">Total Publications</div>
             </div>
         </div>
