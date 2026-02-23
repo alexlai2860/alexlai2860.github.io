@@ -5,9 +5,6 @@ layout: fancy_home
 <div class="hero">
     <div class="hero-content slide-in-left">
         <h1 class="hero-title">About Me</h1>
-        <div class="typing-text-container">
-            <p id="motto" class="typed-motto"></p>
-        </div>
         <p class="hero-subtitle">MPhil Student & AI Researcher</p>
         <div class="hero-description">
             I'm <span class="highlight">Jianyu Lai (赖建宇)</span>, a Master of Philosophy student at HKUST(GZ) advised by <a href="https://sites.google.com/site/indexlzhu/home"><strong>Prof. Lei Zhu</strong></a>. My research focuses on <strong>Low-level Vision</strong>, <strong>AIGC</strong>, and <strong>Multimodal Large Language Models</strong>. I am passionate about developing robust solutions for image restoration in real-world complex environments and exploring AIGC applications for practical scenarios. I am fortunate to have my work <strong>PosterCraft</strong> accepted by ICLR 2026, <strong>PosterReward</strong> and <strong>PosterOmni</strong> accepted by CVPR 2026, and <strong>SnowMaster</strong> accepted by CVPR 2025.

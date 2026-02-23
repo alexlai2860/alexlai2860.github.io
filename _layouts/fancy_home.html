@@ -560,17 +560,6 @@
         a:hover {
             color: #8b5cf6;
         }
-        
-        .typing-text-container {
-            min-height: 30px;
-            margin-bottom: 1rem;
-        }
-        
-        .typed-motto {
-            font-size: 1.1rem;
-            color: #6366f1;
-            font-style: italic;
-        }
     </style>
 </head>
 <body>
@@ -580,7 +569,6 @@
             <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/publications/">Publications</a></li>
-                <li><a href="/awards/">Awards</a></li>
             </ul>
         </div>
     </nav>
@@ -617,39 +605,7 @@
                 observer.observe(el);
             });
             
-            const mottoes = [
-                '"Research should matter to real users."',
-                '"Bridging vision and generation."',
-                '"From low-level vision to AIGC."'
-            ];
-            let currentMotto = 0;
-            const mottoElement = document.getElementById('motto');
-            
-            function typeMotto(text, callback) {
-                let i = 0;
-                mottoElement.textContent = '';
-                function type() {
-                    if (i < text.length) {
-                        mottoElement.textContent += text.charAt(i);
-                        i++;
-                        setTimeout(type, 50);
-                    } else if (callback) {
-                        setTimeout(callback, 2000);
-                    }
-                }
-                type();
-            }
-            
-            function showNextMotto() {
-                typeMotto(mottoes[currentMotto], () => {
-                    currentMotto = (currentMotto + 1) % mottoes.length;
-                    showNextMotto();
-                });
-            }
-            
-            if (mottoElement) {
-                showNextMotto();
-            }
+
         });
     </script>
 </body>
