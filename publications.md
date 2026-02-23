@@ -228,12 +228,13 @@ title: Publications
 }
 
 .authors strong u {
-    color: #0d9488 !important;
+    color: #ffffff !important;
     font-weight: 700 !important;
     text-decoration: none !important;
-    background: rgba(13, 148, 136, 0.12) !important;
-    padding: 1px 4px !important;
-    border-radius: 4px !important;
+    background: linear-gradient(135deg, #0d9488, #0891b2) !important;
+    padding: 2px 8px !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3) !important;
 }
 
 .summary {
@@ -266,6 +267,16 @@ title: Publications
 .resource-list a:hover {
     background: rgba(13, 148, 136, 0.15);
     color: #0f766e;
+}
+
+.gh-btn-wrap {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.3rem;
+}
+
+.gh-btn-wrap iframe {
+    border: none;
 }
 
 .timeline-block {
@@ -337,12 +348,13 @@ title: Publications
 }
 
 .timeline-authors strong u {
-    color: #0d9488 !important;
+    color: #ffffff !important;
     font-weight: 700 !important;
     text-decoration: none !important;
-    background: rgba(13, 148, 136, 0.12) !important;
-    padding: 1px 4px !important;
-    border-radius: 4px !important;
+    background: linear-gradient(135deg, #0d9488, #0891b2) !important;
+    padding: 2px 8px !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3) !important;
 }
 
 .timeline-body p {
@@ -464,7 +476,13 @@ title: Publications
                         <a href="https://arxiv.org/abs/2602.12127">📄 Paper</a>
                         <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
                         <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1">🤗 Model</a>
-                        <a href="https://github.com/MeiGen-AI/PosterOmni">🐙 GitHub</a>
+                        <a href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">🐙 GitHub</a>
+                        <span class="gh-btn-wrap">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
+                        </span>
+                        <span class="gh-btn-wrap">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterOmni GitHub Fork"></iframe>
+                        </span>
                     </div>
                 </div>
             </article>
@@ -482,7 +500,13 @@ title: Publications
                         <a href="https://arxiv.org/abs/2506.10741">📄 Paper</a>
                         <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
                         <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL">🤗 Model</a>
-                        <a href="https://github.com/Ephemeral182/PosterCraft">🐙 GitHub</a>
+                        <a href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">🐙 GitHub</a>
+                        <span class="gh-btn-wrap">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
+                        </span>
+                        <span class="gh-btn-wrap">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterCraft GitHub Fork"></iframe>
+                        </span>
                     </div>
                 </div>
             </article>
