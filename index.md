@@ -36,7 +36,7 @@ layout: fancy_home
     </div>
     <div class="service-card">
         <div class="service-list">
-            <p><strong>Reward Modeling & MLLM.</strong> I am passionate about exploring MLLM applications in image evaluation and generating feedback signals. In <strong>SnowMaster [CVPR'25]</strong>, I lead the development of preference optimization and generative reward-based assessment methods to enhance MLLM perception of image degradation levels. In <strong>PosterReward [CVPR'26]</strong>, we propose a unified framework for training both discriminative and generative reward models.</p>
+            <p><strong>Reward Modeling & MLLM.</strong> I am passionate about exploring MLLM applications in image evaluation and generating feedback signals. In <strong>SnowMaster [CVPR'25]</strong>, we propose a method preference optimization and generative reward-based assessment methods to enhance MLLM perception of image degradation levels. In <strong>PosterReward [CVPR'26]</strong>, I lead the development of a unified framework for training both discriminative and generative reward models.</p>
             <p><strong>Generative Models.</strong> I believe research should matter to real users. My work advances <strong>PosterCraft [ICLR'26]</strong> for high-quality aesthetic poster generation and <strong>PosterOmni [CVPR'26]</strong> for versatile poster editing, pushing the boundaries of visual content creation and achieving widespread community adoption.</p>
         </div>
     </div>

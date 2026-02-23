@@ -415,8 +415,8 @@ title: Publications
     <section class="intro fade-in">
         <div class="intro-text">
             <p class="eyebrow">Research Snapshot</p>
-            <h1>Visual Frontiers & Generative Intelligence</h1>
-            <p>My research lies at the intersection of <strong>Low-level Vision</strong>, <strong>AIGC</strong>, and <strong>Multimodal Large Language Models</strong>. I build frameworks like <strong>PosterCraft</strong> and <strong>PosterOmni</strong> for high-quality poster generation, design reward models for human-aligned generation in <strong>PosterReward</strong>, and explore MLLM applications in image restoration tasks like <strong>SnowMaster</strong> and <strong>GenHaze</strong>.</p>
+            <h1>Visual Evaluation & Generative Intelligence</h1>
+            <p>My research lies at the intersection of <strong>Low-level Vision</strong>, <strong>AIGC</strong>, and <strong>MLLMs</strong>. I build frameworks like <strong>PosterCraft</strong> and <strong>PosterOmni</strong> for high-quality poster generation and editing, design reward models for human-aligned generation in <strong>PosterReward</strong>, and explore MLLM applications in image restoration tasks like <strong>SnowMaster</strong> and <strong>GenHaze</strong>.</p>
             <div class="intro-tags">
                 <span>Low-level Vision</span>
                 <span>AIGC</span>
@@ -426,12 +426,12 @@ title: Publications
         </div>
         <div class="intro-counters">
             <div class="counter-card">
-                <div class="counter-value">3</div>
-                <div class="counter-label">CVPR / ICCV</div>
+                <div class="counter-value">4</div>
+                <div class="counter-label">First/Co-first Author<br><small>(CVPR*3, ICLR*1)</small></div>
             </div>
             <div class="counter-card">
-                <div class="counter-value">1</div>
-                <div class="counter-label">ICLR</div>
+                <div class="counter-value">5</div>
+                <div class="counter-label">ICCV/CVPR/ECCV<br>ICLR/ICML/NeurIPS</div>
             </div>
             <div class="counter-card">
                 <div class="counter-value">5</div>
