@@ -452,7 +452,7 @@ title: Publications
                     <p class="authors"><strong><u>Jianyu Lai*</u></strong>, Sixiang Chen*, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu✉️</p>
                     <p class="summary">A comprehensive reward model for design aesthetics and typography, trained on an automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
                     <div class="resource-list">
-                        <a href="/mypaper/posterreward/PosterReward_Arxiv_official.pdf">📄 Paper</a>
+                        <a href="/mypaper/posterreward/PosterReward_Arxiv_released.pdf">📄 Paper</a>
                         <a href="/PosterReward/">🌐 Project</a>
                         <a href="https://huggingface.co/PosterReward">🤗 Model</a>
                     </div>
@@ -543,7 +543,7 @@ title: Publications
                     <p>A comprehensive reward model for design aesthetics and typography, trained on automated preference dataset.</p>
                     <div class="resource-inline">
                         <a href="/PosterReward/">Project Page</a>
-                        <a href="/mypaper/posterreward/PosterReward_Arxiv_official.pdf">Paper</a>
+                        <a href="/mypaper/posterreward/PosterReward_Arxiv_released.pdf">Paper</a>
                         <a href="https://huggingface.co/PosterReward">Model</a>
                     </div>
                 </div>

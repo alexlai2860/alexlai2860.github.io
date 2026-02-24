@@ -43,6 +43,8 @@ links:
     url: /
   - title: Publications
     url: /publications/
+  - title: Resume
+    url: /file/resume_of_JianyuLai_202602.pdf
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: China/Beijing
