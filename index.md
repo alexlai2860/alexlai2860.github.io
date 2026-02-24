@@ -25,7 +25,7 @@ layout: fancy_home
         </div>
     </div>
     <div class="hero-image slide-in-right">
-        <img src="/images/JianyuLai_img5_20250702.jpg" alt="Jianyu Lai" class="profile-image">
+        <img src="/images/JianyuLai_img2602.jpg" alt="Jianyu Lai" class="profile-image">
     </div>
 </div>
 
