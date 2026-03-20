@@ -14,11 +14,11 @@ layout: fancy_home
                 <i class="fab fa-github"></i>
                 <span class="social-text">GitHub</span>
             </a>
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link scholar" title="Google Scholar">
+            <a href="https://scholar.google.com/citations?user=EOMkjhUAAAAJ" class="social-link scholar" title="Google Scholar">
                 <i class="fas fa-graduation-cap"></i>
                 <span class="social-text">Google Scholar</span>
             </a>
-            <a href="mailto:jlai2860@gmail.com" class="social-link email" title="Email">
+            <a href="mailto:jlai218@connect.hkust-gz.edu.cn" class="social-link email" title="Email">
                 <i class="fas fa-envelope"></i>
                 <span class="social-text">Email</span>
             </a>
