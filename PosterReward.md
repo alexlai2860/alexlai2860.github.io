@@ -34,9 +34,9 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
     </div>
 
     <div style="margin-top: 2rem;">
-        <a href="/mypaper/posterreward/PosterReward_Arxiv_released.pdf" class="btn btn-primary"><span>📄</span> Paper</a>
-        <a href="https://alexlai2860.github.io/PosterReward/" class="btn btn-secondary"><span>💻</span> Code</a>
-        <a href="https://huggingface.co/PosterReward" class="btn btn-secondary"><span>🤗</span> Model</a>
+        <a href="https://arxiv.org/abs/2603.29855" class="btn btn-primary"><span>📄</span> Paper</a>
+        <a href="https://github.com/MeiGen-AI/PosterReward" class="btn btn-secondary"><span>💻</span> Code</a>
+        <a href="https://huggingface.co/MeiGen-AI/PosterReward_v1" class="btn btn-secondary"><span>🤗</span> Model</a>
     </div>
 </div>
 
@@ -1131,7 +1131,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             <span style="display: inline-block; margin-left: 0.55rem; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.72rem; font-weight: 600; color: #334155; background: rgba(148, 163, 184, 0.18); border: 1px solid rgba(148, 163, 184, 0.35); vertical-align: middle;">v1.0, 2026/02</span>
         </h2>
         <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.8rem; max-width: 980px; margin-left: auto; margin-right: auto;">
-            PosterReward supports stronger decision quality at inference through richer analysis traces and demonstrates high agreement with design-centric quality criteria on poster generation benchmarks.
+            Performance comparison of closed-source and open-source image generation models on PosterBench, highlighting both average quality and stability across prompts.
         </p>
         <div class="table-scroll-wrapper">
             <table class="results-table" id="posterbench-leaderboard">
@@ -1140,8 +1140,8 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <th style="width: 28%; cursor: pointer;" data-sort-key="model">Model</th>
                         <th style="width: 18%; cursor: pointer;" data-sort-key="mean">Mean ↑</th>
                         <th style="width: 18%; cursor: pointer;" data-sort-key="median">Median ↑</th>
-                        <th style="width: 18%; cursor: pointer;" data-sort-key="std">Std ↓</th>
-                        <th style="width: 18%; cursor: pointer;" data-sort-key="top8">Best-of-8 Avg ↑</th>
+                        <th style="width: 18%; cursor: pointer;" data-sort-key="std">Std-Avg ↓</th>
+                        <th style="width: 18%; cursor: pointer;" data-sort-key="bo8">Bo8-Avg ↑</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1149,91 +1149,112 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                         <td colspan="5">Closed-Source Models</td>
                     </tr>
                     <tr>
-                        <td>Nano-Banana</td>
-                        <td><span class="rank-1">11.60</span></td>
-                        <td><span class="rank-1">11.69</span></td>
-                        <td>4.94</td>
-                        <td><span class="rank-1">14.49</span></td>
+                        <td>Nano-Banana-Pro</td>
+                        <td><span class="rank-1">13.36</span></td>
+                        <td><span class="rank-1">13.47</span></td>
+                        <td>1.91</td>
+                        <td><span class="rank-1">15.77</span></td>
                     </tr>
                     <tr>
-                        <td>Seedream4.0</td>
+                        <td>Seedream-4.5*</td>
+                        <td>12.03</td>
+                        <td>12.09</td>
+                        <td>2.08</td>
+                        <td>14.57</td>
+                    </tr>
+                    <tr>
+                        <td>Nano-Banana[8]</td>
+                        <td>11.60</td>
+                        <td>11.69</td>
+                        <td>2.17</td>
+                        <td>14.49</td>
+                    </tr>
+                    <tr>
+                        <td>Seedream-4.0[37]</td>
                         <td>11.46</td>
                         <td>11.44</td>
-                        <td>4.95</td>
+                        <td>2.06</td>
                         <td>13.93</td>
                     </tr>
                     <tr>
                         <td>GPT-Image-1</td>
                         <td>11.16</td>
                         <td>11.38</td>
-                        <td><span class="rank-1">4.85</span></td>
+                        <td><span class="rank-1">1.75</span></td>
                         <td>13.43</td>
                     </tr>
                     <tr>
-                        <td>Seedream3.0</td>
+                        <td>Seedream-3.0[10]</td>
                         <td>5.01</td>
                         <td>5.13</td>
-                        <td>6.28</td>
+                        <td>3.66</td>
                         <td>9.75</td>
                     </tr>
                     <tr class="bench-group-row">
                         <td colspan="5">Open-Source Models</td>
                     </tr>
                     <tr>
-                        <td>Z-Image-Turbo</td>
-                        <td>7.65</td>
-                        <td>7.31</td>
-                        <td>6.00</td>
-                        <td>10.47</td>
-                    </tr>
-                    <tr>
-                        <td>Qwen-Image-2512</td>
+                        <td>Qwen-Image-2512[46]</td>
                         <td><span class="rank-1">11.86</span></td>
                         <td><span class="rank-1">11.63</span></td>
-                        <td><span class="rank-1">5.28</span></td>
+                        <td><span class="rank-1">1.46</span></td>
                         <td><span class="rank-1">13.85</span></td>
                     </tr>
                     <tr>
-                        <td>Qwen-Image</td>
+                        <td>Qwen-Image[46]</td>
                         <td>7.69</td>
                         <td>7.72</td>
-                        <td>5.57</td>
+                        <td>2.55</td>
                         <td>11.06</td>
                     </tr>
                     <tr>
-                        <td>Flux.1-dev</td>
-                        <td>2.55</td>
-                        <td>2.42</td>
-                        <td>7.10</td>
-                        <td>7.81</td>
+                        <td>Z-Image-Turbo[2]</td>
+                        <td>7.65</td>
+                        <td>7.31</td>
+                        <td>2.18</td>
+                        <td>10.47</td>
                     </tr>
                     <tr>
-                        <td>Flux-Krea</td>
+                        <td>Flux.2-klein-9B[2]</td>
+                        <td>7.38</td>
+                        <td>7.66</td>
+                        <td>3.20</td>
+                        <td>11.67</td>
+                    </tr>
+                    <tr>
+                        <td>Flux.1-krea-dev[22]</td>
                         <td>5.00</td>
                         <td>5.14</td>
-                        <td>6.87</td>
+                        <td>3.59</td>
                         <td>9.58</td>
                     </tr>
                     <tr>
-                        <td>SD3.5-L</td>
+                        <td>Flux.1-dev[20]</td>
+                        <td>2.55</td>
+                        <td>2.42</td>
+                        <td>3.85</td>
+                        <td>7.81</td>
+                    </tr>
+                    <tr>
+                        <td>SD3.5-L[9]</td>
                         <td>-2.90</td>
                         <td>-3.92</td>
-                        <td>5.76</td>
+                        <td>2.68</td>
                         <td>1.24</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-            PosterBench evaluation results. Higher Mean/Median/Best-of-8 indicate better average and scalable performance; lower Std indicates more stable quality across prompts.
+            PosterBench evaluation results. Mean, Median, and Bo8-Avg represent the corresponding scores, while Std-Avg measures stability across prompt groups, where lower is better.
         </p>
     </div>
 
-    <!-- Section 5: Application - Reward Model in Post Training and Test-Time Scaling -->
+    <!-- Section 5: Application - Reward Model in Post Training -->
     <div class="split-section stacked-showcase" id="posttraining">
         <div class="split-text">
             <span class="section-label">Application</span>
-            <h2 class="section-title">Reward Model in Post Training and Test-Time Scaling</h2>
+            <h2 class="section-title">Reward Model in Post Training</h2>
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="number-badge">1</div>
@@ -1248,7 +1269,7 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
                 <div class="feature-item">
                     <div class="number-badge">3</div>
                     <span class="feature-heading">Transferable to diverse post-training scenarios</span>
-                    <p class="feature-desc">Beyond benchmark ranking, the reward can guide rejection sampling, reranking, and reinforcement fine-tuning for poster generation, helping models move from generic aesthetics to task-specific design quality.</p>
+                    <p class="feature-desc">The reward transfers naturally to reinforcement fine-tuning and iterative policy improvement for poster generation, helping models move from generic aesthetics to task-specific design quality.</p>
                 </div>
             </div>
 
@@ -1256,22 +1277,8 @@ title: PosterReward - Unlocking Accurate Evaluation for High-Quality Graphic Des
             <div style="margin-top: 5rem;">
                 <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; color: var(--text-main);">Visual Comparison</h3>
                 <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    PosterReward enables effective post-training improvement through Best-of-8 selection and GRPO training. Below we show qualitative comparisons between models before and after applying PosterReward-guided optimization.
+                    PosterReward enables effective post-training improvement through GRPO training. Below we show qualitative comparisons between models before and after applying PosterReward-guided optimization.
                 </p>
-
-                <!-- BO8筛选效果对比 -->
-                <div style="margin-bottom: 4rem;">
-                    <h4 style="text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-secondary);">Best-of-8 Selection with PosterReward</h4>
-                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
-                        Using PosterReward to select the best from 8 candidates significantly improves output quality compared to random selection.
-                    </p>
-                    <div class="v-media-stack">
-                        <div class="v-media-card">
-                            <img src="" alt="BO8 selection comparison" onerror="this.parentElement.style.display='none'">
-                            <p class="v-media-caption">Left: Random selection from 8 candidates. Right: PosterReward-guided selection.</p>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Flux-GRPO微调效果对比 -->
                 <div style="margin-bottom: 3rem;">
