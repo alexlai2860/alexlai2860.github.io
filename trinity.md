@@ -9,7 +9,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
     <div class="product-pill">Design agent framework for professional graphic design</div>
     <h1>
       <span class="hero-title-line">Trinity</span>
-      <span class="hero-title-line hero-title-accent">Code as Design</span>
+      <span class="hero-title-line hero-title-accent">Coder as Designer</span>
     </h1>
     <p class="hero-copy">A multi-agent framework that turns professional graphic design into editable, reviewable, and reusable HTML/CSS artifacts, with project-level memory and workflow experience that improves over repeated runs.</p>
     <div class="author-line">
@@ -22,25 +22,9 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
       <a class="button" aria-disabled="true">Code Coming Soon</a>
     </div>
 
-    <div class="hero-product">
-      <div class="window-frame">
-        <div class="window-top">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="window-path">trinity / design outputs / project canvas</span>
-        </div>
-        <img src="/images/trinity/teaser_official.jpg" alt="Trinity design outputs across multiple graphic design deliverables">
-      </div>
-      <div class="float-panel panel-left">
-        <strong>HTML/CSS source</strong>
-        <span>Editable foreground layers, deterministic rendering, and precise local revision.</span>
-      </div>
-      <div class="float-panel panel-right">
-        <strong>Project memory</strong>
-        <span>Master template, design handbook, and protected consistency-critical regions.</span>
-      </div>
-    </div>
+    <figure class="hero-visual reveal">
+      <img src="/images/trinity/teaser_official.jpg" alt="Trinity design outputs across multiple graphic design deliverables">
+    </figure>
   </div>
 </header>
 
@@ -54,20 +38,20 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
       <p class="section-copy">Professional graphic design requires more than visual appeal. Campaigns need coherent families of deliverables, exact text and brand placement, repeated client edits, and lessons that carry into future production. Trinity treats design as code so the system can inspect, diff, protect, and revise every artifact.</p>
     </div>
 
-    <div class="metrics-strip reveal">
-      <div class="metric-tile">
+    <div class="stat-line reveal">
+      <div class="stat">
         <strong>3</strong>
         <span>Collaborative layers: execution specialists, central Designer, and independent reviewers.</span>
       </div>
-      <div class="metric-tile">
+      <div class="stat">
         <strong>92</strong>
         <span>RealDesignBench task instances in the current draft evaluation.</span>
       </div>
-      <div class="metric-tile">
+      <div class="stat">
         <strong>10x</strong>
         <span>Sequential edit protocol to test accumulated fidelity across rounds.</span>
       </div>
-      <div class="metric-tile">
+      <div class="stat">
         <strong>Code</strong>
         <span>Renderable HTML/CSS becomes the design representation and the audit surface.</span>
       </div>
@@ -107,60 +91,62 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
       </div>
       <p class="section-copy">The current manuscript places the Designer at the center of the system. It compiles the task, calls execution-layer resources, renders intermediate previews, passes deterministic audit gates, and receives reviewer feedback before final submission.</p>
     </div>
-    <div class="figure-stage reveal">
+    <figure class="paper-figure reveal">
       <img src="/images/trinity/system_framework_official.png" alt="Overview of the Trinity multi-agent framework">
-      <div class="figure-caption">
+      <figcaption class="figure-caption">
         <span>Task compilation, tool-augmented design, checkpointing, audit gates, and multi-reviewer refinement.</span>
         <span class="caption-tag">Figure 2</span>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   </section>
 
-  <section class="section-band" id="project">
-    <div class="section section-wide">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">Project-Level Management</p>
-          <h2 class="section-title">One master design, many consistent deliverables.</h2>
-        </div>
-        <p class="section-copy">A real campaign is a family, not a singleton. Trinity generates a master task first, extracts a reusable design handbook, and protects key code regions so later tasks can change content without drifting from the brand direction.</p>
+  <section class="section section-wide" id="project">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Project-Level Management</p>
+        <h2 class="section-title">One master design, many consistent deliverables.</h2>
       </div>
+      <p class="section-copy">A real campaign is a family, not a singleton. Trinity generates a master task first, extracts a reusable design handbook, and protects key code regions so later tasks can change content without drifting from the brand direction.</p>
+    </div>
 
-      <div class="process-grid reveal">
-        <article class="process-step" data-step="01">
-          <h3>Master task</h3>
-          <p>Create the first deliverable through the full generation and review pipeline.</p>
-        </article>
-        <article class="process-step" data-step="02">
-          <h3>Handbook extraction</h3>
-          <p>Summarize color, typography, spacing, components, and reusable CSS variables.</p>
-        </article>
-        <article class="process-step" data-step="03">
-          <h3>Tiered protection</h3>
-          <p>Lock identity-critical regions while allowing task-specific content to change.</p>
-        </article>
-        <article class="process-step" data-step="04">
-          <h3>Consistency review</h3>
-          <p>Compare new deliverables against the master and design handbook.</p>
-        </article>
-      </div>
+    <div class="process-track reveal">
+      <article class="process-step">
+        <small>Step 01</small>
+        <h3>Master task</h3>
+        <p>Create the first deliverable through the full generation and review pipeline.</p>
+      </article>
+      <article class="process-step">
+        <small>Step 02</small>
+        <h3>Handbook extraction</h3>
+        <p>Summarize color, typography, spacing, components, and reusable CSS variables.</p>
+      </article>
+      <article class="process-step">
+        <small>Step 03</small>
+        <h3>Tiered protection</h3>
+        <p>Lock identity-critical regions while allowing task-specific content to change.</p>
+      </article>
+      <article class="process-step">
+        <small>Step 04</small>
+        <h3>Consistency review</h3>
+        <p>Compare new deliverables against the master and design handbook.</p>
+      </article>
+    </div>
 
-      <div class="figure-row">
-        <div class="figure-stage reveal">
-          <img src="/images/trinity/project_management_official.png" alt="Project management module in Trinity">
-          <div class="figure-caption">
-            <span>Master template, design handbook, inheritance, and protected edits.</span>
-            <span class="caption-tag">Figure 3</span>
-          </div>
-        </div>
-        <div class="figure-stage reveal">
-          <img src="/images/trinity/comp_project_gen.jpg" alt="Qualitative project-level generation comparison">
-          <div class="figure-caption">
-            <span>Project-level generation comparison from the current paper draft.</span>
-            <span class="caption-tag">Figure 5</span>
-          </div>
-        </div>
-      </div>
+    <div class="figure-row">
+      <figure class="paper-figure reveal">
+        <img src="/images/trinity/project_management_official.png" alt="Project management module in Trinity">
+        <figcaption class="figure-caption">
+          <span>Master template, design handbook, inheritance, and protected edits.</span>
+          <span class="caption-tag">Figure 3</span>
+        </figcaption>
+      </figure>
+      <figure class="paper-figure reveal">
+        <img src="/images/trinity/comp_project_gen.jpg" alt="Qualitative project-level generation comparison">
+        <figcaption class="figure-caption">
+          <span>Project-level generation comparison from the current paper draft.</span>
+          <span class="caption-tag">Figure 5</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -173,20 +159,20 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
       <p class="section-copy">Trinity separates creative guidance from operational reliability. Design knowledge is extracted from professional references and retrieved at runtime; workflow experience is distilled from audit failures, incidents, and behavioral anomalies.</p>
     </div>
     <div class="figure-row">
-      <div class="figure-stage reveal">
+      <figure class="paper-figure reveal">
         <img src="/images/trinity/dual_knowledge_official.png" alt="Dual knowledge mechanism in Trinity">
-        <div class="figure-caption">
+        <figcaption class="figure-caption">
           <span>Offline design pattern extraction plus runtime workflow experience accumulation.</span>
           <span class="caption-tag">Figure 4</span>
-        </div>
-      </div>
-      <div class="figure-stage reveal">
+        </figcaption>
+      </figure>
+      <figure class="paper-figure reveal">
         <img src="/images/trinity/reviewer_distribution.png" alt="Reviewer decision distribution in Trinity">
-        <div class="figure-caption">
+        <figcaption class="figure-caption">
           <span>Reviewer distribution used in the current appendix analysis.</span>
           <span class="caption-tag">Appendix</span>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -219,46 +205,46 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
         </div>
       </div>
 
-      <div class="figure-stage reveal">
+      <figure class="paper-figure reveal">
         <img src="/images/trinity/winrate_combined.png" alt="Pairwise win rate summary for Trinity">
-        <div class="figure-caption">
+        <figcaption class="figure-caption">
           <span>Pairwise win rates grouped by generation, editing, coding-agent, and ablation categories.</span>
           <span class="caption-tag">Figure 6</span>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     </div>
 
     <div class="mini-gallery">
-      <div class="figure-stage reveal">
+      <figure class="paper-figure reveal">
         <img src="/images/trinity/supp_edit_comp.jpg" alt="Multi-round editing comparison for Trinity">
-        <div class="figure-caption">
+        <figcaption class="figure-caption">
           <span>Multi-round editing comparison: layer routing preserves the original design more reliably.</span>
           <span class="caption-tag">Figure 7</span>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
       <div>
-        <div class="figure-stage reveal">
+        <figure class="paper-figure reveal">
           <img src="/images/trinity/edit_fidelity_heatmap.png" alt="Edit fidelity heatmap for Trinity">
-          <div class="figure-caption">
+          <figcaption class="figure-caption">
             <span>Edit fidelity heatmap from the current appendix.</span>
             <span class="caption-tag">Appendix</span>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
         <div class="figure-row">
-          <div class="figure-stage reveal">
+          <figure class="paper-figure reveal">
             <img src="/images/trinity/dim_radar.png" alt="Dimension radar chart for Trinity evaluation">
-            <div class="figure-caption">
+            <figcaption class="figure-caption">
               <span>Dimension radar.</span>
               <span class="caption-tag">Appendix</span>
-            </div>
-          </div>
-          <div class="figure-stage reveal">
+            </figcaption>
+          </figure>
+          <figure class="paper-figure reveal">
             <img src="/images/trinity/human_eval.png" alt="Human evaluation chart for Trinity">
-            <div class="figure-caption">
+            <figcaption class="figure-caption">
               <span>Human evaluation.</span>
               <span class="caption-tag">Appendix</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
