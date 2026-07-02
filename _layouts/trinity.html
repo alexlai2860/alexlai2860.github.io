@@ -58,6 +58,11 @@
     a { color: inherit; }
     img { display: block; max-width: 100%; }
 
+    .lang-zh { display: none !important; }
+    body.lang-zh .lang-en { display: none !important; }
+    body.lang-zh .lang-zh { display: inline !important; }
+    body.lang-zh .hero-title-line.lang-zh { display: block !important; }
+
     .trinity-nav {
       position: fixed;
       top: 0;
@@ -172,6 +177,26 @@
       transition: transform 180ms ease, box-shadow 180ms ease;
     }
 
+    .language-toggle {
+      min-height: 36px;
+      padding: 7px 12px;
+      border: 1px solid rgba(17, 19, 20, 0.12);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.84rem;
+      font-weight: 820;
+      cursor: pointer;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .language-toggle:hover {
+      border-color: rgba(17, 19, 20, 0.22);
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
     .nav-cta:hover {
       transform: translate(-2px, -2px);
       box-shadow: 7px 7px 0 var(--green);
@@ -182,7 +207,7 @@
     }
 
     .hero-inner {
-      max-width: var(--max);
+      max-width: 1480px;
       margin: 0 auto;
       text-align: center;
     }
@@ -382,7 +407,7 @@
       font-weight: 930;
     }
 
-    .stat span {
+    .stat > span {
       display: block;
       margin-top: 9px;
       color: var(--muted);
@@ -438,28 +463,28 @@
     }
 
     .showcase-wall {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-auto-rows: 96px;
-      grid-auto-flow: dense;
-      gap: 16px;
-      margin-top: 34px;
+      width: min(100%, 1420px);
+      margin: 56px auto 0;
+      columns: 4 260px;
+      column-gap: 14px;
+      text-align: left;
     }
 
     .showcase-card {
-      grid-column: span 3;
-      grid-row: span 4;
       position: relative;
       display: block;
+      width: 100%;
+      margin: 0 0 14px;
       padding: 0;
       border: 0;
-      border-radius: 22px;
+      border-radius: 18px;
       background: transparent;
       appearance: none;
       -webkit-appearance: none;
       overflow: hidden;
+      break-inside: avoid;
       cursor: zoom-in;
-      box-shadow: 0 20px 70px rgba(17, 19, 20, 0.12);
+      box-shadow: 0 18px 56px rgba(17, 19, 20, 0.12);
       transform: translateZ(0);
       transition: transform 240ms ease, box-shadow 240ms ease;
     }
@@ -469,25 +494,11 @@
       box-shadow: 0 28px 86px rgba(17, 19, 20, 0.18);
     }
 
-    .showcase-card.wide {
-      grid-column: span 6;
-      grid-row: span 3;
-    }
-
-    .showcase-card.tall {
-      grid-column: span 3;
-      grid-row: span 6;
-    }
-
-    .showcase-card.large {
-      grid-column: span 4;
-      grid-row: span 5;
-    }
-
     .showcase-card img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
+      background: #fff;
       transition: transform 420ms ease;
     }
 
@@ -717,11 +728,7 @@
       .stat-line,
       .capability-grid,
       .process-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .showcase-wall { grid-auto-rows: 82px; }
-      .showcase-card,
-      .showcase-card.large { grid-column: span 6; grid-row: span 4; }
-      .showcase-card.wide { grid-column: span 12; grid-row: span 4; }
-      .showcase-card.tall { grid-column: span 6; grid-row: span 6; }
+      .showcase-wall { columns: 3 220px; }
       .process-track { row-gap: 24px; }
     }
 
@@ -735,17 +742,11 @@
       .process-track,
       .figure-row { grid-template-columns: 1fr; }
       .showcase-wall {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-auto-rows: 96px;
+        columns: 2 150px;
+        column-gap: 10px;
+        margin-top: 42px;
       }
-      .showcase-card,
-      .showcase-card.large,
-      .showcase-card.wide,
-      .showcase-card.tall {
-        grid-column: span 1;
-        grid-row: span 3;
-      }
-      .showcase-card.tall { grid-row: span 5; }
+      .showcase-card { margin-bottom: 10px; border-radius: 14px; }
       .figure-caption {
         align-items: flex-start;
         flex-direction: column;
@@ -785,20 +786,28 @@
         <span>Trinity</span>
       </a>
       <div class="nav-links">
-        <a href="#overview">Overview</a>
-        <a href="#framework">Framework</a>
-        <a href="#project">Project</a>
-        <a href="#knowledge">Knowledge</a>
-        <a href="#results">Results</a>
+        <a href="#overview"><span class="lang-en">Overview</span><span class="lang-zh">概览</span></a>
+        <a href="#framework"><span class="lang-en">Framework</span><span class="lang-zh">框架</span></a>
+        <a href="#project"><span class="lang-en">Project</span><span class="lang-zh">项目</span></a>
+        <a href="#knowledge"><span class="lang-en">Knowledge</span><span class="lang-zh">知识</span></a>
+        <a href="#results"><span class="lang-en">Results</span><span class="lang-zh">结果</span></a>
       </div>
-      <a class="nav-cta" href="/mypaper/trinity/trinity_20260702_110124.pdf">Paper</a>
+      <button class="language-toggle" type="button" data-lang-toggle aria-label="Switch language">
+        <span class="lang-en">中文</span>
+        <span class="lang-zh">EN</span>
+      </button>
+      <a class="nav-cta" href="/mypaper/trinity/trinity_20260702_110124.pdf">
+        <span class="lang-en">Paper</span>
+        <span class="lang-zh">论文</span>
+      </a>
     </div>
   </nav>
 
   {{ content }}
 
   <footer class="trinity-footer">
-    Trinity Project. Work in progress manuscript and project page.
+    <span class="lang-en">Trinity Project. Work in progress manuscript and project page.</span>
+    <span class="lang-zh">Trinity 项目页。论文与页面仍在持续完善中。</span>
   </footer>
 
   <div class="lightbox" id="trinity-lightbox" aria-hidden="true">
@@ -817,6 +826,29 @@
     };
     updateNav();
     window.addEventListener('scroll', updateNav, { passive: true });
+
+    const langToggle = document.querySelector('[data-lang-toggle]');
+    const setLanguage = (language) => {
+      const useChinese = language === 'zh';
+      document.body.classList.toggle('lang-zh', useChinese);
+      document.documentElement.lang = useChinese ? 'zh-CN' : 'en';
+      langToggle?.setAttribute('aria-pressed', String(useChinese));
+      try {
+        window.localStorage.setItem('trinity-language', useChinese ? 'zh' : 'en');
+      } catch (error) {
+        // Ignore storage errors in private browsing contexts.
+      }
+    };
+    let savedLanguage = 'en';
+    try {
+      savedLanguage = window.localStorage.getItem('trinity-language') || 'en';
+    } catch (error) {
+      savedLanguage = 'en';
+    }
+    setLanguage(savedLanguage);
+    langToggle?.addEventListener('click', () => {
+      setLanguage(document.body.classList.contains('lang-zh') ? 'en' : 'zh');
+    });
 
     const revealItems = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
