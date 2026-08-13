@@ -25,7 +25,10 @@
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
 
     body {
       margin: 0;
@@ -58,7 +61,7 @@
     a { color: inherit; }
     img { display: block; max-width: 100%; }
 
-    .lang-zh { display: none !important; }
+    body:not(.lang-zh) .lang-zh { display: none !important; }
     body.lang-zh .lang-en { display: none !important; }
     body.lang-zh .lang-zh { display: inline !important; }
     body.lang-zh .hero-title-line.lang-zh { display: block !important; }
@@ -71,7 +74,8 @@
       z-index: 100;
       background: transparent;
       border-bottom: 1px solid transparent;
-      transition: background 220ms ease, border-color 220ms ease;
+      box-shadow: none;
+      transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
     }
 
     .trinity-nav-inner {
@@ -84,7 +88,16 @@
       gap: 18px;
       border: 1px solid transparent;
       border-radius: 999px;
+      background: transparent;
+      box-shadow: none;
       transition: max-width 260ms ease, margin-top 260ms ease, padding 260ms ease, border-color 260ms ease, background 260ms ease, box-shadow 260ms ease;
+    }
+
+    .trinity-nav:not(.scrolled),
+    .trinity-nav:not(.scrolled) .trinity-nav-inner {
+      border-color: transparent;
+      background: transparent;
+      box-shadow: none;
     }
 
     .trinity-nav.scrolled .trinity-nav-inner {
@@ -523,6 +536,8 @@
       backdrop-filter: blur(12px);
     }
 
+    body.lang-zh .showcase-card::after { content: "点击放大"; }
+
     .showcase-card:hover::after {
       opacity: 1;
       transform: translateY(0);
@@ -833,6 +848,9 @@
       document.body.classList.toggle('lang-zh', useChinese);
       document.documentElement.lang = useChinese ? 'zh-CN' : 'en';
       langToggle?.setAttribute('aria-pressed', String(useChinese));
+      langToggle?.setAttribute('aria-label', useChinese ? '切换语言' : 'Switch language');
+      document.querySelector('.trinity-nav')?.setAttribute('aria-label', useChinese ? 'Trinity 导航' : 'Trinity navigation');
+      document.querySelector('.lightbox-close')?.setAttribute('aria-label', useChinese ? '关闭放大图片' : 'Close enlarged image');
       try {
         window.localStorage.setItem('trinity-language', useChinese ? 'zh' : 'en');
       } catch (error) {
