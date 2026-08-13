@@ -17,7 +17,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
     </h1>
     <p class="hero-copy">
       <span class="lang-en">Trinity is a graphic-design-oriented multi-agent system built on the OpenAI Agents SDK. Through a self-developed execution harness, it transfers the web-design strengths of frontier multimodal models into professional graphic design, producing editable and reviewable HTML/CSS artifacts.</span>
-      <span class="lang-zh">Trinity 是面向平面设计构建的多智能体系统，基于 OpenAI Agents SDK 搭建，并通过自研底层执行 harness，将当前先进多模态模型在网页设计中的能力迁移到专业平面设计，生成可编辑、可审阅的 HTML/CSS 设计稿。</span>
+      <span class="lang-zh">Trinity 是面向平面设计构建的多智能体系统，基于 OpenAI Agents SDK 搭建，并通过自研底层执行 harness，将先进多模态模型在网页设计中的能力迁移到专业平面设计，生成可编辑、可审阅的 HTML/CSS 设计稿。</span>
     </p>
     <div class="author-line">
       Jianyu Lai<sup>1,2</sup>, Sixiang Chen<sup>1</sup>, Jialin Gao, Xiangyu Zhu<sup>2</sup>, Shuaibo Li<sup>1</sup>, Song Fei<sup>1</sup>, Lei Zhu<sup>1,4</sup>, Zufeng Zhang<sup>3&dagger;</sup>
@@ -28,8 +28,8 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
     </div>
     <div class="hero-actions">
       <a class="button button-primary" href="/mypaper/trinity/trinity_20260702_110124.pdf">
-        <span class="lang-en">Read Paper Draft</span>
-        <span class="lang-zh">阅读论文草稿</span>
+        <span class="lang-en">Read Paper</span>
+        <span class="lang-zh">阅读论文</span>
       </a>
       <a class="button" href="#framework">
         <span class="lang-en">Explore Framework</span>
@@ -103,8 +103,8 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
           <span class="lang-zh">概览</span>
         </p>
         <h2 class="section-title">
-          <span class="lang-en">From one-off image generation to a design production workflow.</span>
-          <span class="lang-zh">从单张图片生成，走向可审阅、可复用的设计生产流程。</span>
+          <span class="lang-en title-line">From one-off image<br>generation to a design<br>production workflow.</span>
+          <span class="lang-zh title-line">从单张图片生成，<br>走向可审阅、可复用的设计生产流程。</span>
         </h2>
       </div>
       <p class="section-copy">
@@ -120,7 +120,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
       </div>
       <div class="stat">
         <strong>92</strong>
-        <span><span class="lang-en">RealDesignBench task instances in the current draft evaluation.</span><span class="lang-zh">当前草稿评测中的 RealDesignBench 任务实例。</span></span>
+        <span><span class="lang-en">RealDesignBench task instances in the evaluation.</span><span class="lang-zh">RealDesignBench 评测任务实例。</span></span>
       </div>
       <div class="stat">
         <strong>10x</strong>
@@ -162,9 +162,9 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
     <div class="section-head reveal">
       <div>
         <p class="eyebrow"><span class="lang-en">Framework</span><span class="lang-zh">系统框架</span></p>
-        <h2 class="section-title"><span class="lang-en">A local design studio made of agents, audits, and previews.</span><span class="lang-zh">由 agent、审计与预览共同组成的本地设计工作室。</span></h2>
+        <h2 class="section-title"><span class="lang-en title-line">A local design studio<br>made of agents, audits,<br>and previews.</span><span class="lang-zh title-line">由 agent、审计与预览<br>共同组成的本地设计工作室。</span></h2>
       </div>
-      <p class="section-copy"><span class="lang-en">The current manuscript places the Designer at the center of the system. It compiles the task, calls execution-layer resources, renders intermediate previews, passes deterministic audit gates, and receives reviewer feedback before final submission.</span><span class="lang-zh">当前论文草稿将 Designer 放在系统中心：它编译任务、调用执行层资源、渲染中间预览，通过确定性审计门，并在最终提交前接收审阅者反馈。</span></p>
+      <p class="section-copy"><span class="lang-en">Trinity places the Designer at the center of the system. It compiles tasks, calls execution-layer resources, renders intermediate previews, passes deterministic audit gates, and receives reviewer feedback before final submission.</span><span class="lang-zh">Trinity 将 Designer 放在系统中心：它编译任务、调用执行层资源、渲染中间预览，通过确定性审计门，并在最终提交前接收审阅者反馈。</span></p>
     </div>
     <figure class="paper-figure reveal">
       <img src="/images/trinity/system_framework_official.png" alt="Overview of the Trinity multi-agent framework">
@@ -179,7 +179,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
     <div class="section-head reveal">
       <div>
         <p class="eyebrow"><span class="lang-en">Project-Level Management</span><span class="lang-zh">项目级管理</span></p>
-        <h2 class="section-title"><span class="lang-en">One master design, many consistent deliverables.</span><span class="lang-zh">一个主设计，延展为一组一致的交付物。</span></h2>
+        <h2 class="section-title"><span class="lang-en title-line">One master design,<br>many consistent<br>deliverables.</span><span class="lang-zh title-line">一个主设计，<br>延展为一组一致的交付物。</span></h2>
       </div>
       <p class="section-copy"><span class="lang-en">A real campaign is a family, not a singleton. Trinity generates a master task first, extracts a reusable design handbook, and protects key code regions so later tasks can change content without drifting from the brand direction.</span><span class="lang-zh">真实 campaign 往往是一组设计，而不是单张图片。Trinity 先生成主任务，再提取可复用的设计手册，并保护关键代码区域，使后续任务能替换内容而不偏离品牌方向。</span></p>
     </div>
@@ -218,7 +218,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
       <figure class="paper-figure reveal">
         <img src="/images/trinity/comp_project_gen.jpg" alt="Qualitative project-level generation comparison">
         <figcaption class="figure-caption">
-          <span><span class="lang-en">Project-level generation comparison from the current paper draft.</span><span class="lang-zh">当前论文草稿中的项目级生成对比。</span></span>
+          <span><span class="lang-en">Project-level generation comparison.</span><span class="lang-zh">项目级生成对比。</span></span>
           <span class="caption-tag"><span class="lang-en">Figure 5</span><span class="lang-zh">图 5</span></span>
         </figcaption>
       </figure>
@@ -229,7 +229,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
     <div class="section-head reveal">
       <div>
         <p class="eyebrow"><span class="lang-en">Knowledge</span><span class="lang-zh">知识系统</span></p>
-        <h2 class="section-title"><span class="lang-en">Design knowledge raises the ceiling. Workflow experience protects the floor.</span><span class="lang-zh">设计知识抬高上限，流程经验守住下限。</span></h2>
+        <h2 class="section-title"><span class="lang-en title-line">Design knowledge<br>raises the ceiling. Workflow<br>experience protects the floor.</span><span class="lang-zh title-line">设计知识抬高上限，<br>流程经验守住下限。</span></h2>
       </div>
       <p class="section-copy"><span class="lang-en">Trinity separates creative guidance from operational reliability. Design knowledge is extracted from professional references and retrieved at runtime; workflow experience is distilled from audit failures, incidents, and behavioral anomalies.</span><span class="lang-zh">Trinity 将创意指导与运行可靠性分开处理。设计知识来自专业参考并在运行时检索；流程经验则从审计失败、异常事件和行为问题中沉淀。</span></p>
     </div>
@@ -244,7 +244,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
       <figure class="paper-figure reveal">
         <img src="/images/trinity/reviewer_distribution.png" alt="Reviewer decision distribution in Trinity">
         <figcaption class="figure-caption">
-          <span><span class="lang-en">Reviewer distribution used in the current appendix analysis.</span><span class="lang-zh">当前附录分析中使用的审阅者分布。</span></span>
+          <span><span class="lang-en">Reviewer distribution in the evaluation.</span><span class="lang-zh">评测中的审阅者分布。</span></span>
           <span class="caption-tag"><span class="lang-en">Appendix</span><span class="lang-zh">附录</span></span>
         </figcaption>
       </figure>
@@ -254,21 +254,21 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
   <section class="section section-wide" id="results">
     <div class="section-head reveal">
       <div>
-        <p class="eyebrow"><span class="lang-en">Draft Results</span><span class="lang-zh">草稿结果</span></p>
-        <h2 class="section-title"><span class="lang-en">A compact snapshot, not a final leaderboard.</span><span class="lang-zh">这里是阶段性快照，不是最终榜单。</span></h2>
+        <p class="eyebrow"><span class="lang-en">Results</span><span class="lang-zh">结果</span></p>
+        <h2 class="section-title"><span class="lang-en title-line">Evaluating design quality,<br>consistency, and edit<br>fidelity.</span><span class="lang-zh title-line">从设计质量、一致性<br>与编辑保真度评估系统。</span></h2>
       </div>
-      <p class="section-copy"><span class="lang-en">The paper is still being finalized, so this page only highlights the current trend: code-based generation stays competitive on single-image quality while improving project consistency and long-horizon editing fidelity.</span><span class="lang-zh">论文仍在完善中，因此页面只展示当前趋势：基于代码的生成在单图质量上保持竞争力，同时提升项目一致性和长程编辑保真度。</span></p>
+      <p class="section-copy"><span class="lang-en">Trinity is evaluated across single-image quality, project consistency, and long-horizon editing fidelity. The results below summarize how code-based design representation supports both visual quality and reliable revision.</span><span class="lang-zh">Trinity 从单图质量、项目一致性与长程编辑保真度等维度进行评估。以下结果展示了基于代码的设计表示如何同时支持视觉质量与可靠修改。</span></p>
     </div>
 
     <div class="results-layout">
       <div class="result-stack reveal">
         <div class="result-item">
           <strong>8.15</strong>
-          <span><span class="lang-en">Current project-level overall score for Trinity using Gemini-3.1-Pro + Seedream-4.5.</span><span class="lang-zh">Trinity 使用 Gemini-3.1-Pro + Seedream-4.5 的当前项目级综合得分。</span></span>
+          <span><span class="lang-en">Project-level overall score for Trinity using Gemini-3.1-Pro + Seedream-4.5.</span><span class="lang-zh">Trinity 使用 Gemini-3.1-Pro + Seedream-4.5 的项目级综合得分。</span></span>
         </div>
         <div class="result-item">
           <strong>7.96</strong>
-          <span><span class="lang-en">Current single-image overall score for the same Trinity variant.</span><span class="lang-zh">同一 Trinity 版本当前的单图综合得分。</span></span>
+          <span><span class="lang-en">Single-image overall score for the same Trinity variant.</span><span class="lang-zh">同一 Trinity 版本的单图综合得分。</span></span>
         </div>
         <div class="result-item">
           <strong>7.78</strong>
@@ -276,7 +276,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
         </div>
         <div class="result-item">
           <strong>71.9%</strong>
-          <span><span class="lang-en">Pairwise edit win rate against GPT-Image-2 in the draft final-step comparison.</span><span class="lang-zh">草稿最终步对比中相对 GPT-Image-2 的成对编辑胜率。</span></span>
+          <span><span class="lang-en">Pairwise edit win rate against GPT-Image-2 in the final-step comparison.</span><span class="lang-zh">最终步对比中相对 GPT-Image-2 的成对编辑胜率。</span></span>
         </div>
       </div>
 
@@ -301,7 +301,7 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
         <figure class="paper-figure reveal">
           <img src="/images/trinity/edit_fidelity_heatmap.png" alt="Edit fidelity heatmap for Trinity">
           <figcaption class="figure-caption">
-            <span><span class="lang-en">Edit fidelity heatmap from the current appendix.</span><span class="lang-zh">当前附录中的编辑保真度热力图。</span></span>
+            <span><span class="lang-en">Edit fidelity heatmap.</span><span class="lang-zh">编辑保真度热力图。</span></span>
             <span class="caption-tag"><span class="lang-en">Appendix</span><span class="lang-zh">附录</span></span>
           </figcaption>
         </figure>
@@ -329,9 +329,9 @@ title: "Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic De
     <div class="section-head reveal">
       <div>
         <p class="eyebrow"><span class="lang-en">Citation</span><span class="lang-zh">引用</span></p>
-        <h2 class="section-title"><span class="lang-en">Draft BibTeX</span><span class="lang-zh">草稿 BibTeX</span></h2>
+        <h2 class="section-title"><span class="lang-en title-line">BibTeX</span><span class="lang-zh title-line">BibTeX</span></h2>
       </div>
-      <p class="section-copy"><span class="lang-en">This entry is intentionally provisional while the manuscript is still being finalized.</span><span class="lang-zh">论文仍在整理中，因此这里暂时保留为临时引用。</span></p>
+      <p class="section-copy"><span class="lang-en">Citation information for the Trinity project page.</span><span class="lang-zh">Trinity 项目页的引用信息。</span></p>
     </div>
     <pre class="citation reveal"><code>@article{lai2026trinity,
   title={Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic Design Creation},
